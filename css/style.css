@@ -393,12 +393,14 @@ ol {
 }
 
 .hero__title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  letter-spacing: 0.08em;
-  line-height: 1.4;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 16px;
+}
+
+.hero__title-logo {
+  height: 180px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
 }
 
 .hero__concept {
@@ -1007,6 +1009,10 @@ ol {
     font-size: 1.75rem;
   }
 
+  .hero__title-logo {
+    height: 140px;
+  }
+
   .hero__concept {
     font-size: 0.9375rem;
   }
@@ -1113,6 +1119,10 @@ ol {
 
   .hero__date {
     font-size: 1.375rem;
+  }
+
+  .hero__title-logo {
+    height: 110px;
   }
 }
 
