@@ -218,27 +218,9 @@ ol {
   flex-shrink: 0;
 }
 
-.header__logo-text {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--color-primary-dark);
-  letter-spacing: 0.02em;
-}
-
 .header__logo-img {
-  height: 36px;
+  height: 56px;
   width: auto;
-}
-
-.header__badge {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  color: var(--color-primary-dark);
-  background-color: var(--color-primary-light);
-  padding: 3px 10px;
-  border-radius: 100px;
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .header__nav {
@@ -389,22 +371,36 @@ ol {
 }
 
 .hero__date {
-  display: inline-block;
-  font-size: 1.125rem;
   font-weight: 700;
-  background-color: var(--color-accent);
-  color: var(--color-white);
-  padding: 8px 28px;
-  border-radius: 100px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero__date-year {
+  display: block;
+  font-size: 4rem;
   letter-spacing: 0.08em;
 }
 
+.hero__date-month {
+  font-size: 2.5rem;
+}
+
+.hero__date-label {
+  display: block;
+  font-size: 1.25rem;
+  letter-spacing: 0.2em;
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
 .hero__title {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 16px;
-  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+  letter-spacing: 0.08em;
   line-height: 1.4;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
@@ -1011,13 +1007,20 @@ ol {
     padding: 40px 20px;
   }
 
-  .hero__date {
-    font-size: 0.9375rem;
-    padding: 6px 20px;
+  .hero__logo-img {
+    height: 72px;
   }
 
-  .hero__title {
-    font-size: 1.625rem;
+  .hero__date-year {
+    font-size: 3rem;
+  }
+
+  .hero__date-month {
+    font-size: 1.875rem;
+  }
+
+  .hero__date-label {
+    font-size: 1rem;
   }
 
   .hero__concept {
@@ -1116,17 +1119,16 @@ ol {
 
 /* --- 小さいスマートフォン (374px以下) --- */
 @media (max-width: 374px) {
-  .header__logo-text {
-    font-size: 0.9375rem;
+  .header__logo-img {
+    height: 36px;
   }
 
-  .header__badge {
-    font-size: 0.5625rem;
-    padding: 2px 8px;
+  .hero__date-year {
+    font-size: 2.5rem;
   }
 
-  .hero__title {
-    font-size: 1.375rem;
+  .hero__date-month {
+    font-size: 1.5rem;
   }
 }
 
