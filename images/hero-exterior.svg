@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700">
+  <rect width="1400" height="700" fill="#E8F0EB"/>
+  <!-- Ground -->
+  <rect x="0" y="520" width="1400" height="180" fill="#D4DCCF"/>
+  <!-- Building body -->
+  <rect x="300" y="180" width="800" height="340" rx="4" fill="#F5F3EF"/>
+  <rect x="300" y="180" width="800" height="340" rx="4" stroke="#B8C4B0" stroke-width="2" fill="none"/>
+  <!-- Roof overhang -->
+  <rect x="280" y="168" width="840" height="20" rx="2" fill="#A3B299"/>
+  <!-- Windows -->
+  <rect x="360" y="240" width="160" height="120" rx="6" fill="#C8DDD0" stroke="#A3B299" stroke-width="1.5"/>
+  <rect x="560" y="240" width="160" height="120" rx="6" fill="#C8DDD0" stroke="#A3B299" stroke-width="1.5"/>
+  <rect x="880" y="240" width="160" height="120" rx="6" fill="#C8DDD0" stroke="#A3B299" stroke-width="1.5"/>
+  <!-- Door -->
+  <rect x="735" y="340" width="130" height="180" rx="6" fill="#C8DDD0" stroke="#A3B299" stroke-width="1.5"/>
+  <line x1="800" y1="340" x2="800" y2="520" stroke="#A3B299" stroke-width="1"/>
+  <!-- Door handle -->
+  <circle cx="820" cy="435" r="4" fill="#A3B299"/>
+  <!-- Sign area -->
+  <rect x="520" y="200" width="360" height="30" rx="4" fill="#A3B299" opacity="0.3"/>
+  <!-- Trees -->
+  <circle cx="220" cy="420" r="60" fill="#B8C4B0"/>
+  <circle cx="240" cy="380" r="50" fill="#C5D4BD"/>
+  <rect x="225" y="450" width="10" height="70" fill="#9BA88F"/>
+  <circle cx="1180" cy="420" r="55" fill="#B8C4B0"/>
+  <circle cx="1200" cy="385" r="45" fill="#C5D4BD"/>
+  <rect x="1185" y="445" width="10" height="75" fill="#9BA88F"/>
+  <!-- Shrubs -->
+  <ellipse cx="400" cy="520" rx="80" ry="25" fill="#B8C4B0"/>
+  <ellipse cx="1000" cy="520" rx="70" ry="22" fill="#B8C4B0"/>
+  <!-- Path -->
+  <rect x="720" y="520" width="160" height="180" fill="#E0DDD8"/>
+  <!-- Label -->
+  <text x="700" y="640" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#7A7A7A" letter-spacing="2">外観完成予想図（仮画像）</text>
+</svg>

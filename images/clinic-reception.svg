@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#F5F3EF"/>
+  <!-- Floor -->
+  <rect x="0" y="360" width="800" height="140" fill="#E8E2D8"/>
+  <!-- Back wall -->
+  <rect x="40" y="60" width="720" height="300" fill="#FAFAF7"/>
+  <!-- Window -->
+  <rect x="500" y="100" width="200" height="160" rx="4" fill="#D8E8DD" stroke="#C5D4BD" stroke-width="1.5"/>
+  <line x1="600" y1="100" x2="600" y2="260" stroke="#C5D4BD" stroke-width="1"/>
+  <line x1="500" y1="180" x2="700" y2="180" stroke="#C5D4BD" stroke-width="1"/>
+  <!-- Sofa 1 -->
+  <rect x="80" y="280" width="180" height="60" rx="8" fill="#C8DDD0" stroke="#A3B299" stroke-width="1"/>
+  <rect x="80" y="260" width="180" height="30" rx="6" fill="#D4E6DA" stroke="#A3B299" stroke-width="1"/>
+  <!-- Sofa 2 -->
+  <rect x="300" y="280" width="140" height="60" rx="8" fill="#C8DDD0" stroke="#A3B299" stroke-width="1"/>
+  <rect x="300" y="260" width="140" height="30" rx="6" fill="#D4E6DA" stroke="#A3B299" stroke-width="1"/>
+  <!-- Side table -->
+  <rect x="272" y="290" width="20" height="50" rx="3" fill="#C4B8A8"/>
+  <!-- Magazine -->
+  <rect x="274" y="285" width="16" height="12" rx="1" fill="#D4915E" opacity="0.5"/>
+  <!-- Plant -->
+  <circle cx="720" cy="310" r="25" fill="#B8C4B0"/>
+  <circle cx="735" cy="295" r="20" fill="#C5D4BD"/>
+  <rect x="715" y="330" width="15" height="30" rx="3" fill="#C4B8A8"/>
+  <!-- Clock -->
+  <circle cx="400" cy="120" r="25" fill="#FFF" stroke="#C4B8A8" stroke-width="1.5"/>
+  <line x1="400" y1="120" x2="400" y2="105" stroke="#7A7A7A" stroke-width="1.5"/>
+  <line x1="400" y1="120" x2="412" y2="125" stroke="#7A7A7A" stroke-width="1"/>
+  <!-- Label -->
+  <text x="400" y="450" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#7A7A7A" letter-spacing="1">待合室イメージ（仮画像）</text>
+</svg>
