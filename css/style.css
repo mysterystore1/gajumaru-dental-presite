@@ -367,8 +367,8 @@ ol {
   justify-content: center;
   background: linear-gradient(
     to bottom,
-    rgba(40, 55, 45, 0.35) 0%,
-    rgba(40, 55, 45, 0.55) 100%
+    rgba(30, 40, 35, 0.45) 0%,
+    rgba(30, 40, 35, 0.65) 100%
   );
   padding: 60px 20px;
 }
@@ -382,9 +382,9 @@ ol {
 .hero__date {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   line-height: 1.3;
   letter-spacing: 0.12em;
   text-shadow: 0 3px 20px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -393,28 +393,22 @@ ol {
 }
 
 .hero__title {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .hero__title-logo {
-  height: 180px;
+  height: 80px;
   width: auto;
   filter: brightness(0) invert(1);
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 .hero__concept {
-  font-size: 1.0625rem;
+  font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   letter-spacing: 0.04em;
-  opacity: 0.95;
-}
-
-.hero__note {
-  font-size: 0.875rem;
-  opacity: 0.85;
-  margin-bottom: 32px;
+  opacity: 0.9;
 }
 
 .hero__cta {
@@ -1006,11 +1000,11 @@ ol {
   }
 
   .hero__date {
-    font-size: 1.75rem;
+    font-size: 2.25rem;
   }
 
   .hero__title-logo {
-    height: 140px;
+    height: 64px;
   }
 
   .hero__concept {
@@ -1118,11 +1112,11 @@ ol {
   }
 
   .hero__date {
-    font-size: 1.375rem;
+    font-size: 1.75rem;
   }
 
   .hero__title-logo {
-    height: 110px;
+    height: 56px;
   }
 }
 
