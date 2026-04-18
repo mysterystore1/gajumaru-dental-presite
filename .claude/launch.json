@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "presite",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "C:/work/projects/gajumaru-dental-presite", "-l", "8080", "--no-clipboard"],
+      "port": 8080
+    }
+  ]
+}
