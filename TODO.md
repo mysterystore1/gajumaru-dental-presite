@@ -1,0 +1,16 @@
+# TODO — gajumaru-dental-presite（辻堂がじゅまる歯科プレサイト）
+
+残タスクと今後の予定。完了したら `[x]`。詳細な現在地は `HANDOFF.md`、確定判断は `DECISIONS.md` 参照。
+
+## 進行中 / 次にやること
+- [ ] （次の作業をここに書く）
+
+## バックログ（今後の予定）
+- [ ] 独自ドメイン `gajumaru-dental.com` の DNS 反映確認（CNAME 設定済み、レジストラ側の DNS 設定が要る）
+- [ ] 画像の軽量化: `director-profile.png`(1.9MB) / `hero-director.png`(2.3MB) を WebP 化・圧縮（表示高速化）
+- [ ] 未使用画像 `doctor.png` / `hero-exterior.png` の整理（現在は参照なし。残すか削除か判断）
+- [ ] 開院（2026年9月）に向けたコンテンツ拡充
+
+## 完了
+- [x] 2026-06-09 ヒーロー・院長画像を新ビジュアルに差し替え（`db69181`）
+- [x] 2026-06-09 独自ドメイン `gajumaru-dental.com` を CNAME 設定
