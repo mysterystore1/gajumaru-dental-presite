@@ -1666,6 +1666,22 @@ ol {
   margin-bottom: 18px;
 }
 
+.service-detail__meta {
+  margin-bottom: 18px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--color-border);
+  font-size: 0.875rem;
+  line-height: 1.9;
+  color: var(--color-text-light);
+}
+
+.service-detail__meta-label {
+  display: inline-block;
+  margin-right: 8px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
 .service-detail__cta {
   font-size: 0.9375rem;
   font-weight: 700;
