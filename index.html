@@ -289,9 +289,15 @@
       <form
         id="contact-form"
         class="contact__form"
-        action="https://formspree.io/f/FORM_ID_HERE"
+        action="https://formsubmit.co/ajax/info@gajumaru-dental.com"
         method="POST"
       >
+        <!-- formsubmit.co 設定（ajax版: main.js の fetch と整合） -->
+        <input type="hidden" name="_subject" value="【辻堂がじゅまる歯科】お問い合わせ">
+        <input type="hidden" name="_template" value="table">
+        <!-- ハニーポット（スパム対策・人間には不可視。ボットが入力すると弾かれる） -->
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
         <div class="form-group">
           <label for="name" class="form-label">お名前 <span class="form-required">必須</span></label>
           <input type="text" id="name" name="name" required autocomplete="name" class="form-input" placeholder="例：山田 太郎">

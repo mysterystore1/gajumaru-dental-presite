@@ -16,9 +16,10 @@
 - 2026-06-09: 独自ドメイン `gajumaru-dental.com` を CNAME 設定（GitHub web 経由）。DNS 反映状況は要確認
 - 2026-06-09 方針転換(DEC-003): 本番サイトはこのプレサイトリポを育てて作る。Astro版 kuwara-dental-v2(新美クリニック)は退役。URL `gajumaru-dental.com` 維持
 - 2026-06-09 SEO・速度改善: JSON-LD(Dentist)/canonical/favicon/OGP絶対URL を追加。hero-director・director-profile を WebP化(4.1MB→259KB、img src のみ変更でCSS不変)。OGP用にPNGは保持
+- 2026-06-09 フォーム実装: formsubmit.co ajax版(info@gajumaru-dental.com)。件名/整形/ハニーポット追加。★要有効化: 公開後にテスト送信→info@宛の確認メール承認。有効化後 hash版へ差し替えでメール非公開化
 
 ## 次の一手
-- お問い合わせフォームの機能化: 送信先メールを決め、Formspree か formsubmit.co で送信を有効化（現状 FORM_ID 未設定で送信不可）
+- フォーム有効化（ユーザー作業）: 公開サイトでテスト送信 → info@gajumaru-dental.com の確認メールを承認。その後 hash版エンドポイントへ差し替え（私が対応）
 - 本番化の第一歩: 追加ページの構成を決める（診療案内 / 医師紹介 / アクセス / 予約 等）。プレサイトのデザイン・トンマナを踏襲
 
 ## 注意・前提

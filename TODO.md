@@ -3,7 +3,7 @@
 残タスクと今後の予定。完了したら `[x]`。詳細な現在地は `HANDOFF.md`、確定判断は `DECISIONS.md` 参照。
 
 ## 進行中 / 次にやること
-- [ ] お問い合わせフォームを機能させる（送信先メール＋Formspree/formsubmit.co の方式決定待ち）
+- [ ] お問い合わせフォーム有効化: formsubmit.co で実装済み → 公開後にテスト送信して info@ の確認メールを承認。有効化後、hash版エンドポイントへ差し替えてメール非公開化
 - [ ] 本番サイト化（DEC-003）: 追加ページの構成を決める（プレサイトのデザイン・トンマナを踏襲）
 
 ## バックログ（今後の予定）
@@ -19,3 +19,4 @@
 - [x] 2026-06-09 独自ドメイン `gajumaru-dental.com` を CNAME 設定
 - [x] 2026-06-09 SEO改善: 構造化データ(Dentist)/canonical/favicon/OGP絶対URL を追加
 - [x] 2026-06-09 速度改善: hero-director・director-profile を WebP化（4.1MB→259KB）
+- [x] 2026-06-09 お問い合わせフォームを formsubmit.co で実装（ajax版・件名/整形/ハニーポット付き、要有効化）
