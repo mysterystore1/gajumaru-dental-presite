@@ -18,12 +18,16 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet"></noscript>
 
   <!-- Canonical / favicon -->
   <link rel="canonical" href="https://gajumaru-dental.com/">
   <link rel="icon" type="image/png" href="images/logo-icon.png">
   <link rel="apple-touch-icon" href="images/logo-icon.png">
+
+  <!-- LCPヒーロー画像の優先読み込み -->
+  <link rel="preload" as="image" href="images/hero-director.webp" fetchpriority="high">
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -90,7 +94,7 @@
 
 <!-- ====== ヒーロー ====== -->
 <section class="hero" id="hero">
-  <img src="images/hero-director.webp" alt="がじゅまる歯科の院内イメージ" class="hero__bg" width="1672" height="941">
+  <img src="images/hero-director.webp" alt="がじゅまる歯科の院内イメージ" class="hero__bg" width="1672" height="941" fetchpriority="high">
   <div class="hero__overlay">
     <div class="hero__content">
       <h1 class="hero__title">
