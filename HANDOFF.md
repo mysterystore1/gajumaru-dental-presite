@@ -10,16 +10,15 @@
 - 公開: https://gajumaru-dental.com/ （独自ドメイン・CNAME設定済み）。github.io でも到達可。`main` push で1〜2分後に反映
 - 独立リポジトリ（work-root とは別管理）
 
-## 現在地（最終更新: 2026-06-09 / メインPC）
+## 現在地（最終更新: 2026-06-10 / メインPC）
 - 最新コミット `db69181`: ヒーロー背景を院内イメージ(`hero-director.png`)に、院長写真を `director-profile.png` に差し替え。`og:image` も更新
 - 旧画像 `doctor.png` / `hero-exterior.png` は最適化済みだが現在は未使用
 - 2026-06-09: 独自ドメイン `gajumaru-dental.com` を CNAME 設定（GitHub web 経由）。DNS 反映状況は要確認
 - 2026-06-09 方針転換(DEC-003): 本番サイトはこのプレサイトリポを育てて作る。Astro版 kuwara-dental-v2(新美クリニック)は退役。URL `gajumaru-dental.com` 維持
 - 2026-06-09 SEO・速度改善: JSON-LD(Dentist)/canonical/favicon/OGP絶対URL を追加。hero-director・director-profile を WebP化(4.1MB→259KB、img src のみ変更でCSS不変)。OGP用にPNGは保持
-- 2026-06-09 フォーム: formsubmit.co ajax+hash版(774345...)でメール非公開化済み。件名/整形/ハニーポット付き。★残: メールの ACTIVATE FORM クリック(有効化)＋着信テスト(ユーザー作業)
+- 2026-06-10 フォーム本番稼働: formsubmit.co ajax+hash版(774345...)。ACTIVATE済・テスト送信が info@ 着信確認。件名/整形/ハニーポット/メール非公開 すべて正常
 
 ## 次の一手
-- フォーム有効化（ユーザー作業）: メールの ACTIVATE FORM をクリック → 公開サイトで再テスト送信 → info@ に届けば完了
 - 本番化の第一歩: 追加ページの構成を決める（診療案内 / 医師紹介 / アクセス / 予約 等）。プレサイトのデザイン・トンマナを踏襲
 
 ## 注意・前提
