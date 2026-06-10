@@ -16,6 +16,16 @@
 - 公開: https://gajumaru-dental.com/ （独自ドメイン・CNAME）。`main` push で1〜2分後に反映
 - 独立リポジトリ（work-root とは別管理）
 
+## ▶ 別PCで再開する手順（最初にこれ）
+GitHub に全部 push 済み（最新 `957fb33` = origin/main・作業ツリーはクリーン）。別PCではこれだけ:
+1. **取得**: 既存クローンがあれば `git pull --ff-only origin main`。無ければ任意の作業フォルダで `git clone https://github.com/mysterystore1/gajumaru-dental-presite.git`（推奨: `C:\work\projects\` 配下に置くと Claude Code から開ける）
+2. **git identity（新PC初回のみ・push に必要）**: `git config user.name "mysterystore1"` / `git config user.email "mysterystore10311031@gmail.com"`
+3. **画像ワークフロー使うなら**: `python -m pip install Pillow`（`honban/_tools/apply_image.py` 用。新PCには未インストール）
+4. **このHANDOFFと `git log -5` を読む** → 下の「現在地」「次の一手」で続きが分かる
+5. プレビューはブラウザで `honban/index.html` を直接開くだけ（ビルド不要）
+
+git に乗らない＝移行されないもの（必要時に各PCで再設定）: 上記2の identity、3の Pillow、`honban/images/_incoming/` の中身（`.gitignore` 対象のステージング）、Claude Code 側の preview launch 設定。
+
 ## 現在地（最終更新: 2026-06-10）
 - **プレビュー画像 反映済**（`ccee0f9`）: トップhero＋院内6枚（外観/受付/待合/診療室/カウンセリング/設備）を AI生成のプレビュー画像（ひまわり歯科の雰囲気に着想・Google由来写真は不使用）に差し替え。`hero-director.webp`＋`facility-*.webp`、facility.html は svg→webp 移行済。IMAGE_TODO 同期済。**院長写真は未差し替え（実物資料なし）**。**本番公開前に実院内・外観の実写へ要差し替え**（AI画像を本物として出さない）。画像適用は `honban/_tools/apply_image.py`＋`_incoming/` で運用（IMAGE_WORKFLOW.md）。配色はがじゅまる暖色。モバイル速度改善済（Fonts非ブロッキング＋hero優先）。og:imageは互換のためpng維持（本番で1200x630 jpg用意）
 - **dental-anxiety.html 改稿完了（AI感除去）**: 位置づけ=保険診療メイン・地元密着の町医者と確定。30院リサーチを反映し、詩的ぶつ切り/「全然OK」連発/完璧な対句を解体→複文の話し言葉へ。語り手混合（ヒーロー・約束=院長寄り/流れ・Q&A=当院）。「手を挙げて止める」「初回はお話だけ」は実院多数の本物の型として残置。fade-in を本文コンテナから削減。全文（仮）維持。方針詳細・改稿コピーは `honban/PLAN_anxiety.md`
