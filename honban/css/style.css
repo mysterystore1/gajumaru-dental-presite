@@ -13,7 +13,7 @@
   --color-bg-alt: #F4F9FC;
   --color-bg-highlight: #E7F3FA;
   --color-text: #333A40;
-  --color-text-light: #6B7780;
+  --color-text-light: #5A636B;
   --color-border: #DCE6EC;
   --color-white: #FFFFFF;
   --font-family: "Noto Sans JP", sans-serif;
@@ -53,6 +53,24 @@ body {
 
 body.no-scroll {
   overflow: hidden;
+}
+
+/* キーボード操作時のフォーカス可視（a11y） */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* 準備中の予約ボタン（EPARK/LINE）は押下不可に */
+.reserve__btn--epark,
+.reserve__btn--line {
+  opacity: 0.55;
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 img {
