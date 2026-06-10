@@ -20,3 +20,10 @@
 - Decision: 辻堂がじゅまる歯科の本番サイトを、別の Astro 実装（kuwara-dental-v2 / 新美クリニック流用）で作るのをやめ、このプレサイトリポ（gajumaru-dental-presite）のデザイン・トンマナをベースに、同リポをページ追加して本番へ育てる
 - Reason: 公開URL `gajumaru-dental.com`（CNAME設定済み）をそのまま使いたい。プレサイトのデザインが良く流用したい。リポ統合で管理がシンプル（ドメイン移行・新規セットアップ不要）
 - Impact: kuwara-dental-v2（Astro/18ページ・新美クリニック）は退役（参照用に残す）。本番も静的 HTML/CSS/JS で構築。リポ名は `-presite` のままだが公開URLとは無関係（必要なら `gajumaru-dental` に rename 可、URLは自動リダイレクト）
+
+## [DEC-004] 本番マルチページ化の構成（フラットURL + 共通部品コピー方式）
+- Date: 2026-06-10
+- Decision: 1ページ構成のプレサイトを9ページ前後のマルチページ本番サイトへ拡張する。(1) URL構成は**ルート直下フラット**（`dental-anxiety.html` / `services.html` 等。サブディレクトリ非採用）。(2) ヘッダー/フッター/モバイルバーの共通部品は Node無しのため**各ページにコピー複製**し、`_partials.html`（SSOTメモ）を正本として変更時は全ページへ手動反映。(3) 全データ仮で骨組み構築 → 実データ後日差し替え（仮テキストは「（仮）」明示、NAPは一括置換可能な固定文字列、仮画像はSVGプレースホルダー + `IMAGE_TODO.md` 台帳運用）。(4) 文言トーンは `c:\work\tasks\codex-dental-copy-audit.md` を正本とし、地名は辻堂にローカライズ。
+- Reason: 静的維持(DEC-002)のままMEO/SEOを強化したい。フラットURLは相対パスが単純でURLが短くMEO有利。共通部品コピーは `file://` 直開きでも崩れずデプロイ依存ゼロ（JS fetch注入案はCORS/ちらつき/MEO不利で不採用、ビルド導入案はDEC-002違反で不採用）。
+- Impact: ページ追加ごとに共通部品の同期が必要（変更時は `_partials.html` 起点で全ページ反映をルール化）。実NAP・院内写真・EPARK/LINE実URL・JSON-LD telephone は確定後に一括差し替え（誤情報をMEOに出さないため確定まで未記載）。
+- 却下案: サブディレクトリ構成 / JS fetch によるインクルード / ビルドツール導入（Astro等）
