@@ -1234,35 +1234,29 @@ ol {
 .anxiety-feelings {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 0 48px;
   max-width: 720px;
   margin: 0 auto;
 }
 
 .anxiety-feelings__item {
   position: relative;
-  padding: 20px 20px 20px 52px;
-  background-color: var(--color-bg-alt);
-  border-radius: var(--radius-lg);
+  padding: 18px 8px 18px 26px;
+  border-bottom: 1px solid var(--color-border);
   font-size: 0.9375rem;
   font-weight: 700;
 }
 
 .anxiety-feelings__item::before {
-  content: "?";
+  content: "";
   position: absolute;
-  left: 18px;
+  left: 6px;
   top: 50%;
   transform: translateY(-50%);
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-accent);
   border-radius: 50%;
-  font-size: 0.8125rem;
 }
 
 .anxiety-intro {
@@ -1277,21 +1271,21 @@ ol {
    ============================================= */
 .promises {
   display: grid;
-  gap: 20px;
+  gap: 0;
   max-width: 760px;
   margin: 0 auto;
 }
 
 .promise {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   align-items: flex-start;
-  padding: 24px 28px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-primary);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  padding: 28px 4px;
+  border-top: 1px solid var(--color-border);
+}
+
+.promise:last-child {
+  border-bottom: 1px solid var(--color-border);
 }
 
 .promise__num {
@@ -1322,7 +1316,7 @@ ol {
    ============================================= */
 .steps {
   display: grid;
-  gap: 16px;
+  gap: 0;
   max-width: 760px;
   margin: 0 auto;
   counter-reset: step;
@@ -1330,9 +1324,12 @@ ol {
 
 .steps__item {
   position: relative;
-  padding: 22px 28px;
-  background-color: var(--color-bg-alt);
-  border-radius: var(--radius-lg);
+  padding: 24px 4px;
+  border-top: 1px solid var(--color-border);
+}
+
+.steps__item:last-child {
+  border-bottom: 1px solid var(--color-border);
 }
 
 .steps__num {
@@ -1368,59 +1365,58 @@ ol {
 }
 
 .qa__item {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  margin-bottom: 14px;
-  overflow: hidden;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.qa__item:first-child {
+  border-top: 1px solid var(--color-border);
 }
 
 .qa__q {
   position: relative;
-  padding: 18px 24px 18px 56px;
+  padding: 22px 8px 10px 40px;
   font-size: 1rem;
   font-weight: 700;
-  background-color: var(--color-primary-light);
 }
 
 .qa__q::before {
   content: "Q";
   position: absolute;
-  left: 20px;
-  top: 18px;
-  width: 26px;
-  height: 26px;
+  left: 2px;
+  top: 20px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--color-primary);
   color: var(--color-white);
   border-radius: 50%;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .qa__a {
   position: relative;
-  padding: 18px 24px 18px 56px;
+  padding: 0 8px 22px 40px;
   font-size: 0.9375rem;
   line-height: 1.9;
-  color: var(--color-text);
+  color: var(--color-text-light);
 }
 
 .qa__a::before {
   content: "A";
   position: absolute;
-  left: 20px;
-  top: 18px;
-  width: 26px;
-  height: 26px;
+  left: 2px;
+  top: 0;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--color-accent);
   color: var(--color-white);
   border-radius: 50%;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 /* =============================================
@@ -1428,16 +1424,12 @@ ol {
    ============================================= */
 .doctor-message {
   display: flex;
-  gap: 36px;
+  gap: 40px;
   align-items: flex-start;
   max-width: 820px;
   margin: 0 auto;
-  padding: 36px 40px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-primary);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  padding: 8px 0 8px 28px;
+  border-left: 3px solid var(--color-primary);
 }
 
 .doctor-message__photo {
@@ -1493,11 +1485,10 @@ ol {
   .doctor-message {
     flex-direction: column;
     gap: 20px;
-    padding: 28px 22px;
+    padding: 4px 0 4px 18px;
   }
   .doctor-message__photo {
     width: 160px;
-    margin: 0 auto;
   }
 }
 
@@ -1721,13 +1712,13 @@ ol {
 
   .anxiety-feelings {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 0;
   }
 
   .promise {
     flex-direction: column;
     gap: 8px;
-    padding: 20px 22px;
+    padding: 22px 0;
   }
 
   .promise__num {
