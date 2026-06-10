@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#F5F3EF"/>
+  <!-- Floor -->
+  <rect x="0" y="370" width="800" height="130" fill="#E0DDD8"/>
+  <!-- Walls -->
+  <rect x="40" y="50" width="720" height="320" fill="#FAFAF7"/>
+  <!-- Ceiling light -->
+  <rect x="340" y="50" width="120" height="10" rx="2" fill="#E8E2D8"/>
+  <line x1="400" y1="60" x2="400" y2="120" stroke="#D4DCCF" stroke-width="1"/>
+  <ellipse cx="400" cy="125" rx="30" ry="10" fill="#FFF" stroke="#D4DCCF" stroke-width="1"/>
+  <!-- Dental chair base -->
+  <rect x="280" y="350" width="200" height="20" rx="4" fill="#A3B299"/>
+  <!-- Chair seat -->
+  <path d="M300,350 L300,280 Q300,260 320,250 L440,250 Q460,260 460,280 L460,350" fill="#C8DDD0" stroke="#A3B299" stroke-width="1.5"/>
+  <!-- Chair back -->
+  <path d="M300,280 Q280,200 300,160 L340,140 Q360,135 380,140" fill="#C8DDD0" stroke="#A3B299" stroke-width="1.5"/>
+  <!-- Headrest -->
+  <ellipse cx="340" cy="135" rx="30" ry="15" fill="#D4E6DA" stroke="#A3B299" stroke-width="1"/>
+  <!-- Arm -->
+  <rect x="460" y="270" width="30" height="8" rx="3" fill="#A3B299"/>
+  <!-- Light arm -->
+  <line x1="400" y1="125" x2="350" y2="170" stroke="#C4B8A8" stroke-width="2"/>
+  <ellipse cx="340" cy="175" rx="15" ry="8" fill="#FFF" stroke="#C4B8A8" stroke-width="1"/>
+  <!-- Side unit -->
+  <rect x="520" y="220" width="80" height="150" rx="6" fill="#D4DCCF" stroke="#B8C4B0" stroke-width="1"/>
+  <rect x="530" y="230" width="60" height="20" rx="2" fill="#F5F3EF"/>
+  <rect x="530" y="260" width="60" height="20" rx="2" fill="#F5F3EF"/>
+  <!-- Monitor -->
+  <rect x="560" y="100" width="120" height="90" rx="4" fill="#333" stroke="#555" stroke-width="1"/>
+  <rect x="565" y="105" width="110" height="75" rx="2" fill="#C8DDD0"/>
+  <rect x="615" y="190" width="10" height="30" fill="#555"/>
+  <!-- Window -->
+  <rect x="80" y="80" width="140" height="180" rx="4" fill="#D8E8DD" stroke="#C5D4BD" stroke-width="1.5"/>
+  <line x1="150" y1="80" x2="150" y2="260" stroke="#C5D4BD" stroke-width="1"/>
+  <!-- Label -->
+  <text x="400" y="450" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#7A7A7A" letter-spacing="1">診療室イメージ（仮画像）</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="520" viewBox="0 0 400 520">
+  <rect width="400" height="520" fill="#F5F3EF"/>
+  <!-- Body (white coat) -->
+  <path d="M120,520 L120,320 Q120,280 160,260 L200,240 L240,260 Q280,280 280,320 L280,520" fill="#FFFFFF" stroke="#D4DCCF" stroke-width="1.5"/>
+  <!-- Collar -->
+  <path d="M160,260 L185,290 L200,270 L215,290 L240,260" fill="none" stroke="#D4DCCF" stroke-width="1.5"/>
+  <!-- Head -->
+  <ellipse cx="200" cy="190" rx="55" ry="65" fill="#F0E6D8"/>
+  <!-- Hair -->
+  <path d="M145,180 Q145,130 200,125 Q255,130 255,180" fill="#5A4A3A" stroke="none"/>
+  <!-- Eyes -->
+  <ellipse cx="180" cy="195" rx="5" ry="4" fill="#5A4A3A"/>
+  <ellipse cx="220" cy="195" rx="5" ry="4" fill="#5A4A3A"/>
+  <!-- Smile -->
+  <path d="M185,218 Q200,230 215,218" fill="none" stroke="#5A4A3A" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Stethoscope -->
+  <path d="M170,290 Q170,340 190,360" fill="none" stroke="#A3B299" stroke-width="2"/>
+  <circle cx="190" cy="365" r="8" fill="none" stroke="#A3B299" stroke-width="2"/>
+  <!-- Label -->
+  <text x="200" y="480" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#7A7A7A" letter-spacing="1">院長写真（仮画像）</text>
+</svg>

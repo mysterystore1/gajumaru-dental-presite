@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow"><!-- 本番制作中: 検索に出さない。開業時のルート昇格で解除 -->
   <title>辻堂がじゅまる歯科 | 2026年9月 開院予定</title>
   <meta name="description" content="辻堂がじゅまる歯科は2026年9月に神奈川県藤沢市辻堂に開院予定の歯科医院です。家族で通いやすい歯科医院を目指しています。お気軽にお問い合わせください。">
 
@@ -48,20 +49,25 @@
 </head>
 <body>
 
-<!-- ====== ヘッダー ====== -->
+<!-- ====== ヘッダー（_partials.html と同一・変更時は全ページ反映） ====== -->
 <header class="header" id="header">
   <div class="header__inner">
-    <a href="#" class="header__logo">
+    <a href="index.html" class="header__logo">
       <img src="images/logo.jpg" alt="辻堂がじゅまる歯科" class="header__logo-img">
       <span class="header__logo-text">辻堂がじゅまる歯科</span>
     </a>
 
     <nav class="header__nav" id="nav">
       <ul class="header__nav-list">
-        <li><a href="#greeting">ごあいさつ</a></li>
-        <li><a href="#info">医院情報</a></li>
-        <li><a href="#access">アクセス</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="index.html" aria-current="page">トップ</a></li>
+        <li><a href="dental-anxiety.html">通院をためらう方へ</a></li>
+        <li><a href="services.html">診療案内</a></li>
+        <li><a href="about.html">院長・当院</a></li>
+        <li><a href="facility.html">院内</a></li>
+        <li><a href="pricing.html">料金</a></li>
+        <li><a href="access.html">アクセス</a></li>
+        <li><a href="faq.html">よくあるご質問</a></li>
+        <li><a href="news.html">お知らせ</a></li>
       </ul>
     </nav>
 
@@ -70,7 +76,7 @@
         <svg class="header__tel-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         <span>0466-XX-XXXX</span>
       </a>
-      <a href="#contact" class="header__cta btn btn--accent btn--sm">お問い合わせ</a>
+      <a href="dental-anxiety.html" class="header__cta btn btn--accent btn--sm">怖い方へ</a>
     </div>
 
     <button class="header__hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
@@ -97,6 +103,19 @@
         <a href="#contact" class="btn btn--accent">お問い合わせ</a>
         <a href="#access" class="btn btn--white-outline">アクセスを見る</a>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== 「ためらう方へ」誘導バナー ====== -->
+<section class="anxiety-banner" id="anxiety-banner">
+  <div class="container">
+    <div class="anxiety-banner__inner fade-in">
+      <p class="anxiety-banner__lead">歯医者が怖い・通院をためらっている方へ</p>
+      <h2 class="anxiety-banner__title">「怖い」を、我慢しなくていい。</h2>
+      <p class="anxiety-banner__text">何年ぶりでも大丈夫です。まず、話を聞くところから。<br>治療するかどうかは、来てから一緒に決めましょう。</p>
+      <a href="dental-anxiety.html" class="btn btn--accent btn--lg">通院をためらう方へ</a>
     </div>
   </div>
 </section>
@@ -179,6 +198,42 @@
         <p class="features__desc">辻堂駅から徒歩3分。お仕事帰りやお買い物のついでにも通いやすい場所にあります。</p>
       </div>
 
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== 診療案内（カード一覧） ====== -->
+<section class="section section--alt" id="services-preview">
+  <div class="container">
+    <h2 class="section__title fade-in">診療案内</h2>
+    <p class="section__subtitle fade-in">辻堂で、お子さまから大人まで。一般歯科から予防・ホワイトニングまで対応します。（仮）</p>
+    <div class="service-cards fade-in">
+      <a href="services.html#general" class="service-card">
+        <h3 class="service-card__title">一般歯科</h3>
+        <p class="service-card__lead">削るのは、最後の手段です。</p>
+        <span class="service-card__more">くわしく見る</span>
+      </a>
+      <a href="services.html#pediatric" class="service-card">
+        <h3 class="service-card__title">小児歯科</h3>
+        <p class="service-card__lead">嫌がったら、やめます。</p>
+        <span class="service-card__more">くわしく見る</span>
+      </a>
+      <a href="services.html#prevention" class="service-card">
+        <h3 class="service-card__title">予防歯科</h3>
+        <p class="service-card__lead">痛くなる前に来る。それが一番の治療です。</p>
+        <span class="service-card__more">くわしく見る</span>
+      </a>
+      <a href="services.html#perio" class="service-card">
+        <h3 class="service-card__title">歯周病治療</h3>
+        <p class="service-card__lead">歯を失う原因、第1位。でも、防げます。</p>
+        <span class="service-card__more">くわしく見る</span>
+      </a>
+      <a href="services.html#whitening" class="service-card">
+        <h3 class="service-card__title">ホワイトニング</h3>
+        <p class="service-card__lead">あなたに似合う白さを。</p>
+        <span class="service-card__more">くわしく見る</span>
+      </a>
     </div>
   </div>
 </section>
@@ -279,6 +334,40 @@
 </section>
 
 
+<!-- ====== お知らせ（最新抜粋） ====== -->
+<section class="section" id="news-preview">
+  <div class="container">
+    <h2 class="section__title fade-in">お知らせ</h2>
+    <ul class="news-list fade-in">
+      <li class="news-list__item">
+        <a href="news.html" class="news-list__link">
+          <time class="news-list__date" datetime="2026-06-01">2026.06.01</time>
+          <span class="news-list__tag">お知らせ</span>
+          <span class="news-list__title">開院準備を進めています（仮）</span>
+        </a>
+      </li>
+      <li class="news-list__item">
+        <a href="news.html" class="news-list__link">
+          <time class="news-list__date" datetime="2026-05-20">2026.05.20</time>
+          <span class="news-list__tag">内覧会</span>
+          <span class="news-list__title">内覧会の開催を予定しています（仮）</span>
+        </a>
+      </li>
+      <li class="news-list__item">
+        <a href="news.html" class="news-list__link">
+          <time class="news-list__date" datetime="2026-05-10">2026.05.10</time>
+          <span class="news-list__tag">求人</span>
+          <span class="news-list__title">スタッフ募集のお知らせ（仮）</span>
+        </a>
+      </li>
+    </ul>
+    <div class="news-list__more-wrap fade-in">
+      <a href="news.html" class="btn btn--accent btn--sm">お知らせ一覧へ</a>
+    </div>
+  </div>
+</section>
+
+
 <!-- ====== お問い合わせ ====== -->
 <section class="section section--alt" id="contact">
   <div class="container">
@@ -346,7 +435,35 @@
 </section>
 
 
-<!-- ====== フッター ====== -->
+<!-- ====== 予約導線（_partials.html と同一・index ではフォームは #contact） ====== -->
+<section class="reserve" aria-labelledby="reserve-title">
+  <div class="container">
+    <h2 class="reserve__title" id="reserve-title">ご予約・お問い合わせ</h2>
+    <p class="reserve__lead">ご都合のよい方法でご連絡ください。相談だけでも大丈夫です。</p>
+    <div class="reserve__grid">
+      <a href="#" class="reserve__btn reserve__btn--epark" data-todo="EPARK予約の実URLに差し替え">
+        <span class="reserve__btn-label">WEB予約</span>
+        <span class="reserve__btn-sub">EPARK（準備中）</span>
+      </a>
+      <a href="#" class="reserve__btn reserve__btn--line" data-todo="LINE公式アカウントの実URLに差し替え">
+        <span class="reserve__btn-label">LINEで予約</span>
+        <span class="reserve__btn-sub">友だち追加（準備中）</span>
+      </a>
+      <a href="tel:0466XXXXXX" class="reserve__btn reserve__btn--tel">
+        <span class="reserve__btn-label">電話で予約</span>
+        <span class="reserve__btn-sub">0466-XX-XXXX（仮）</span>
+      </a>
+      <a href="#contact" class="reserve__btn reserve__btn--form">
+        <span class="reserve__btn-label">フォーム</span>
+        <span class="reserve__btn-sub">お問い合わせ</span>
+      </a>
+    </div>
+    <p class="reserve__note">※ WEB予約・LINE は開院準備中です。当面はお電話・フォームをご利用ください。（仮）</p>
+  </div>
+</section>
+
+
+<!-- ====== フッター（_partials.html と同一・変更時は全ページ反映） ====== -->
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
@@ -357,6 +474,19 @@
           <a href="tel:0466XXXXXX">0466-XX-XXXX</a>（仮）
         </p>
       </div>
+      <nav class="footer__nav" aria-label="フッターナビ">
+        <ul class="footer__nav-list">
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="dental-anxiety.html">通院をためらう方へ</a></li>
+          <li><a href="services.html">診療案内</a></li>
+          <li><a href="about.html">院長・当院紹介</a></li>
+          <li><a href="facility.html">院内紹介</a></li>
+          <li><a href="pricing.html">料金表</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="faq.html">よくあるご質問</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+        </ul>
+      </nav>
       <div class="footer__schedule">
         <table class="footer__schedule-table">
           <thead>
@@ -373,7 +503,7 @@
             </tr>
           </tbody>
         </table>
-        <p class="footer__note">△ 土曜午後は 14:00-17:00 ／ 休診: 水・日・祝</p>
+        <p class="footer__note">△ 土曜午後は 14:00-17:00 ／ 休診: 水・日・祝（仮）</p>
       </div>
     </div>
     <p class="footer__copy">&copy; 2026 辻堂がじゅまる歯科</p>

@@ -4,17 +4,17 @@
 
 /* --- カスタムプロパティ --- */
 :root {
-  --color-primary: #6B9E7D;
-  --color-primary-dark: #5A8A6B;
-  --color-primary-light: #EBF3EE;
-  --color-accent: #D4915E;
-  --color-accent-hover: #C07D4A;
+  --color-primary: #2C8FC9;
+  --color-primary-dark: #1F6FA0;
+  --color-primary-light: #E7F3FA;
+  --color-accent: #3BB4CC;
+  --color-accent-hover: #2E9AB0;
   --color-bg: #FFFFFF;
-  --color-bg-alt: #F9F7F4;
-  --color-bg-highlight: #EBF3EE;
-  --color-text: #3A3A3A;
-  --color-text-light: #777777;
-  --color-border: #E0DDD8;
+  --color-bg-alt: #F4F9FC;
+  --color-bg-highlight: #E7F3FA;
+  --color-text: #333A40;
+  --color-text-light: #6B7780;
+  --color-border: #DCE6EC;
   --color-white: #FFFFFF;
   --font-family: "Noto Sans JP", sans-serif;
   --font-display: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
@@ -228,7 +228,7 @@ ol {
   font-family: var(--font-display);
   font-size: 1.125rem;
   font-weight: 700;
-  color: #8B6914;
+  color: var(--color-primary-dark);
   letter-spacing: 0.02em;
 }
 
@@ -564,6 +564,158 @@ ol {
 }
 
 /* =============================================
+   トップ: ためらう方へ誘導バナー
+   ============================================= */
+.anxiety-banner {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, #D4E9F5 100%);
+  padding: 64px 0;
+}
+
+.anxiety-banner__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.anxiety-banner__lead {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.anxiety-banner__title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.anxiety-banner__text {
+  font-size: 0.9375rem;
+  line-height: 2;
+  margin-bottom: 28px;
+}
+
+/* =============================================
+   トップ: 診療カード
+   ============================================= */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 16px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: transform 0.15s ease, border-color var(--transition), box-shadow var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary);
+  color: var(--color-text);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.service-card__title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-primary-light);
+}
+
+.service-card__lead {
+  flex: 1;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+.service-card__more {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.service-card__more::after {
+  content: " →";
+}
+
+/* =============================================
+   お知らせ（一覧・抜粋共通）
+   ============================================= */
+.news-list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.news-list__item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.news-list__item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.news-list__link {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 18px 8px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: background-color var(--transition);
+}
+
+.news-list__link:hover {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+.news-list__date {
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.news-list__tag {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
+  padding: 3px 10px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.news-list__title {
+  font-size: 0.9375rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.news-list__more-wrap {
+  text-align: center;
+  margin-top: 32px;
+}
+
+/* =============================================
    医院情報
    ============================================= */
 .info__list {
@@ -806,6 +958,88 @@ ol {
 }
 
 /* =============================================
+   予約導線（EPARK / LINE / 電話 / フォーム）
+   ============================================= */
+.reserve {
+  padding: 64px 0;
+  background-color: var(--color-bg-highlight);
+  text-align: center;
+}
+
+.reserve__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.reserve__lead {
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+  margin-bottom: 32px;
+}
+
+.reserve__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.reserve__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 20px 12px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-border);
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, border-color var(--transition), box-shadow var(--transition);
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.reserve__btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  color: var(--color-text);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.reserve__btn-label {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.reserve__btn-sub {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
+
+.reserve__btn--epark {
+  border-color: var(--color-primary);
+}
+
+.reserve__btn--line {
+  border-color: #06C755;
+}
+
+.reserve__btn--tel {
+  border-color: var(--color-accent);
+}
+
+.reserve__note {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  margin-top: 24px;
+}
+
+/* =============================================
    フッター
    ============================================= */
 .footer {
@@ -819,6 +1053,26 @@ ol {
   justify-content: space-between;
   gap: 40px;
   margin-bottom: 32px;
+}
+
+.footer__info {
+  flex-shrink: 0;
+}
+
+.footer__nav-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 24px;
+}
+
+.footer__nav-list a {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+}
+
+.footer__nav-list a:hover {
+  color: var(--color-white);
 }
 
 .footer__name {
@@ -906,6 +1160,299 @@ ol {
 }
 
 /* =============================================
+   下層ページ共通: ページヒーロー
+   ============================================= */
+.page-hero {
+  margin-top: var(--header-height);
+  padding: 72px 0;
+  background-color: var(--color-bg-highlight);
+  text-align: center;
+}
+
+.page-hero--anxiety {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, #D4E9F5 100%);
+}
+
+.page-hero__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.page-hero__eyebrow {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin-bottom: 18px;
+}
+
+.page-hero__lead {
+  font-size: 1rem;
+  line-height: 2;
+  color: var(--color-text);
+}
+
+/* =============================================
+   下層ページ共通: パンくず
+   ============================================= */
+.breadcrumb {
+  margin-top: var(--header-height);
+  padding: 12px 0;
+  background-color: var(--color-bg-alt);
+  font-size: 0.75rem;
+}
+
+.breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: var(--color-text-light);
+}
+
+.breadcrumb__list li:not(:last-child)::after {
+  content: "›";
+  margin-left: 6px;
+  color: var(--color-text-light);
+}
+
+.breadcrumb__list a {
+  color: var(--color-primary-dark);
+}
+
+/* =============================================
+   ためらう方へ: お気持ちリスト / 導入
+   ============================================= */
+.anxiety-feelings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.anxiety-feelings__item {
+  position: relative;
+  padding: 20px 20px 20px 52px;
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.anxiety-feelings__item::before {
+  content: "?";
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 0.8125rem;
+}
+
+.anxiety-intro {
+  text-align: center;
+  margin-top: 36px;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+/* =============================================
+   ためらう方へ: 4つの約束
+   ============================================= */
+.promises {
+  display: grid;
+  gap: 20px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.promise {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px 28px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.promise__num {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 0.6;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.promise__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.promise__text {
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+  line-height: 1.9;
+}
+
+/* =============================================
+   下層ページ共通: 来院ステップ
+   ============================================= */
+.steps {
+  display: grid;
+  gap: 16px;
+  max-width: 760px;
+  margin: 0 auto;
+  counter-reset: step;
+}
+
+.steps__item {
+  position: relative;
+  padding: 22px 28px;
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+}
+
+.steps__num {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  padding: 3px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+
+.steps__title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.steps__text {
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+  line-height: 1.9;
+}
+
+/* =============================================
+   下層ページ共通: Q&A
+   ============================================= */
+.qa {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.qa__item {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.qa__q {
+  position: relative;
+  padding: 18px 24px 18px 56px;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: var(--color-primary-light);
+}
+
+.qa__q::before {
+  content: "Q";
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 0.875rem;
+}
+
+.qa__a {
+  position: relative;
+  padding: 18px 24px 18px 56px;
+  font-size: 0.9375rem;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+
+.qa__a::before {
+  content: "A";
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 0.875rem;
+}
+
+/* =============================================
+   下層ページ共通: ページ内CTA帯
+   ============================================= */
+.page-cta {
+  text-align: center;
+}
+
+.page-cta__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 44px 28px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  border-radius: var(--radius-lg);
+  color: var(--color-white);
+}
+
+.page-cta__title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.page-cta__text {
+  font-size: 0.9375rem;
+  opacity: 0.95;
+}
+
+/* =============================================
    レスポンシブ
    ============================================= */
 
@@ -932,8 +1479,10 @@ ol {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 40px 20px;
+    padding: 24px 20px 40px;
     z-index: 999;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     animation: fadeIn 0.25s ease-out;
   }
 
@@ -950,8 +1499,8 @@ ol {
 
   .header__nav.is-open .header__nav-list a {
     display: block;
-    padding: 18px 0;
-    font-size: 1.0625rem;
+    padding: 15px 0;
+    font-size: 1rem;
     text-align: center;
     border-bottom: 1px solid var(--color-border);
   }
@@ -965,6 +1514,14 @@ ol {
     gap: 32px;
     max-width: 480px;
     margin: 0 auto;
+  }
+
+  .service-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__nav-list {
+    grid-template-columns: 1fr;
   }
 
   .greeting {
@@ -1053,6 +1610,56 @@ ol {
     min-height: 320px;
   }
 
+  .reserve__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 420px;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .anxiety-banner__title {
+    font-size: 1.375rem;
+  }
+
+  .news-list__title {
+    min-width: 100%;
+  }
+
+  .page-hero {
+    padding: 48px 0;
+  }
+
+  .page-hero__title {
+    font-size: 1.5rem;
+  }
+
+  .page-hero__lead {
+    font-size: 0.9375rem;
+  }
+
+  .anxiety-feelings {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .promise {
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 22px;
+  }
+
+  .promise__num {
+    font-size: 1.5rem;
+  }
+
+  .page-cta__title {
+    font-size: 1.1875rem;
+  }
+
   .btn--lg {
     padding: 14px 32px;
     font-size: 0.9375rem;
@@ -1093,7 +1700,7 @@ ol {
   }
 
   .mobile-bar__btn--tel:hover {
-    background-color: #ddeee3;
+    background-color: #D4E9F5;
     color: var(--color-primary-dark);
   }
 
