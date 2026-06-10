@@ -17,7 +17,7 @@
 
 | # | 用途 | 現在の仮ファイル | 差し替え目印（HTML検索） | alt 本番想定 | 状態 |
 |---|------|----------------|----------------------|-------------|------|
-| 1 | ヒーロー背景（院内/外観イメージ） | `images/hero-director.webp` | `class="hero__bg"` | 辻堂がじゅまる歯科の院内 | 仮（流用） |
+| 1 | ヒーロー背景（院内/外観イメージ） | `images/hero-director.webp` | `class="hero__bg"` | 辻堂がじゅまる歯科の院内 | 仮（AIプレビュー・要実写） |
 | 2 | 院長写真（ごあいさつ） | `images/director-profile.webp` | `class="greeting__photo"` 内 `<img>` | 院長 桑田 淳 | 仮（流用・要本番ポートレート） |
 
 ## 通院をためらう方へ（dental-anxiety.html）
@@ -45,12 +45,12 @@
 
 | # | 用途 | 現在の仮ファイル | 差し替え目印 | alt 本番想定 | 状態 |
 |---|------|----------------|------------|-------------|------|
-| 5b | 外観（院内紹介 冒頭） | `images/hero-exterior.svg` | `data-img="facility-exterior"` | 辻堂がじゅまる歯科の外観 | 仮（SVG） |
-| 6 | 受付 | `images/clinic-reception.svg` | `data-img="reception"` | 辻堂がじゅまる歯科の受付 | 仮（SVG） |
-| 7 | 待合室 | `images/clinic-reception.svg` | `data-img="waiting"` | 明るく静かな待合室 | 仮（SVG） |
-| 8 | 診療室 | `images/clinic-room.svg` | `data-img="treatment"` | 半個室の診療室 | 仮（SVG） |
-| 9 | カウンセリングルーム | `images/clinic-room.svg` | `data-img="counseling"` | 個室のカウンセリングルーム | 仮（SVG） |
-| 10 | 設備（レントゲン等） | `images/clinic-room.svg` | `data-img="equipment"` | 被ばく量の少ないレントゲン | 仮（SVG） |
+| 5b | 外観（院内紹介 冒頭） | `images/facility-exterior.webp` | `data-img="facility-exterior"` | 辻堂がじゅまる歯科の外観 | 仮（AIプレビュー・要実写） |
+| 6 | 受付 | `images/facility-reception.webp` | `data-img="reception"` | 辻堂がじゅまる歯科の受付 | 仮（AIプレビュー・要実写） |
+| 7 | 待合室 | `images/facility-waiting.webp` | `data-img="waiting"` | 明るく静かな待合室 | 仮（AIプレビュー・要実写） |
+| 8 | 診療室 | `images/facility-treatment.webp` | `data-img="treatment"` | 半個室の診療室 | 仮（AIプレビュー・要実写） |
+| 9 | カウンセリングルーム | `images/facility-counseling.webp` | `data-img="counseling"` | 個室のカウンセリングルーム | 仮（AIプレビュー・要実写） |
+| 10 | 設備（レントゲン等） | `images/facility-equipment.webp` | `data-img="equipment"` | 被ばく量の少ないレントゲン | 仮（AIプレビュー・要実写） |
 
 ## アクセス（access.html）
 
