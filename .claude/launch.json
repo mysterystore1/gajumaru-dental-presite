@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "presite",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "C:/work/projects/gajumaru-dental-presite", "-l", "8080", "--no-clipboard"],
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-X", "utf8", "-m", "http.server", "8080", "--directory", "C:/work/projects/gajumaru-dental-presite"],
       "port": 8080
     }
   ]

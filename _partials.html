@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  _partials.html — 共通部品 SSOT（Single Source Of Truth / コピー元正本）
+  ============================================================================
+
+  ■ これは何か
+    辻堂がじゅまる歯科サイトの「ヘッダー / フッター / モバイルバー / 予約導線」を
+    まとめた正本ファイル。Node を使わない静的サイト（DEC-002 / DEC-004）のため、
+    SSI やテンプレートエンジンでの共通化ができない。よって各ページに HTML を
+    コピー複製して使う。
+
+  ■ 変更したら必ず全ページへ反映（最重要ルール）
+    ヘッダーのナビ項目・電話番号・住所・診療時間・フッターNAP 等の共通要素を
+    変更したら、このファイルを直してから、下記すべてのページの該当ブロックへ
+    手動で同じ内容を反映すること。1ファイルでも漏らすと表記ゆれ＝MEOのNAP不一致。
+
+    反映先ページ（フラットURL構成 / ルート直下）:
+      - index.html            （トップ）
+      - dental-anxiety.html   （通院をためらう方へ）
+      - services.html         （診療案内）
+      - about.html            （院長・当院紹介）
+      - facility.html         （院内紹介）
+      - pricing.html          （料金表）
+      - access.html           （アクセス）
+      - faq.html              （よくある質問）
+      - news.html             （お知らせ一覧）
+      - news/ 配下の各記事     （記事雛形 PAGE_TEMPLATE_NEWS.html ベース）
+
+  ■ ページごとに必ず差し替える箇所
+    1. <nav> 内の現在ページのリンクに aria-current="page" を付ける（任意・現在地表示）。
+    2. ルート直下以外（news/ 配下の記事）からは、href を "../xxx.html" のように
+       1階層上げる。js/main.js / css/style.css の参照も "../" を付ける。
+
+  ■ NAP（医院名 / 住所 / 電話）一括置換用の固定文字列（実データ確定後に置換）
+    - 医院名 : 辻堂がじゅまる歯科
+    - 住所   : 〒251-0047 神奈川県藤沢市辻堂1-00-00（仮）
+    - 電話表示: 0466-XX-XXXX
+    - 電話link: tel:0466XXXXXX
+    確定後はこの4文字列を全ページで一括置換すれば NAP 統一が保てる。
+
+  ※ このファイル自体は公開ページではない（ブラウザ確認用に最小限の体裁のみ）。
+  ============================================================================
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>_partials.html（共通部品 正本・非公開）</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========================================================================
+     [PARTIAL: HEADER] ヘッダー
+     - ロゴは index.html へ。ナビは9ページ構成。
+     - 現在ページのリンクには aria-current="page" を付与（各ページで差し替え）。
+     ======================================================================== -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">
+      <img src="images/logo.jpg" alt="辻堂がじゅまる歯科" class="header__logo-img">
+      <span class="header__logo-text">辻堂がじゅまる歯科</span>
+    </a>
+
+    <nav class="header__nav" id="nav">
+      <ul class="header__nav-list">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="dental-anxiety.html">通院をためらう方へ</a></li>
+        <li><a href="services.html">診療案内</a></li>
+        <li><a href="about.html">院長・当院</a></li>
+        <li><a href="facility.html">院内</a></li>
+        <li><a href="pricing.html">料金</a></li>
+        <li><a href="access.html">アクセス</a></li>
+        <li><a href="faq.html">よくあるご質問</a></li>
+        <li><a href="news.html">お知らせ</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a href="tel:0466XXXXXX" class="header__tel">
+        <svg class="header__tel-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>0466-XX-XXXX</span>
+      </a>
+      <a href="dental-anxiety.html" class="header__cta btn btn--accent btn--sm">怖い方へ</a>
+    </div>
+
+    <button class="header__hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+      <span class="header__hamburger-line"></span>
+      <span class="header__hamburger-line"></span>
+      <span class="header__hamburger-line"></span>
+    </button>
+  </div>
+</header>
+
+
+<!-- ========================================================================
+     [PARTIAL: RESERVE-CTA] 予約導線ブロック（EPARK / LINE / 電話 / フォーム）
+     - 各ページ下部（フッター直前）に差し込む想定。
+     - EPARK / LINE は実URL未確定のため href="#" + data-todo。確定後に置換。
+     - 電話は tel:。フォームはトップの #contact へアンカー（他ページからは index.html#contact）。
+     - ルート直下ページ用。news/ 配下からは index.html を ../index.html に変える。
+     ======================================================================== -->
+<section class="reserve" aria-labelledby="reserve-title">
+  <div class="container">
+    <h2 class="reserve__title" id="reserve-title">ご予約・お問い合わせ</h2>
+    <p class="reserve__lead">ご都合のよい方法でご連絡ください。相談だけでも大丈夫です。</p>
+    <div class="reserve__grid">
+      <a href="#" class="reserve__btn reserve__btn--epark" data-todo="EPARK予約の実URLに差し替え">
+        <span class="reserve__btn-label">WEB予約</span>
+        <span class="reserve__btn-sub">EPARK（準備中）</span>
+      </a>
+      <a href="#" class="reserve__btn reserve__btn--line" data-todo="LINE公式アカウントの実URLに差し替え">
+        <span class="reserve__btn-label">LINEで予約</span>
+        <span class="reserve__btn-sub">友だち追加（準備中）</span>
+      </a>
+      <a href="tel:0466XXXXXX" class="reserve__btn reserve__btn--tel">
+        <span class="reserve__btn-label">電話で予約</span>
+        <span class="reserve__btn-sub">0466-XX-XXXX（仮）</span>
+      </a>
+      <a href="index.html#contact" class="reserve__btn reserve__btn--form">
+        <span class="reserve__btn-label">フォーム</span>
+        <span class="reserve__btn-sub">お問い合わせ</span>
+      </a>
+    </div>
+    <p class="reserve__note">※ WEB予約・LINE は開院準備中です。当面はお電話・フォームをご利用ください。（仮）</p>
+  </div>
+</section>
+
+
+<!-- ========================================================================
+     [PARTIAL: FOOTER] フッター
+     - NAP（医院名 / 住所 / 電話）は全ページ完全一致。診療時間も共通。
+     - フッター内リンクで全ページへ誘導（クロール性・回遊性）。
+     ======================================================================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__info">
+        <p class="footer__name">辻堂がじゅまる歯科</p>
+        <p class="footer__address">〒251-0047 神奈川県藤沢市辻堂1-00-00（仮）</p>
+        <p class="footer__tel">
+          <a href="tel:0466XXXXXX">0466-XX-XXXX</a>（仮）
+        </p>
+      </div>
+      <nav class="footer__nav" aria-label="フッターナビ">
+        <ul class="footer__nav-list">
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="dental-anxiety.html">通院をためらう方へ</a></li>
+          <li><a href="services.html">診療案内</a></li>
+          <li><a href="about.html">院長・当院紹介</a></li>
+          <li><a href="facility.html">院内紹介</a></li>
+          <li><a href="pricing.html">料金表</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="faq.html">よくあるご質問</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+        </ul>
+      </nav>
+      <div class="footer__schedule">
+        <table class="footer__schedule-table">
+          <thead>
+            <tr>
+              <th></th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9:30-13:00</td><td>●</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>-</td>
+            </tr>
+            <tr>
+              <td>14:30-18:30</td><td>●</td><td>●</td><td>-</td><td>●</td><td>●</td><td>△</td><td>-</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="footer__note">△ 土曜午後は 14:00-17:00 ／ 休診: 水・日・祝（仮）</p>
+      </div>
+    </div>
+    <p class="footer__copy">&copy; 2026 辻堂がじゅまる歯科</p>
+  </div>
+</footer>
+
+
+<!-- ========================================================================
+     [PARTIAL: MOBILE-BAR] モバイル固定フッター
+     - 767px以下で表示。電話 / 予約(怖い方へ) / 問い合わせ の3枠。
+     ======================================================================== -->
+<div class="mobile-bar">
+  <a href="tel:0466XXXXXX" class="mobile-bar__btn mobile-bar__btn--tel">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    電話する
+  </a>
+  <a href="index.html#contact" class="mobile-bar__btn mobile-bar__btn--contact">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    お問い合わせ
+  </a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
