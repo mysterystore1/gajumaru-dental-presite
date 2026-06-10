@@ -1192,6 +1192,41 @@ ol {
   background: linear-gradient(135deg, var(--color-primary-light) 0%, #F0DAC8 100%);
 }
 
+/* 画像背景型ヒーロー（背景写真＋白半透明オーバーレイ＋パンくず） */
+.page-hero--image {
+  margin-top: var(--header-height);
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.page-hero__overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 250, 246, 0.82);
+  padding: 60px 0;
+}
+.breadcrumb {
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  margin-bottom: 18px;
+}
+.breadcrumb a {
+  color: var(--color-primary-dark);
+}
+.breadcrumb span {
+  margin: 0 7px;
+  color: var(--color-border);
+}
+
 .page-hero__inner {
   max-width: 720px;
   margin: 0 auto;
