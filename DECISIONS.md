@@ -14,3 +14,9 @@
 - Decision: プレサイトは素の HTML/CSS/JS のまま運用（Astro 等は本番 kuwara-dental-v2 のみ）
 - Reason: プレサイトは小規模・短命。ビルド不要で誰でも `index.html` を開けば編集・確認できる
 - Impact: Node 不要。GitHub Pages へ push するだけでデプロイ完了
+
+## [DEC-003] 本番サイトはプレサイトを育てる方式に（Astro版 kuwara-dental-v2 は退役）
+- Date: 2026-06-09
+- Decision: 辻堂がじゅまる歯科の本番サイトを、別の Astro 実装（kuwara-dental-v2 / 新美クリニック流用）で作るのをやめ、このプレサイトリポ（gajumaru-dental-presite）のデザイン・トンマナをベースに、同リポをページ追加して本番へ育てる
+- Reason: 公開URL `gajumaru-dental.com`（CNAME設定済み）をそのまま使いたい。プレサイトのデザインが良く流用したい。リポ統合で管理がシンプル（ドメイン移行・新規セットアップ不要）
+- Impact: kuwara-dental-v2（Astro/18ページ・新美クリニック）は退役（参照用に残す）。本番も静的 HTML/CSS/JS で構築。リポ名は `-presite` のままだが公開URLとは無関係（必要なら `gajumaru-dental` に rename 可、URLは自動リダイレクト）

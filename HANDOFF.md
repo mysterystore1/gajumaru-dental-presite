@@ -14,9 +14,10 @@
 - 最新コミット `db69181`: ヒーロー背景を院内イメージ(`hero-director.png`)に、院長写真を `director-profile.png` に差し替え。`og:image` も更新
 - 旧画像 `doctor.png` / `hero-exterior.png` は最適化済みだが現在は未使用
 - 2026-06-09: 独自ドメイン `gajumaru-dental.com` を CNAME 設定（GitHub web 経由）。DNS 反映状況は要確認
+- 2026-06-09 方針転換(DEC-003): 本番サイトはこのプレサイトリポを育てて作る。Astro版 kuwara-dental-v2(新美クリニック)は退役。URL `gajumaru-dental.com` 維持
 
 ## 次の一手
-- （ここに次にやることを書く）
+- 本番化の第一歩: 追加ページの構成を決める（診療案内 / 医師紹介 / アクセス / 予約 等）。プレサイトのデザイン・トンマナを踏襲
 - 参考メモ: 院長・ヒーロー画像が 1.9〜2.3MB と重い。Web表示用に圧縮（WebP化など）の余地あり
 
 ## 注意・前提
