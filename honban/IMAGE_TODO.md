@@ -37,12 +37,15 @@
 
 | # | 用途 | 現在の仮ファイル | 差し替え目印 | alt 本番想定 | 状態 |
 |---|------|----------------|------------|-------------|------|
-| 5 | 院長ポートレート | `images/director-profile.webp` | `class="about-director__photo"` 内 `<img>` | 院長 桑田 淳 | 仮（流用・要本番ポートレート） |
+| 5 | 院長ポートレート | `images/director-profile.webp` | `data-img="about-director"` 内 `<img>` | 院長 桑田 淳 | 仮（流用・要本番ポートレート） |
 
 ## 院内紹介（facility.html）★写真到着で最優先差し替え（ページ作成済・枠稼働中）
 
+> ※ キッズスペースは無し（医院に存在しない）。facilityに枠を作らないこと。
+
 | # | 用途 | 現在の仮ファイル | 差し替え目印 | alt 本番想定 | 状態 |
 |---|------|----------------|------------|-------------|------|
+| 5b | 外観（院内紹介 冒頭） | `images/hero-exterior.svg` | `data-img="facility-exterior"` | 辻堂がじゅまる歯科の外観 | 仮（SVG） |
 | 6 | 受付 | `images/clinic-reception.svg` | `data-img="reception"` | 辻堂がじゅまる歯科の受付 | 仮（SVG） |
 | 7 | 待合室 | `images/clinic-reception.svg` | `data-img="waiting"` | 明るく静かな待合室 | 仮（SVG） |
 | 8 | 診療室 | `images/clinic-room.svg` | `data-img="treatment"` | 半個室の診療室 | 仮（SVG） |

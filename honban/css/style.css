@@ -1571,6 +1571,74 @@ ol {
 }
 
 /* =============================================
+   院長・当院: プロフィール / 当院の考え
+   ============================================= */
+.profile-list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.profile-list__row {
+  display: flex;
+  gap: 24px;
+  padding: 18px 4px;
+  border-top: 1px solid var(--color-border);
+}
+
+.profile-list__row:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.profile-list__term {
+  flex: 0 0 96px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  font-size: 0.9375rem;
+}
+
+.profile-list__desc {
+  flex: 1;
+  font-size: 0.9375rem;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+
+.profile-note {
+  max-width: 720px;
+  margin: 16px auto 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+}
+
+.policy-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.policy-item {
+  padding: 28px 4px;
+  border-top: 1px solid var(--color-border);
+}
+
+.policy-item:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.policy-item__title {
+  font-family: var(--font-display);
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 10px;
+}
+
+.policy-item__text {
+  font-size: 0.9375rem;
+  line-height: 1.95;
+  color: var(--color-text);
+}
+
+/* =============================================
    下層ページ共通: ページ内CTA帯
    ============================================= */
 .page-cta {
