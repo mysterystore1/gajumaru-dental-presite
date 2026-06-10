@@ -4,17 +4,18 @@
 
 /* --- カスタムプロパティ --- */
 :root {
-  --color-primary: #2C8FC9;
-  --color-primary-dark: #1F6FA0;
-  --color-primary-light: #E7F3FA;
-  --color-accent: #3BB4CC;
-  --color-accent-hover: #2E9AB0;
+  /* がじゅまる暖色パレット（薄めのテラコッタ／アプリコット系） */
+  --color-primary: #C56A38;
+  --color-primary-dark: #9C5026;
+  --color-primary-light: #F7E8DB;
+  --color-accent: #B85E2A;
+  --color-accent-hover: #9C5026;
   --color-bg: #FFFFFF;
-  --color-bg-alt: #F4F9FC;
-  --color-bg-highlight: #E7F3FA;
-  --color-text: #333A40;
-  --color-text-light: #5A636B;
-  --color-border: #DCE6EC;
+  --color-bg-alt: #FBF6F0;
+  --color-bg-highlight: #F7E8DB;
+  --color-text: #3A352F;
+  --color-text-light: #6E645A;
+  --color-border: #ECE0D4;
   --color-white: #FFFFFF;
   --font-family: "Noto Sans JP", sans-serif;
   --font-display: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
@@ -586,7 +587,7 @@ ol {
    トップ: ためらう方へ誘導バナー
    ============================================= */
 .anxiety-banner {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, #D4E9F5 100%);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, #F0DAC8 100%);
   padding: 64px 0;
 }
 
@@ -1188,7 +1189,7 @@ ol {
 }
 
 .page-hero--anxiety {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, #D4E9F5 100%);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, #F0DAC8 100%);
 }
 
 .page-hero__inner {
@@ -2043,7 +2044,7 @@ ol {
   }
 
   .mobile-bar__btn--tel:hover {
-    background-color: #D4E9F5;
+    background-color: #F0DAC8;
     color: var(--color-primary-dark);
   }
 
