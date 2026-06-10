@@ -4,17 +4,17 @@
 
 /* --- カスタムプロパティ --- */
 :root {
-  --color-primary: #6B9E7D;
-  --color-primary-dark: #5A8A6B;
-  --color-primary-light: #EBF3EE;
-  --color-accent: #D4915E;
-  --color-accent-hover: #C07D4A;
+  --color-primary: #2C8FC9;
+  --color-primary-dark: #1F6FA0;
+  --color-primary-light: #E7F3FA;
+  --color-accent: #3BB4CC;
+  --color-accent-hover: #2E9AB0;
   --color-bg: #FFFFFF;
-  --color-bg-alt: #F9F7F4;
-  --color-bg-highlight: #EBF3EE;
-  --color-text: #3A3A3A;
-  --color-text-light: #777777;
-  --color-border: #E0DDD8;
+  --color-bg-alt: #F4F9FC;
+  --color-bg-highlight: #E7F3FA;
+  --color-text: #333A40;
+  --color-text-light: #6B7780;
+  --color-border: #DCE6EC;
   --color-white: #FFFFFF;
   --font-family: "Noto Sans JP", sans-serif;
   --font-display: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
@@ -228,7 +228,7 @@ ol {
   font-family: var(--font-display);
   font-size: 1.125rem;
   font-weight: 700;
-  color: #8B6914;
+  color: var(--color-primary-dark);
   letter-spacing: 0.02em;
 }
 
@@ -567,7 +567,7 @@ ol {
    トップ: ためらう方へ誘導バナー
    ============================================= */
 .anxiety-banner {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, #F4EDE3 100%);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, #D4E9F5 100%);
   padding: 64px 0;
 }
 
@@ -1170,7 +1170,7 @@ ol {
 }
 
 .page-hero--anxiety {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, #F4EDE3 100%);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, #D4E9F5 100%);
 }
 
 .page-hero__inner {
@@ -1700,7 +1700,7 @@ ol {
   }
 
   .mobile-bar__btn--tel:hover {
-    background-color: #ddeee3;
+    background-color: #D4E9F5;
     color: var(--color-primary-dark);
   }
 
