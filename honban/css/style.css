@@ -552,6 +552,12 @@ ol {
     height: 44px;
   }
 }
+/* .mobile-bar（下部固定バー・767px以下）とTOPボタンの重なり回避 */
+@media (max-width: 767px) {
+  .floating-actions {
+    bottom: calc(64px + env(safe-area-inset-bottom) + 10px);
+  }
+}
 
 .header__actions {
   display: flex;
