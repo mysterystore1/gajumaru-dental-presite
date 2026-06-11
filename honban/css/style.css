@@ -1175,7 +1175,7 @@ ol {
 .form-textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(107, 158, 125, 0.15);
+  box-shadow: 0 0 0 3px rgba(197, 106, 56, 0.16);
 }
 
 .form-input::placeholder,
