@@ -21,6 +21,15 @@ SPECS = {
     "treatment":  ("facility-treatment.webp", 1000, 625),  # facility 診療室
     "counseling": ("facility-counseling.webp",1000, 625),  # facility カウンセリング
     "equipment":  ("facility-equipment.webp", 1000, 625),  # facility 設備
+    # --- 生成イラスト素材（正方形・cream背景込み）---
+    "feat-family":     ("feature-family.webp",   900, 900),  # index 当院の特徴01 家族で通いやすい環境
+    "feat-consult":    ("feature-consult.webp",  900, 900),  # index 当院の特徴02 相談しやすい診療
+    "feat-access":     ("feature-access.webp",   900, 900),  # index 当院の特徴03 通いやすい立地
+    "svc-general":     ("svc-general.webp",      600, 600),  # services 一般歯科
+    "svc-pediatric":   ("svc-pediatric.webp",    600, 600),  # services 小児歯科
+    "svc-prevention":  ("svc-prevention.webp",   600, 600),  # services 予防歯科
+    "svc-perio":       ("svc-perio.webp",        600, 600),  # services 歯周病治療
+    "svc-whitening":   ("svc-whitening.webp",    600, 600),  # services ホワイトニング
 }
 
 def main():
