@@ -1388,6 +1388,47 @@ ol {
   line-height: 1.9;
 }
 
+/* 初診時の持ち物（罫線＋余白型） */
+.visit-belongings {
+  max-width: 760px;
+  margin: 36px auto 0;
+}
+
+.visit-belongings__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.visit-belongings__list {
+  list-style: none;
+  display: grid;
+  gap: 0;
+}
+
+.visit-belongings__list li {
+  position: relative;
+  padding: 12px 4px 12px 22px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9375rem;
+  color: var(--color-text);
+}
+
+.visit-belongings__list li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 20px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background-color: var(--color-accent);
+}
+
+.visit-belongings__list li:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
 /* =============================================
    下層ページ共通: Q&A
    ============================================= */
