@@ -67,3 +67,31 @@ python honban/_tools/apply_image.py honban/images/_incoming/svc-general.png    s
 ```
 → webp化・サイズ統一して `honban/images/` へ。その後 index/services のマークアップ・CSSへ配置し、実機確認してpush。
 スロット定義は `honban/_tools/apply_image.py` の SPECS 参照。
+
+---
+
+## Batch 3: 散らす装飾素材（透過PNG・IROHAの魚に相当）
+各セクションの隅・余白に**小さく散らす**ためのモチーフ。IROHA等が魚/泡/さんごを散らすのと同じ手法を、**ガジュマル＝木・暖色の世界観**で。
+- **超重要**: **背景を透過(PNG alpha)で書き出す**（背景色を塗らない）。タイル型のbatch1/2とは違い、こちらはモチーフ単体を切り抜いた透過素材。
+- サイズ: 各 512〜768px 正方形、余白込み。やわらかい水彩タッチ。文字なし。
+- 保存先: `honban/images/_incoming/`、ファイル名は下記。
+
+### 9. deco-leaf.png
+*Single soft watercolor gajumaru (banyan) leaf sprig, warm terracotta/apricot/leaf-green tones, gentle, transparent background (PNG alpha), no background fill, no text.*
+
+### 10. deco-leaf-cluster.png
+*Small cluster of 3-4 watercolor gajumaru leaves on a thin twig, warm palette, soft, transparent background, no text.*
+
+### 11. deco-root.png
+*A few slender hanging gajumaru aerial roots (気根) with tiny leaves, watercolor, warm brown/terracotta, transparent background, no text.*
+
+### 12. deco-bird.png
+*A small cute songbird perched, soft watercolor, warm apricot/terracotta tones (not blue), gentle and calm, transparent background, no text.*
+
+### 13. deco-flower.png
+*A single small southern/tropical flower in warm terracotta-apricot tones (not pink/blue), soft watercolor, transparent background, no text.*
+
+### 14. deco-light.png
+*A soft warm dappled-light (komorebi) glow blob, very soft apricot/cream, semi-transparent watercolor, transparent background, for layering as gentle light accents, no text.*
+
+加工(Claude側): 透過維持のため通常のapply_imageではなくClaude Codeがalpha保持で配置（webp alpha or PNGのまま）。CSSで各セクション隅に低〜中opacityで散らす。
