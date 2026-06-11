@@ -1261,33 +1261,6 @@ ol {
 }
 
 /* =============================================
-   下層ページ共通: パンくず
-   ============================================= */
-.breadcrumb {
-  margin-top: var(--header-height);
-  padding: 12px 0;
-  background-color: var(--color-bg-alt);
-  font-size: 0.75rem;
-}
-
-.breadcrumb__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  color: var(--color-text-light);
-}
-
-.breadcrumb__list li:not(:last-child)::after {
-  content: "›";
-  margin-left: 6px;
-  color: var(--color-text-light);
-}
-
-.breadcrumb__list a {
-  color: var(--color-primary-dark);
-}
-
-/* =============================================
    ためらう方へ: お気持ちリスト / 導入
    ============================================= */
 .anxiety-feelings {
