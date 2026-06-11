@@ -2447,3 +2447,26 @@ ol {
     opacity: 1;
   }
 }
+
+/* =============================================
+   アクセシビリティ: 動きの抑制（prefers-reduced-motion）
+   - スムーススクロールと全transition/animationを無効化
+   - fade-in はスクロール到達を待たず常時表示
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .fade-in {
+    opacity: 1;
+    transform: none;
+  }
+}
