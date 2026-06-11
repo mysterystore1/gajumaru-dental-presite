@@ -1623,6 +1623,17 @@ ol {
   line-height: 1.2;
 }
 
+.promise__icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+}
+
+.promise__body {
+  flex: 1;
+  min-width: 0;
+}
+
 .promise__title {
   font-size: 1.125rem;
   font-weight: 700;
