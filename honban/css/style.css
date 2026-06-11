@@ -73,10 +73,10 @@ textarea:focus-visible {
   border-radius: 2px;
 }
 
-/* 準備中の予約ボタン（EPARK/LINE）は押下不可に */
+/* 準備中の予約ボタン（EPARK/LINE）は押下不可に（ブランド色は読めるようdim緩和） */
 .reserve__btn--epark,
 .reserve__btn--line {
-  opacity: 0.55;
+  opacity: 0.78;
   pointer-events: none;
   cursor: not-allowed;
 }
@@ -1252,16 +1252,48 @@ ol {
   color: var(--color-text-light);
 }
 
+/* 予約ボタンの識別アイコン */
+.reserve__btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 4px;
+}
+.reserve__btn-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
 .reserve__btn--epark {
   border-color: var(--color-primary);
 }
+.reserve__btn--epark .reserve__btn-icon {
+  color: var(--color-primary);
+}
 
+/* LINE: 公式グリーンの塗りボタンで一発識別 */
 .reserve__btn--line {
+  background-color: #06C755;
   border-color: #06C755;
+  color: var(--color-white);
+}
+.reserve__btn--line .reserve__btn-icon {
+  color: var(--color-white);
+}
+.reserve__btn--line .reserve__btn-sub {
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .reserve__btn--tel {
   border-color: var(--color-accent);
+}
+.reserve__btn--tel .reserve__btn-icon {
+  color: var(--color-accent);
+}
+.reserve__btn--form .reserve__btn-icon {
+  color: var(--color-text-light);
 }
 
 .reserve__note {
