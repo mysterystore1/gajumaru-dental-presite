@@ -143,12 +143,14 @@ ol {
 }
 
 .section__title {
+  font-family: var(--font-display);
   font-size: 1.625rem;
   font-weight: 700;
   line-height: 1.45;
   text-align: center;
   margin-bottom: 48px;
-  letter-spacing: 0.04em;
+  font-feature-settings: "palt";
+  letter-spacing: 0.06em;
   position: relative;
 }
 
