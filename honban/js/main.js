@@ -182,14 +182,35 @@ document.addEventListener('DOMContentLoaded', () => {
     start();
   });
 
-  /* --- 浮遊アクション(WEB予約 / ページTOP) --- */
+  /* --- 右端固定の予約レール（常時表示・PC） --- */
+  if (!document.querySelector('.side-reserve')) {
+    const cal = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
+    const line = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.5c-5 0-9 3.2-9 7.2 0 3.6 3.2 6.6 7.5 7.1.3.05.7.2.8.4.07.25.05.6.02.85l-.12.74c-.04.23-.18.9.8.5 1-.42 5.3-3.1 7.2-5.3 1.3-1.45 1.9-2.93 1.9-4.3 0-4-4-7.2-9.1-7.2Z"/></svg>';
+    const phone = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
+    const rail = document.createElement('div');
+    rail.className = 'side-reserve';
+    rail.innerHTML =
+      '<a href="#reserve" class="side-reserve__btn side-reserve__btn--web">' + cal + '<span>WEB予約</span></a>' +
+      '<a href="#reserve" class="side-reserve__btn side-reserve__btn--line">' + line + '<span>LINE</span></a>' +
+      '<a href="tel:0466XXXXXX" class="side-reserve__btn side-reserve__btn--tel">' + phone + '<span>電話</span></a>';
+    document.body.appendChild(rail);
+
+    rail.querySelectorAll('a[href="#reserve"]').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        const target = document.getElementById('reserve');
+        if (!target) return;
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.pageYOffset - header.offsetHeight;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+  }
+
+  /* --- 浮遊TOPボタン（スクロール後に表示） --- */
   if (!document.querySelector('.floating-actions')) {
     const wrap = document.createElement('div');
     wrap.className = 'floating-actions';
     wrap.innerHTML =
-      '<a href="#reserve" class="floating-actions__reserve">' +
-        '<svg class="floating-actions__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>' +
-        '<span>WEB予約</span></a>' +
       '<button type="button" class="floating-actions__top" aria-label="ページ上部へ戻る">' +
         '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>' +
         '<span>TOP</span></button>';
@@ -197,15 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const topBtn = wrap.querySelector('.floating-actions__top');
     topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    const reserve = wrap.querySelector('.floating-actions__reserve');
-    reserve.addEventListener('click', (e) => {
-      const target = document.getElementById('reserve');
-      if (!target) return;
-      e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.pageYOffset - header.offsetHeight;
-      window.scrollTo({ top, behavior: 'smooth' });
-    });
 
     const toggleTop = () => wrap.classList.toggle('is-scrolled', window.scrollY > 400);
     window.addEventListener('scroll', toggleTop, { passive: true });
