@@ -73,9 +73,8 @@ textarea:focus-visible {
   border-radius: 2px;
 }
 
-/* 準備中の予約ボタン（EPARK/LINE）は押下不可に（ブランド色は読めるようdim緩和） */
-.reserve__btn--epark,
-.reserve__btn--line {
+/* 準備中の予約ボタン（WEB予約）は押下不可に（ブランド色は読めるようdim緩和） */
+.reserve__btn--epark {
   opacity: 0.78;
   pointer-events: none;
   cursor: not-allowed;
@@ -467,7 +466,6 @@ ol {
   height: 23px;
 }
 .side-reserve__btn--web { background-color: var(--color-accent); }
-.side-reserve__btn--line { background-color: #06C755; }
 .side-reserve__btn--tel { background-color: var(--color-primary-dark); }
 .side-reserve__btn:hover {
   width: 72px;
@@ -758,56 +756,6 @@ ol {
 
 .greeting__text p:last-child {
   margin-bottom: 0;
-}
-
-/* =============================================
-   内覧会のご案内
-   ============================================= */
-.open-house {
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.open-house__text {
-  margin-bottom: 32px;
-  font-size: 0.9375rem;
-  line-height: 2;
-}
-
-.open-house__details {
-  text-align: left;
-  max-width: 400px;
-  margin: 0 auto 24px;
-}
-
-.open-house__row {
-  display: flex;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(107, 158, 125, 0.2);
-}
-
-.open-house__row dt {
-  font-weight: 700;
-  width: 100px;
-  flex-shrink: 0;
-  color: var(--color-primary-dark);
-  font-size: 0.875rem;
-}
-
-.open-house__row dd {
-  color: var(--color-text-light);
-  font-size: 0.875rem;
-}
-
-.open-house__note {
-  font-size: 0.8125rem;
-  color: var(--color-text-light);
-  margin-bottom: 24px;
-}
-
-.open-house__cta {
-  margin-top: 8px;
 }
 
 /* =============================================
@@ -1327,19 +1275,6 @@ ol {
 }
 .reserve__btn--epark .reserve__btn-icon {
   color: var(--color-primary);
-}
-
-/* LINE: 公式グリーンの塗りボタンで一発識別 */
-.reserve__btn--line {
-  background-color: #06C755;
-  border-color: #06C755;
-  color: var(--color-white);
-}
-.reserve__btn--line .reserve__btn-icon {
-  color: var(--color-white);
-}
-.reserve__btn--line .reserve__btn-sub {
-  color: rgba(255, 255, 255, 0.92);
 }
 
 .reserve__btn--tel {
