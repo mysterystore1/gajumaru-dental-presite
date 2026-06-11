@@ -1265,12 +1265,24 @@ ol {
   width: 100%;
   height: 100%;
 }
+.reserve__btn-icon img {
+  height: 100%;
+  width: auto;
+}
 
 .reserve__btn--epark {
   border-color: var(--color-primary);
 }
+/* EPARK公式ロゴは横長ワードマーク＝枠を可変幅・高さ控えめに */
 .reserve__btn--epark .reserve__btn-icon {
-  color: var(--color-primary);
+  width: auto;
+  height: auto;
+  margin-bottom: 6px;
+}
+.reserve__btn--epark .reserve__btn-icon img {
+  height: 24px;
+  width: auto;
+  max-width: none;
 }
 
 /* LINE: 公式グリーンの塗りボタンで一発識別 */
