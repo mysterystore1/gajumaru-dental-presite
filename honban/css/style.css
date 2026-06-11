@@ -47,7 +47,14 @@ body {
   font-size: 16px;
   line-height: 1.9;
   color: var(--color-text);
-  background-color: var(--color-bg);
+  /* 真っ白を避け、生成り地＋木漏れ日の淡い陰影で奥行きを出す */
+  background-color: #FBF8F3;
+  background-image:
+    radial-gradient(58vw 58vw at 102% -8%, rgba(197, 106, 56, 0.07), transparent 62%),
+    radial-gradient(50vw 50vw at -8% 26%, rgba(247, 232, 219, 0.55), transparent 60%),
+    radial-gradient(46vw 46vw at 96% 88%, rgba(247, 232, 219, 0.45), transparent 60%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -107,7 +114,29 @@ ol {
 }
 
 .section--alt {
-  background-color: var(--color-bg-alt);
+  background-color: #F5ECE0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 配置素材: ガジュマルの葉ブランチを隅に淡く（世界観の付与） */
+.section--alt::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: -28px;
+  width: 200px;
+  height: 220px;
+  background: url("../images/leaf-branch.svg") center / contain no-repeat;
+  opacity: 0.10;
+  transform: rotate(8deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section--alt > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .section--highlight {
@@ -127,11 +156,10 @@ ol {
 .section__title::after {
   content: "";
   display: block;
-  width: 40px;
-  height: 3px;
-  background-color: var(--color-primary);
-  margin: 16px auto 0;
-  border-radius: 2px;
+  width: 74px;
+  height: 22px;
+  margin: 14px auto 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 74 22'%3E%3Cpath d='M37 21C33 15 33 8 37 2C41 8 41 15 37 21Z' fill='%23C56A38'/%3E%3Cpath d='M36 18C29 17 24 13 22 7C29 8 34 12 36 18Z' fill='%23D98A5A'/%3E%3Cpath d='M38 18C45 17 50 13 52 7C45 8 40 12 38 18Z' fill='%23D98A5A'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .section__subtitle {
