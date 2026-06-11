@@ -1193,7 +1193,7 @@ ol {
 }
 
 /* 画像背景型ヒーロー（背景写真＋白半透明オーバーレイ＋パンくず） */
-.page-hero--image {
+.page-hero.page-hero--image {
   margin-top: var(--header-height);
   padding: 0;
   background-color: transparent;
@@ -1211,8 +1211,12 @@ ol {
 .page-hero__overlay {
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 250, 246, 0.82);
-  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 220px;
+  background: linear-gradient(180deg, rgba(255, 250, 246, 0.86) 0%, rgba(255, 250, 246, 0.93) 100%);
+  padding: 40px 0;
 }
 .breadcrumb {
   font-size: 0.8125rem;
