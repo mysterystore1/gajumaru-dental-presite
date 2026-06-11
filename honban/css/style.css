@@ -336,6 +336,97 @@ ol {
   opacity: 0.65;
 }
 
+/* 院内の様子: カルーセル（自動送り・矢印・ドット） */
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.carousel__viewport {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.carousel__track {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.6s ease;
+}
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+}
+.carousel__slide img {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 42vw, 460px);
+  object-fit: cover;
+}
+.carousel__caption {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: rgba(58, 53, 47, 0.62);
+  color: var(--color-white);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary-dark);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background-color var(--transition);
+}
+.carousel__arrow:hover {
+  background-color: var(--color-white);
+}
+.carousel__arrow--prev { left: 12px; }
+.carousel__arrow--next { right: 12px; }
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 18px;
+}
+.carousel__dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+}
+.carousel__dot.is-active {
+  background-color: var(--color-primary);
+  transform: scale(1.25);
+}
+.gallery__note {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+}
+@media (max-width: 768px) {
+  .carousel__arrow { width: 38px; height: 38px; font-size: 1.25rem; }
+}
+
 /* 浮遊アクション（右下固定: WEB予約 / TOP） */
 .floating-actions {
   position: fixed;

@@ -137,6 +137,51 @@ document.addEventListener('DOMContentLoaded', () => {
     a.appendChild(span);
   });
 
+  /* --- カルーセル（院内の様子・自動送り） --- */
+  document.querySelectorAll('[data-carousel]').forEach((root) => {
+    const track = root.querySelector('.carousel__track');
+    const slides = Array.from(root.querySelectorAll('.carousel__slide'));
+    const dotsWrap = root.querySelector('.carousel__dots');
+    if (!track || slides.length <= 1) return;
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let index = 0;
+    let timer = null;
+
+    const dots = slides.map((_, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'carousel__dot';
+      b.setAttribute('aria-label', (i + 1) + '枚目');
+      b.addEventListener('click', () => go(i, true));
+      dotsWrap.appendChild(b);
+      return b;
+    });
+
+    const render = () => {
+      track.style.transform = 'translateX(' + (-index * 100) + '%)';
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
+    };
+    const go = (i, user) => {
+      index = (i + slides.length) % slides.length;
+      render();
+      if (user) restart();
+    };
+    const start = () => { if (!reduce && !timer) timer = setInterval(() => go(index + 1), 4500); };
+    const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+    const restart = () => { stop(); start(); };
+
+    root.querySelector('.carousel__arrow--next').addEventListener('click', () => go(index + 1, true));
+    root.querySelector('.carousel__arrow--prev').addEventListener('click', () => go(index - 1, true));
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    root.addEventListener('focusin', stop);
+    root.addEventListener('focusout', start);
+
+    render();
+    start();
+  });
+
   /* --- 浮遊アクション(WEB予約 / ページTOP) --- */
   if (!document.querySelector('.floating-actions')) {
     const wrap = document.createElement('div');
