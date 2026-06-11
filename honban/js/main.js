@@ -113,4 +113,57 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  /* --- バイリンガルnav: 各リンクにEN副ラベルを付与 --- */
+  const NAV_EN = {
+    'index.html': 'Home',
+    'dental-anxiety.html': 'Anxiety',
+    'services.html': 'Medical',
+    'about.html': 'About',
+    'facility.html': 'Clinic',
+    'pricing.html': 'Price',
+    'access.html': 'Access',
+    'faq.html': 'FAQ',
+    'news.html': 'News',
+  };
+  document.querySelectorAll('.header__nav-list a').forEach((a) => {
+    const file = (a.getAttribute('href') || '').split('/').pop();
+    const en = NAV_EN[file];
+    if (!en || a.querySelector('.header__nav-en')) return;
+    a.classList.add('has-en');
+    const span = document.createElement('span');
+    span.className = 'header__nav-en';
+    span.textContent = en;
+    a.appendChild(span);
+  });
+
+  /* --- 浮遊アクション(WEB予約 / ページTOP) --- */
+  if (!document.querySelector('.floating-actions')) {
+    const wrap = document.createElement('div');
+    wrap.className = 'floating-actions';
+    wrap.innerHTML =
+      '<a href="#reserve" class="floating-actions__reserve">' +
+        '<svg class="floating-actions__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>' +
+        '<span>WEB予約</span></a>' +
+      '<button type="button" class="floating-actions__top" aria-label="ページ上部へ戻る">' +
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>' +
+        '<span>TOP</span></button>';
+    document.body.appendChild(wrap);
+
+    const topBtn = wrap.querySelector('.floating-actions__top');
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const reserve = wrap.querySelector('.floating-actions__reserve');
+    reserve.addEventListener('click', (e) => {
+      const target = document.getElementById('reserve');
+      if (!target) return;
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.pageYOffset - header.offsetHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+
+    const toggleTop = () => wrap.classList.toggle('is-scrolled', window.scrollY > 400);
+    window.addEventListener('scroll', toggleTop, { passive: true });
+    toggleTop();
+  }
 });

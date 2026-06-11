@@ -318,6 +318,98 @@ ol {
   width: 100%;
 }
 
+/* バイリンガルnav: 日本語＋英語副ラベル */
+.header__nav-list a.has-en {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  line-height: 1.2;
+}
+.header__nav-en {
+  font-family: var(--font-display);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  opacity: 0.65;
+}
+
+/* 浮遊アクション（右下固定: WEB予約 / TOP） */
+.floating-actions {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.floating-actions__reserve {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(156, 80, 38, 0.32);
+  transition: transform var(--transition), background-color var(--transition);
+}
+.floating-actions__reserve:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+}
+.floating-actions__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background-color: rgba(255, 255, 255, 0.96);
+  color: var(--color-primary-dark);
+  font-family: var(--font-display);
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+}
+.floating-actions.is-scrolled .floating-actions__top {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .floating-actions {
+    right: 12px;
+    bottom: 12px;
+    gap: 8px;
+  }
+  .floating-actions__reserve {
+    padding: 12px 18px;
+    font-size: 0.875rem;
+  }
+  .floating-actions__top {
+    width: 44px;
+    height: 44px;
+  }
+}
+
 .header__actions {
   display: flex;
   align-items: center;
