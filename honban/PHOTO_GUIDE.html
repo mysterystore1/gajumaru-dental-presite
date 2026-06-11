@@ -85,6 +85,11 @@
   .photo-slot .hd .cam{font-size:18px}
   .photo-slot .prompt{margin-top:8px; padding:10px 12px; background:#fff; border:1px solid var(--line); border-radius:9px; font-size:12.5px; color:var(--ink); white-space:pre-wrap}
   .photo-slot .hint{font-size:12px; color:var(--ink-soft); margin-top:6px}
+  .photo-slot.has-img{background:#fff; border-style:solid; border-color:var(--line)}
+  .photo-slot.has-img img{width:100%; max-height:300px; object-fit:cover; border-radius:10px; display:block; margin:8px 0 4px; border:1px solid var(--line)}
+  .photo-slot.has-img .tagline{display:inline-block; font-size:11px; color:#fff; background:var(--primary); border-radius:20px; padding:2px 10px; margin-left:6px; vertical-align:1px}
+  .photo-slot details{margin-top:6px}
+  .photo-slot summary{font-size:12px; color:var(--primary); cursor:pointer}
 
   /* 早見表 */
   table{width:100%; border-collapse:collapse; margin-top:12px; font-size:13px}
@@ -279,9 +284,13 @@
       <div class="col yes"><h4>○ 置く・狙う</h4><ul><li>カウンター上の観葉（30〜40cm）</li><li>整頓したパンフ立て・ロゴ小物</li><li>スタッフ後ろ姿1〜2名で「迎える」温度</li></ul></div>
       <div class="col no"><h4>× 片付ける</h4><ul><li>書類・領収書</li><li>PCモニタ裏の配線</li><li>スタッフ私物（バッグ・携帯）</li></ul></div>
     </div>
-    <div class="photo-slot">
-      <div class="hd"><span class="cam">📷</span>雰囲気見本：受付イメージ（→ <code>images/guide/sample-reception.jpg</code>）</div>
-      <div class="prompt">生成プロンプト例：「歯科医院の明るい受付カウンター、木目の什器、アイボリーの壁、観葉植物、窓からの自然光、奥にスタッフの後ろ姿、清潔で温かい、実写風、人物の顔は写さない」</div>
+    <div class="photo-slot has-img">
+      <div class="hd"><span class="cam">📷</span>雰囲気見本：受付<span class="tagline">参考イメージ</span></div>
+      <img src="images/guide/sample-reception.jpg" alt="受付の参考イメージ（木目の曲線カウンター・観葉・自然光）">
+      <details><summary>この雰囲気を出す生成プロンプト</summary>
+        <div class="prompt">「歯科医院の明るい受付カウンター、木目の什器、アイボリーの壁、観葉植物、窓からの自然光、奥にスタッフの後ろ姿、清潔で温かい、実写風、人物の顔は写さない」</div>
+      </details>
+      <div class="hint">※雰囲気の参考。本番サイトには実際の受付の実写を使う。</div>
     </div>
   </div>
 
@@ -297,9 +306,13 @@
       <div class="col no"><h4>× 片付ける</h4><ul><li>傘立て・私物・段ボール</li><li>消毒液ボトル・コート掛けの上着</li></ul></div>
     </div>
     <div class="callout"><b>注意：</b>キッズスペースは無し（医院に存在しない）。キッズ要素を盛りすぎない（絵本1冊が置いてある程度なら可）。</div>
-    <div class="photo-slot">
-      <div class="hd"><span class="cam">📷</span>雰囲気見本：待合室イメージ（→ <code>images/guide/sample-waiting.jpg</code>）</div>
-      <div class="prompt">生成プロンプト例：「歯科医院の静かな待合室、木製のベンチと布張りの椅子、大きな窓から差し込む柔らかい自然光、背の高い観葉植物、アイボリーと木目、無人、リラックスした暖かい雰囲気、実写風」</div>
+    <div class="photo-slot has-img">
+      <div class="hd"><span class="cam">📷</span>雰囲気見本：待合室<span class="tagline">参考イメージ</span></div>
+      <img src="images/guide/sample-waiting.jpg" alt="待合室の参考イメージ（緑とアイボリーの椅子・木目・観葉・自然光）">
+      <details><summary>この雰囲気を出す生成プロンプト</summary>
+        <div class="prompt">「歯科医院の静かな待合室、木製のベンチと布張りの椅子、大きな窓から差し込む柔らかい自然光、背の高い観葉植物、アイボリーと木目、無人、リラックスした暖かい雰囲気、実写風」</div>
+      </details>
+      <div class="hint">※雰囲気の参考。本番サイトには実際の待合室の実写を使う。</div>
     </div>
   </div>
 
@@ -338,6 +351,14 @@
       <div class="col yes"><h4>○ 置く・狙う</h4><ul><li>清潔なクッション</li><li>少しだけ整頓したトレー</li><li>拭いて光る無影灯</li></ul></div>
       <div class="col no"><h4>× 片付ける</h4><ul><li>吸引チューブ・床に垂れた配線</li><li>ゴミ箱・紙コップ</li><li>黒いモニタ画面/映り込み</li></ul></div>
     </div>
+    <div class="photo-slot has-img">
+      <div class="hd"><span class="cam">📷</span>雰囲気見本：診療室<span class="tagline">参考イメージ</span></div>
+      <img src="images/guide/sample-treatment.jpg" alt="診療室の参考イメージ（チェアを斜めから・無影灯・明るく清潔）">
+      <details><summary>この雰囲気を出す生成プロンプト</summary>
+        <div class="prompt">「歯科の診療室、デンタルチェア1台を斜め45度から、無影灯、明るく清潔、窓からの自然光、暖色の壁、器具は整頓、配線は見えない、実写風、無人」</div>
+      </details>
+      <div class="hint">※雰囲気の参考。本番サイトには実際の診療室の実写を使う。</div>
+    </div>
   </div>
 
   <!-- 個室 -->
@@ -351,9 +372,13 @@
       <div class="col yes"><h4>○ 置く・狙う</h4><ul><li>歯の模型・整頓したパンフ立て</li><li>木製デスク・背後コーナーの観葉</li><li>スタンドライト（電球色）</li></ul></div>
       <div class="col no"><h4>× 片付ける</h4><ul><li>私物・書類の山</li><li>業務用カレンダー・配線</li></ul></div>
     </div>
-    <div class="photo-slot">
-      <div class="hd"><span class="cam">📷</span>雰囲気見本：個室イメージ（→ <code>images/guide/sample-counseling.jpg</code>）</div>
-      <div class="prompt">生成プロンプト例：「歯科医院の小さなカウンセリング個室、木製デスクを挟んで椅子がL字配置、電球色の暖かい間接照明、歯の模型とパンフレット、観葉植物、落ち着いた安心感、実写風、無人」</div>
+    <div class="photo-slot has-img">
+      <div class="hd"><span class="cam">📷</span>雰囲気見本：個室<span class="tagline">参考イメージ</span></div>
+      <img src="images/guide/sample-counseling.jpg" alt="カウンセリング個室の参考イメージ（丸テーブル・椅子・観葉・暖色）">
+      <details><summary>この雰囲気を出す生成プロンプト</summary>
+        <div class="prompt">「歯科医院の小さなカウンセリング個室、木製デスクを挟んで椅子がL字配置、電球色の暖かい間接照明、歯の模型とパンフレット、観葉植物、落ち着いた安心感、実写風、無人」</div>
+      </details>
+      <div class="hint">※雰囲気の参考。本番サイトには実際の個室の実写を使う。</div>
     </div>
   </div>
 
