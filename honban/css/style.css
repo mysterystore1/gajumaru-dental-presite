@@ -1257,9 +1257,9 @@ ol {
 
 .reserve__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  max-width: 760px;
+  max-width: 620px;
   margin: 0 auto;
 }
 
@@ -1318,16 +1318,8 @@ ol {
 .reserve__btn--epark {
   border-color: var(--color-primary);
 }
-/* EPARK公式ロゴは横長ワードマーク＝枠を可変幅・高さ控えめに */
 .reserve__btn--epark .reserve__btn-icon {
-  width: auto;
-  height: auto;
-  margin-bottom: 6px;
-}
-.reserve__btn--epark .reserve__btn-icon img {
-  height: 24px;
-  width: auto;
-  max-width: none;
+  color: var(--color-primary);
 }
 
 /* LINE: 公式グリーンの塗りボタンで一発識別 */

@@ -185,13 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --- 右端固定の予約レール（常時表示・PC） --- */
   if (!document.querySelector('.side-reserve')) {
     const cal = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
-    const line = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.5c-5 0-9 3.2-9 7.2 0 3.6 3.2 6.6 7.5 7.1.3.05.7.2.8.4.07.25.05.6.02.85l-.12.74c-.04.23-.18.9.8.5 1-.42 5.3-3.1 7.2-5.3 1.3-1.45 1.9-2.93 1.9-4.3 0-4-4-7.2-9.1-7.2Z"/></svg>';
     const phone = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
     const rail = document.createElement('div');
     rail.className = 'side-reserve';
     rail.innerHTML =
       '<a href="#reserve" class="side-reserve__btn side-reserve__btn--web">' + cal + '<span>WEB予約</span></a>' +
-      '<a href="#reserve" class="side-reserve__btn side-reserve__btn--line">' + line + '<span>LINE</span></a>' +
       '<a href="tel:0466XXXXXX" class="side-reserve__btn side-reserve__btn--tel">' + phone + '<span>電話</span></a>';
     document.body.appendChild(rail);
 
@@ -229,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'reserve__btn--line':
       '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3.2c-5.1 0-9.3 3.35-9.3 7.48 0 3.7 3.32 6.8 7.8 7.39.3.06.72.2.83.46.1.24.06.6.03.85l-.13.8c-.04.24-.19.94.82.51 1.02-.43 5.48-3.23 7.48-5.53 1.38-1.52 2.04-3.06 2.04-4.88 0-4.13-4.14-7.48-9.34-7.48Zm-3.77 9.6h-1.9a.49.49 0 0 1-.5-.49V8.96a.5.5 0 0 1 1 0v2.86h1.4a.49.49 0 0 1 0 .98Zm1.96-.49a.5.5 0 0 1-1 0V8.96a.5.5 0 0 1 1 0v3.35Zm4.2 0a.49.49 0 0 1-.34.47.5.5 0 0 1-.56-.18l-1.92-2.62v2.33a.5.5 0 0 1-1 0V8.96a.49.49 0 0 1 .9-.29l1.92 2.62V8.96a.5.5 0 0 1 1 0v3.35Zm3.1-2.36a.49.49 0 0 1 0 .98h-1.4v.9h1.4a.49.49 0 0 1 0 .98h-1.9a.49.49 0 0 1-.5-.49V8.96a.5.5 0 0 1 .5-.49h1.9a.49.49 0 0 1 0 .98h-1.4v.9h1.4Z"/></svg>',
     'reserve__btn--epark':
-      '<img src="images/epark-logo.png" alt="EPARK" width="322" height="84">',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8.5 20.5h7M12 17.5v3"/><path d="M7.5 11l2.2 2.2 4.8-4.8"/></svg>',
     'reserve__btn--tel':
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>',
     'reserve__btn--form':
