@@ -117,11 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --- バイリンガルnav: 各リンクにEN副ラベルを付与 --- */
   const NAV_EN = {
     'index.html': 'Home',
-    'dental-anxiety.html': 'Anxiety',
-    'services.html': 'Medical',
+    'dental-anxiety.html': 'First Step',
+    'services.html': 'Services',
     'about.html': 'About',
     'facility.html': 'Clinic',
-    'pricing.html': 'Price',
+    'pricing.html': 'Fees',
     'access.html': 'Access',
     'faq.html': 'FAQ',
     'news.html': 'News',
