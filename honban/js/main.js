@@ -7,9 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.getElementById('hamburger');
   const nav = document.getElementById('nav');
 
-  /* --- ヘッダースクロール影 --- */
+  /* --- ヘッダースクロール影＋スマートヘッダー ---
+     下スクロール中は隠して画面を空け、上に戻した瞬間に再表示する。
+     メニュー展開中は隠さない */
+  let lastScrollY = window.scrollY;
   const onScroll = () => {
-    header.classList.toggle('header--scrolled', window.scrollY > 10);
+    const y = window.scrollY;
+    header.classList.toggle('header--scrolled', y > 10);
+    if (nav.classList.contains('is-open')) {
+      header.classList.remove('header--hidden');
+    } else if (y > 240 && y > lastScrollY + 4) {
+      header.classList.add('header--hidden');
+    } else if (y < lastScrollY - 4 || y <= 240) {
+      header.classList.remove('header--hidden');
+    }
+    lastScrollY = y;
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
