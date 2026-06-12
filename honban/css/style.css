@@ -1646,8 +1646,34 @@ p {
   flex-direction: column;
   justify-content: center;
   min-height: 220px;
-  background: linear-gradient(180deg, rgba(255, 250, 246, 0.86) 0%, rgba(255, 250, 246, 0.93) 100%);
+  /* テキスト側だけ濃く・右へ抜く方向性グラデ（H-4: 全面白幕だと写真が死ぬ） */
+  background: linear-gradient(
+    105deg,
+    rgba(255, 250, 246, 0.96) 0%,
+    rgba(255, 250, 246, 0.88) 46%,
+    rgba(255, 250, 246, 0.45) 78%,
+    rgba(255, 250, 246, 0.15) 100%
+  );
   padding: 40px 0;
+}
+
+/* 中央寄せをやめ左寄せ＝右側に写真の「抜け」をつくる */
+.page-hero--image .page-hero__inner {
+  max-width: 640px;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  /* モバイルはテキストが全幅に及ぶため白幕を強める */
+  .page-hero__overlay {
+    background: linear-gradient(
+      105deg,
+      rgba(255, 250, 246, 0.95) 0%,
+      rgba(255, 250, 246, 0.88) 60%,
+      rgba(255, 250, 246, 0.6) 100%
+    );
+  }
 }
 .breadcrumb {
   font-size: 0.8125rem;
