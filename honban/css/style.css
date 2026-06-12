@@ -1495,6 +1495,25 @@ p {
   transform: translateY(0);
 }
 
+/* fade-in の時差（§4-7: コンテナ可視化後、子が90ms刻みで立ち上がる）
+   - transitionでなくanimationを使い、hover用transitionと干渉させない */
+.fade-in.is-visible .features__item,
+.fade-in.is-visible .service-card {
+  animation: riseIn 0.6s ease-out both;
+  animation-delay: calc(var(--i, 0) * 90ms);
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* =============================================
    下層ページ共通: ページヒーロー
    ============================================= */
@@ -2561,7 +2580,9 @@ p {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
   }
 
   .fade-in {
