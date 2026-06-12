@@ -1495,6 +1495,13 @@ p {
   transform: translateY(0);
 }
 
+/* マーカー風アンダーライン（§4-6: dental-anxietyの強調語・少数のみ）
+   - alt背景(#F5ECE0)上でも見えるようテラコッタの淡チントで引く */
+.u-marker {
+  background: linear-gradient(transparent 62%, rgba(197, 106, 56, 0.22) 62%);
+  padding: 0 0.1em;
+}
+
 /* fade-in の時差（§4-7: コンテナ可視化後、子が90ms刻みで立ち上がる）
    - transitionでなくanimationを使い、hover用transitionと干渉させない */
 .fade-in.is-visible .features__item,
