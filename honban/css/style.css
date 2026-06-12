@@ -1854,6 +1854,46 @@ ol {
 }
 
 /* =============================================
+   写真ユーティリティ: アーチ窓＋ずらし罫線枠（部品2）
+   - 人物=アーチ窓・場所=角丸、と窓の形に意味を持たせる
+   - 背面はベタ座布団でなく罫線の枠（箱で囲わない方針との整合）
+   ============================================= */
+.ph-arch {
+  position: relative;
+}
+
+.ph-arch img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 999px 999px var(--radius-lg) var(--radius-lg);
+  box-shadow: 0 1px 2px rgba(58, 42, 30, 0.08), 0 16px 40px -12px rgba(156, 80, 38, 0.22);
+}
+
+.ph-arch::before {
+  content: "";
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  border: 1.5px solid rgba(197, 106, 56, 0.3);
+  border-radius: 999px 999px var(--radius-lg) var(--radius-lg);
+  z-index: -1;
+}
+
+/* 前面に葉をひと枝（トップの院長写真のみ） */
+.ph-arch--leaf::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  right: -20px;
+  width: 84px;
+  height: 92px;
+  background: url("../images/leaf-branch.svg") center / contain no-repeat;
+  transform: rotate(-14deg);
+  pointer-events: none;
+}
+
+/* =============================================
    院内紹介: facility
    ============================================= */
 .facility-intro {
