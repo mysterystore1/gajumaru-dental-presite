@@ -903,6 +903,19 @@ ol {
   color: var(--color-primary-dark);
 }
 
+.service-card__icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 2px;
+  filter: grayscale(0.2);
+  transition: filter var(--transition), transform var(--transition);
+}
+
+.service-card:hover .service-card__icon {
+  filter: none;
+  transform: translateY(-3px);
+}
+
 .service-card__title {
   font-size: 1.0625rem;
   font-weight: 700;
