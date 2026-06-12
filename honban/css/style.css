@@ -319,10 +319,20 @@ p {
   right: 0;
   height: var(--header-height);
   background-color: rgba(255, 250, 246, 0.78);
-  -webkit-backdrop-filter: blur(10px) saturate(1.5);
-  backdrop-filter: blur(10px) saturate(1.5);
   z-index: 1000;
   transition: box-shadow var(--transition);
+}
+
+/* 背景ぼかしは疑似要素に分離。
+   .header 自身に backdrop-filter を置くと fixed 子孫(モバイルメニュー)の
+   基準が viewport→header に変わり、オーバーレイが高さ0に潰れるため */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  -webkit-backdrop-filter: blur(10px) saturate(1.5);
+  backdrop-filter: blur(10px) saturate(1.5);
 }
 
 .header--scrolled {
