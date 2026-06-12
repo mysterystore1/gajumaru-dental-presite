@@ -1627,29 +1627,35 @@ p {
 .anxiety-feelings {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 48px;
+  gap: 24px 28px;
   max-width: 720px;
   margin: 0 auto;
 }
 
+/* 内心セリフは罫線の吹き出し＝発話の記号（部品6・箱塗りはしない） */
 .anxiety-feelings__item {
   position: relative;
-  padding: 18px 8px 18px 26px;
-  border-bottom: 1px solid var(--color-border);
+  padding: 16px 20px;
+  background: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
   font-size: 0.9375rem;
   font-weight: 700;
+  word-break: auto-phrase;
 }
 
-.anxiety-feelings__item::before {
+.anxiety-feelings__item::after {
   content: "";
   position: absolute;
-  left: 6px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 7px;
-  height: 7px;
-  background-color: var(--color-accent);
-  border-radius: 50%;
+  bottom: -9px;
+  left: 28px;
+  width: 16px;
+  height: 16px;
+  background: inherit;
+  border-right: 1.5px solid var(--color-border);
+  border-bottom: 1.5px solid var(--color-border);
+  transform: rotate(45deg) skew(8deg, 8deg);
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
 }
 
 .anxiety-intro {
@@ -2489,7 +2495,7 @@ p {
 
   .anxiety-feelings {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 18px;
   }
 
   .promise {
