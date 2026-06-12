@@ -147,65 +147,16 @@ document.addEventListener('DOMContentLoaded', () => {
     a.appendChild(span);
   });
 
-  /* --- カルーセル（院内の様子・scroll-snap: スワイプ/矢印/ドット/自動送り） --- */
-  document.querySelectorAll('[data-carousel]').forEach((root) => {
-    const track = root.querySelector('.carousel__track');
-    const slides = Array.from(root.querySelectorAll('.carousel__slide'));
-    const dotsWrap = root.querySelector('.carousel__dots');
-    if (!track || slides.length <= 1) return;
-
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let index = 0;
-    let timer = null;
-
-    const dots = slides.map((_, i) => {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'carousel__dot';
-      b.setAttribute('aria-label', (i + 1) + '枚目');
-      b.addEventListener('click', () => go(i, true));
-      dotsWrap.appendChild(b);
-      return b;
+  /* --- 流れる帯ギャラリー（院内の様子）: シームレスループ用にスライド一式を複製 --- */
+  document.querySelectorAll('[data-gallery-flow]').forEach((root) => {
+    const track = root.querySelector('.gallery-flow__track');
+    if (!track) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    Array.from(track.children).forEach((li) => {
+      const clone = li.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
     });
-
-    const setActive = () => {
-      dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
-    };
-    const go = (i, user) => {
-      index = (i + slides.length) % slides.length;
-      track.scrollTo({ left: index * track.clientWidth, behavior: reduce ? 'auto' : 'smooth' });
-      setActive();
-      if (user) restart();
-    };
-
-    /* スワイプ・横スクロールとドットを同期 */
-    let syncTimer = null;
-    track.addEventListener('scroll', () => {
-      clearTimeout(syncTimer);
-      syncTimer = setTimeout(() => {
-        const i = Math.round(track.scrollLeft / track.clientWidth);
-        if (i !== index && i >= 0 && i < slides.length) {
-          index = i;
-          setActive();
-        }
-      }, 90);
-    }, { passive: true });
-
-    const start = () => { if (!reduce && !timer) timer = setInterval(() => go(index + 1), 4500); };
-    const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
-    const restart = () => { stop(); start(); };
-
-    root.querySelector('.carousel__arrow--next').addEventListener('click', () => go(index + 1, true));
-    root.querySelector('.carousel__arrow--prev').addEventListener('click', () => go(index - 1, true));
-    root.addEventListener('mouseenter', stop);
-    root.addEventListener('mouseleave', start);
-    root.addEventListener('focusin', stop);
-    root.addEventListener('focusout', start);
-    track.addEventListener('touchstart', stop, { passive: true });
-    track.addEventListener('touchend', start, { passive: true });
-
-    setActive();
-    start();
   });
 
   /* --- 右端固定の予約レール（常時表示・PC） --- */

@@ -425,47 +425,48 @@ p {
   opacity: 0.65;
 }
 
-/* 院内の様子: カルーセル（自動送り・矢印・ドット） */
-.carousel {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.carousel__viewport {
+/* 院内の様子: 流れる帯ギャラリー（IROHA型・全幅・自動フロー）
+   - 複数枚が常時見え、ゆっくり左へ流れ続ける。ホバーで一時停止
+   - シームレスループはJSがスライド一式を複製して translateX(-50%) で実現
+   - gapでなく margin-right を使う（-50%でピッタリ一周させるため） */
+.gallery-flow {
   overflow: hidden;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  margin-top: 8px;
 }
-.carousel__track {
+
+.gallery-flow__track {
   display: flex;
+  width: max-content;
   list-style: none;
   margin: 0;
-  padding: 0;
-  /* scroll-snap方式: モバイルのスワイプが無料で効く（M-2） */
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  overscroll-behavior-x: contain;
-  scrollbar-width: none;
+  padding: 4px 0 10px;
+  animation: gallery-flow-scroll 48s linear infinite;
 }
-.carousel__track::-webkit-scrollbar {
-  display: none;
+
+.gallery-flow:hover .gallery-flow__track {
+  animation-play-state: paused;
 }
-.carousel__slide {
+
+.gallery-flow__item {
   position: relative;
-  flex: 0 0 100%;
-  scroll-snap-align: start;
+  flex-shrink: 0;
+  margin-right: 18px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
-.carousel__slide img {
+
+.gallery-flow__item img {
   display: block;
-  width: 100%;
-  height: clamp(240px, 42vw, 460px);
-  object-fit: cover;
+  height: clamp(190px, 24vw, 300px);
+  width: auto;
 }
-.carousel__caption {
+
+.gallery-flow__caption {
   position: absolute;
-  left: 14px;
-  bottom: 14px;
-  padding: 6px 14px;
+  left: 12px;
+  bottom: 12px;
+  padding: 5px 13px;
   border-radius: 999px;
   background-color: rgba(58, 53, 47, 0.62);
   color: var(--color-white);
@@ -473,57 +474,29 @@ p {
   font-weight: 700;
   letter-spacing: 0.04em;
 }
-.carousel__arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border: none;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: var(--color-primary-dark);
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  transition: background-color var(--transition);
+
+@keyframes gallery-flow-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
-.carousel__arrow:hover {
-  background-color: var(--color-white);
+
+/* 動きを抑える設定では手動スクロールに切り替え */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-flow {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .gallery-flow__track {
+    animation: none;
+  }
 }
-.carousel__arrow--prev { left: 12px; }
-.carousel__arrow--next { right: 12px; }
-.carousel__dots {
-  display: flex;
-  justify-content: center;
-  gap: 9px;
-  margin-top: 18px;
-}
-.carousel__dot {
-  width: 9px;
-  height: 9px;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  background-color: var(--color-border);
-  cursor: pointer;
-  transition: background-color var(--transition), transform var(--transition);
-}
-.carousel__dot.is-active {
-  background-color: var(--color-primary);
-  transform: scale(1.25);
-}
+
 .gallery__note {
   margin-top: 16px;
   text-align: center;
   font-size: 0.8125rem;
   color: var(--color-text-light);
 }
-@media (max-width: 768px) {
-  .carousel__arrow { width: 38px; height: 38px; font-size: 1.25rem; }
-}
-
 /* 右端固定の予約レール（常時表示・PC） */
 .side-reserve {
   position: fixed;
