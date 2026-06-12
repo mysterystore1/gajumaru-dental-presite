@@ -828,19 +828,48 @@ p {
 }
 
 /* =============================================
-   医院名の由来（がじゅまる・トップ/aboutで共用）
+   医院名の由来（がじゅまると子猫・トップ/aboutで共用）
+   - 挿絵は手描きSVG（画像生成不使用）。テキスト左+挿絵右の非対称段組
    ============================================= */
 .naming {
-  max-width: 640px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  max-width: 880px;
   margin: 0 auto;
 }
 
-.naming p {
+.naming__text {
+  flex: 1;
+}
+
+.naming__text p {
   margin-bottom: 16px;
 }
 
-.naming p:last-child {
+.naming__text p:last-child {
   margin-bottom: 0;
+}
+
+.naming__art {
+  flex-shrink: 0;
+  width: 290px;
+}
+
+.naming__art img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .naming {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .naming__art {
+    width: 220px;
+  }
 }
 
 /* =============================================
@@ -1424,6 +1453,19 @@ p {
   background-color: var(--color-text);
   color: rgba(255, 255, 255, 0.8);
   padding: 48px 0 24px;
+  position: relative;
+}
+
+/* フッター上端から見守る子猫（医院名の由来=がじゅまる） */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -37px;
+  right: clamp(20px, 9vw, 110px);
+  width: 42px;
+  height: 38px;
+  background: url("../images/cat-sitting.svg") center bottom / contain no-repeat;
+  pointer-events: none;
 }
 
 .footer__inner {

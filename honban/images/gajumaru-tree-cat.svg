@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 340" fill="none">
+  <!-- 地面の影 -->
+  <ellipse cx="206" cy="318" rx="142" ry="9" fill="#9C5026" opacity="0.08"/>
+  <!-- ガジュマルの樹冠（重ね葉） -->
+  <ellipse cx="166" cy="106" rx="90" ry="52" fill="#C56A38" opacity="0.24"/>
+  <ellipse cx="254" cy="94" rx="84" ry="48" fill="#D98A5A" opacity="0.30"/>
+  <ellipse cx="208" cy="142" rx="114" ry="46" fill="#C56A38" opacity="0.20"/>
+  <ellipse cx="304" cy="136" rx="50" ry="34" fill="#D98A5A" opacity="0.24"/>
+  <ellipse cx="120" cy="140" rx="44" ry="30" fill="#D98A5A" opacity="0.22"/>
+  <!-- 幹（根元に向かって広がる） -->
+  <path d="M192,178 C188,222 184,264 172,316 L258,316 C248,264 244,222 242,178 C226,187 208,187 192,178 Z" fill="#9C5026" opacity="0.82"/>
+  <!-- 枝 -->
+  <path d="M204,192 C178,204 158,200 144,192" stroke="#9C5026" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  <path d="M232,194 C258,208 276,204 290,194" stroke="#9C5026" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  <!-- 気根（ガジュマルの特徴） -->
+  <path d="M150,194 C148,230 152,256 149,282" stroke="#9C5026" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <path d="M168,198 C167,238 171,282 168,314" stroke="#9C5026" stroke-width="2.5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M286,198 C288,236 284,260 287,290" stroke="#9C5026" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <path d="M300,192 C302,230 298,278 301,314" stroke="#9C5026" stroke-width="2.5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M262,204 C263,230 260,246 262,264" stroke="#9C5026" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <!-- 子猫（木陰で見上げて座る） -->
+  <path d="M136,270 L133,261 L139,265 Z" fill="#4A3526"/>
+  <path d="M146,264 L150,258 L151,266 Z" fill="#4A3526"/>
+  <circle cx="142" cy="276" r="7.5" fill="#4A3526"/>
+  <path d="M137,282 C131,290 128,300 129,316 L155,316 C157,302 153,292 148,282 Z" fill="#4A3526"/>
+  <path d="M155,313 C166,311 168,301 161,297" stroke="#4A3526" stroke-width="4" stroke-linecap="round"/>
+  <!-- 舞う葉 -->
+  <path d="M160,248 C157.5,244 157.5,239 160,235 C162.5,239 162.5,244 160,248 Z" fill="#C56A38" opacity="0.5" transform="rotate(24 160 241)"/>
+  <path d="M128,222 C125.5,218 125.5,213 128,209 C130.5,213 130.5,218 128,222 Z" fill="#C56A38" opacity="0.38" transform="rotate(-26 128 215)"/>
+  <!-- 足あと -->
+  <circle cx="106" cy="306" r="2.4" fill="#9C5026" opacity="0.28"/>
+  <circle cx="111" cy="301" r="1.7" fill="#9C5026" opacity="0.28"/>
+  <circle cx="116" cy="306" r="1.7" fill="#9C5026" opacity="0.25"/>
+  <circle cx="90" cy="314" r="2.4" fill="#9C5026" opacity="0.2"/>
+  <circle cx="95" cy="309" r="1.7" fill="#9C5026" opacity="0.2"/>
+</svg>
