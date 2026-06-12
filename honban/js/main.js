@@ -135,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'pricing.html': 'Fees',
     'access.html': 'Access',
     'faq.html': 'FAQ',
-    'news.html': 'News',
   };
   document.querySelectorAll('.header__nav-list a').forEach((a) => {
     const file = (a.getAttribute('href') || '').split('/').pop();

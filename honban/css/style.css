@@ -1196,7 +1196,8 @@ p {
   transition: background-color var(--transition);
 }
 
-.news-list__link:hover {
+/* お知らせはTOP統合・リンク無し表示（DEC-007）。hoverは a の場合のみ */
+a.news-list__link:hover {
   background-color: var(--color-bg-alt);
   color: var(--color-text);
 }
