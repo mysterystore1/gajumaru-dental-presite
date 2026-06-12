@@ -72,6 +72,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* タブ復帰時の救済: 長寿命タブでIOが失効しても、画面内の未表示要素を取り残さない */
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState !== 'visible') return;
+    document.querySelectorAll('.fade-in:not(.is-visible)').forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) {
+        el.classList.add('is-visible');
+      }
+    });
+  });
+
   /* --- お問い合わせフォーム送信 --- */
   const form = document.getElementById('contact-form');
   if (form) {

@@ -1483,14 +1483,16 @@ p {
 
 /* =============================================
    フェードインアニメーション
+   - 初期非表示は「JSが動いたとき（html.js）」だけ。
+     JS無効・読み込み失敗・クローラのレンダ失敗時は常時表示（no-jsフォールバック）
    ============================================= */
-.fade-in {
+.js .fade-in {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.fade-in.is-visible {
+.js .fade-in.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -2592,7 +2594,7 @@ p {
     transition-delay: 0s !important;
   }
 
-  .fade-in {
+  .js .fade-in {
     opacity: 1;
     transform: none;
   }
