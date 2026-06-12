@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" fill="none">
+  <!-- スタイル: サイト共通の線画言語（線 #9C5026 / 塗り #FBF6F0・#F7E8DB / 点目+頬） -->
+  <!-- 枝 -->
+  <path d="M8,82 C36,78 78,78 112,84" stroke="#9C5026" stroke-width="2.4" stroke-linecap="round" opacity="0.6"/>
+  <path d="M96,82 C102,74 110,72 116,74" stroke="#9C5026" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+  <!-- 枝の葉 -->
+  <g transform="rotate(-18 22 74)">
+    <path d="M22,80 C19.5,76.5 19.5,71.5 22,68 C24.5,71.5 24.5,76.5 22,80 Z" fill="#F7E8DB" stroke="#9C5026" stroke-width="1.5"/>
+    <path d="M22,78.5 L22,69.5" stroke="#9C5026" stroke-width="0.9"/>
+  </g>
+  <!-- 小鳥（丸い体・点目・頬） -->
+  <path d="M50,80 C42,76 38,66 42,56 C46,45 60,40 70,45 C74,40 80,39 84,42 C83,46 81,49 78,51 C84,58 84,70 76,76 C68,82 57,83 50,80 Z" fill="#FBF6F0" stroke="#9C5026" stroke-width="2.6" stroke-linejoin="round"/>
+  <!-- くちばし -->
+  <path d="M84,52 L93,55 L84,58 Z" fill="#F7E8DB" stroke="#9C5026" stroke-width="1.8" stroke-linejoin="round"/>
+  <!-- 羽 -->
+  <path d="M52,58 C58,54 66,55 70,60 C66,66 58,67 52,64" fill="#F7E8DB" stroke="#9C5026" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M56,61 C60,59.5 64,60 66,62" stroke="#9C5026" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <!-- しっぽ -->
+  <path d="M44,57 C38,52 34,46 34,40 C40,43 45,48 47,53" fill="#F7E8DB" stroke="#9C5026" stroke-width="1.8" stroke-linejoin="round"/>
+  <!-- 点目・頬 -->
+  <circle cx="77" cy="50" r="1.6" fill="#9C5026"/>
+  <ellipse cx="72" cy="55" rx="2.6" ry="1.8" fill="#F0DAC8"/>
+  <!-- 脚 -->
+  <path d="M58,80 L57,86 M66,80 L66,86" stroke="#9C5026" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- 音符がわりの葉ひとひら -->
+  <g transform="rotate(24 100 30)">
+    <path d="M100,36 C97.8,33 97.8,28.5 100,25.5 C102.2,28.5 102.2,33 100,36 Z" fill="#F7E8DB" stroke="#9C5026" stroke-width="1.4"/>
+    <path d="M100,34.5 L100,27" stroke="#9C5026" stroke-width="0.9"/>
+  </g>
+</svg>
