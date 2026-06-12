@@ -34,31 +34,21 @@
 
 <!-- ====== ヘッダー（_partials.html と同一） ====== -->
 <header class="header" id="header">
-  <div class="header__inner">
+  <div class="header__inner header__inner--top">
     <a href="index.html" class="header__logo">
       <img src="images/logo.jpg" alt="辻堂がじゅまる歯科" class="header__logo-img">
       <span class="header__logo-text">辻堂がじゅまる歯科</span>
     </a>
 
-    <nav class="header__nav" id="nav">
-      <ul class="header__nav-list">
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="dental-anxiety.html">通院をためらう方へ</a></li>
-        <li><a href="services.html">診療案内</a></li>
-        <li><a href="about.html">院長・当院</a></li>
-        <li><a href="facility.html">院内</a></li>
-        <li><a href="pricing.html" aria-current="page">料金</a></li>
-        <li><a href="access.html">アクセス</a></li>
-        <li><a href="faq.html">よくあるご質問</a></li>
-        <li><a href="news.html">お知らせ</a></li>
-      </ul>
-    </nav>
 
     <div class="header__actions">
-      <a href="tel:0466XXXXXX" class="header__tel">
-        <svg class="header__tel-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span>0466-XX-XXXX</span>
-      </a>
+      <div class="header__tel-block">
+        <a href="tel:0466XXXXXX" class="header__tel">
+          <svg class="header__tel-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>0466-XX-XXXX</span><span class="header__tel-kari">（仮）</span>
+        </a>
+        <span class="header__tel-hours">受付 9:30-13:00 / 14:30-18:30（水・日・祝 休診）（仮）</span>
+      </div>
       <a href="#reserve" class="header__cta btn btn--accent btn--sm">ご予約</a>
     </div>
 
@@ -68,6 +58,19 @@
       <span class="header__hamburger-line"></span>
     </button>
   </div>
+  <nav class="header__nav" id="nav">
+    <ul class="header__nav-list">
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="dental-anxiety.html">通院をためらう方へ</a></li>
+      <li><a href="services.html">診療案内</a></li>
+      <li><a href="about.html">院長・当院</a></li>
+      <li><a href="facility.html">院内</a></li>
+      <li><a href="pricing.html" aria-current="page">料金</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="faq.html">よくあるご質問</a></li>
+      <li><a href="news.html">お知らせ</a></li>
+    </ul>
+  </nav>
 </header>
 
 

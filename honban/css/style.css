@@ -706,6 +706,66 @@ p {
 }
 
 /* =============================================
+   2段ヘッダー（デスクトップ≥1280）
+   - 上段=ロゴ+電話(受付時間付き・仮明示)+ご予約 ／ 下段=nav横一列
+   - 歯科サイトの定石「FVで電話・時間・予約に即アクセス」。実NAP確定で数値差し替え
+   - --header-height を上書きするだけでヒーロー/アンカー余白は全て追従
+   ============================================= */
+@media (min-width: 1280px) {
+  :root {
+    --header-height: 118px;
+  }
+
+  .header__inner--top {
+    height: 72px;
+  }
+
+  .header__inner--top .header__actions {
+    margin-left: auto;
+  }
+
+  .header__nav {
+    margin-left: 0;
+    height: 46px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .header__nav-list {
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .header__tel-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1px;
+  }
+
+  .header__tel {
+    font-size: 1.1875rem;
+    letter-spacing: 0.02em;
+  }
+
+  .header__tel-kari {
+    font-size: 0.6875rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin-left: 2px;
+  }
+
+  .header__tel-hours {
+    font-size: 0.6875rem;
+    color: var(--color-text-light);
+    line-height: 1.2;
+  }
+}
+
+/* =============================================
    ヒーロー
    ============================================= */
 .hero {
