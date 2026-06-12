@@ -705,23 +705,50 @@ p {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* 最上部1行帯・週間診療表はPC(≥1280)のみ表示 */
+.header__topline,
+.header__schedule {
+  display: none;
+}
+
 /* =============================================
-   2段ヘッダー（デスクトップ≥1280）
-   - 上段=ロゴ+電話(受付時間付き・仮明示)+ご予約 ／ 下段=nav横一列
-   - 歯科サイトの定石「FVで電話・時間・予約に即アクセス」。実NAP確定で数値差し替え
+   3段ヘッダー（デスクトップ≥1280）
+   - 最上部=駅徒歩/開院予定の1行帯 ／ 上段=大ロゴ+週間診療表+電話+ご予約 ／ 下段=nav横一列
+   - 歯科サイトの定石「FVで電話・診療時間・予約に即アクセス」。実NAP確定で数値差し替え
    - --header-height を上書きするだけでヒーロー/アンカー余白は全て追従
    ============================================= */
 @media (min-width: 1280px) {
   :root {
-    --header-height: 118px;
+    --header-height: 168px;
+  }
+
+  .header__topline {
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 max(20px, calc((100% - 1240px) / 2));
+    background-color: rgba(247, 232, 219, 0.55);
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .header__inner--top {
-    height: 72px;
+    height: 96px;
+  }
+
+  .header__logo-img {
+    height: 68px;
+  }
+
+  .header__logo-text {
+    font-size: 1.75rem;
   }
 
   .header__inner--top .header__actions {
     margin-left: auto;
+    gap: 22px;
   }
 
   .header__nav {
@@ -739,6 +766,46 @@ p {
     gap: 28px;
   }
 
+  .header__schedule {
+    display: block;
+  }
+
+  .header__schedule-table {
+    border-collapse: collapse;
+    font-size: 0.6875rem;
+    line-height: 1.5;
+  }
+
+  .header__schedule-table th,
+  .header__schedule-table td {
+    padding: 0 5px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .header__schedule-table thead th {
+    color: var(--color-text-light);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header__schedule-table td:first-child {
+    font-size: 0.625rem;
+    color: var(--color-text-light);
+    text-align: right;
+  }
+
+  .header__schedule-table td {
+    color: var(--color-primary-dark);
+  }
+
+  .header__schedule-note {
+    margin-top: 2px;
+    font-size: 0.625rem;
+    color: var(--color-text-light);
+    text-align: right;
+    line-height: 1.3;
+  }
+
   .header__tel-block {
     display: flex;
     flex-direction: column;
@@ -747,7 +814,7 @@ p {
   }
 
   .header__tel {
-    font-size: 1.1875rem;
+    font-size: 1.375rem;
     letter-spacing: 0.02em;
   }
 
@@ -756,12 +823,6 @@ p {
     font-weight: 400;
     color: var(--color-text-light);
     margin-left: 2px;
-  }
-
-  .header__tel-hours {
-    font-size: 0.6875rem;
-    color: var(--color-text-light);
-    line-height: 1.2;
   }
 }
 
