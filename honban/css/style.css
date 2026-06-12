@@ -748,12 +748,13 @@ p {
     height: 96px;
   }
 
+  /* 医院名は画面幅で流体スケール（1280pxで現状維持→広い画面ほど大きく） */
   .header__logo-img {
-    height: 68px;
+    height: clamp(68px, 44px + 1.875vw, 82px);
   }
 
   .header__logo-text {
-    font-size: 1.75rem;
+    font-size: clamp(1.75rem, 1rem + 0.94vw, 2.25rem);
   }
 
   .header__inner--top .header__actions {
