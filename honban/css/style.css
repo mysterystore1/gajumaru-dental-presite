@@ -1430,6 +1430,39 @@ p {
   color: var(--color-text-light);
 }
 
+/* 治療別「こんなとき」症状リスト（services・取材後に院長監修で確定） */
+.service-detail__symptoms {
+  margin: 14px 0 16px;
+}
+
+.service-detail__symptoms-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 6px;
+}
+
+.service-detail__symptoms li {
+  position: relative;
+  padding-left: 17px;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  line-height: 1.9;
+}
+
+.service-detail__symptoms li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.75em;
+  width: 7px;
+  height: 7px;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  box-sizing: border-box;
+}
+
 /* 予約ボタンの識別アイコン */
 .reserve__btn-icon {
   display: flex;
