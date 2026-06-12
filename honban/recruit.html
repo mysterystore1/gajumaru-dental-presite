@@ -1,18 +1,4 @@
 <!DOCTYPE html>
-<!--
-  ============================================================================
-  PAGE_TEMPLATE.html — 新規ページ雛形（空ページ）
-  ============================================================================
-  使い方:
-    1. このファイルを複製し、ルート直下に <page>.html として保存。
-    2. <head> 内の【差し替え】コメント箇所をページ固有の値に直す
-       （title / description / canonical / OGP / JSON-LD）。
-    3. <nav> の該当リンクに aria-current="page" を付ける（任意）。
-    4. <main> にページ本文を実装。
-    5. ヘッダー / 予約導線 / フッター / モバイルバーは _partials.html と同一に保つ。
-       _partials.html を変更したら、このファイルと全ページへ反映する。
-  ============================================================================
--->
 <html lang="ja" class="no-js">
 <head>
   <meta charset="UTF-8">
@@ -21,17 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow"><!-- 本番制作中: 検索に出さない。開業時のルート昇格で解除 -->
 
-  <!-- 【差し替え】ページ固有 title（〜｜辻堂がじゅまる歯科） -->
-  <title>ページタイトル（仮）｜辻堂がじゅまる歯科</title>
-  <!-- 【差し替え】ページ固有 description（辻堂＋ページ主題キーワード） -->
-  <meta name="description" content="ページの説明文（仮）。辻堂の歯科医院。">
+  <title>採用情報｜辻堂がじゅまる歯科</title>
+  <meta name="description" content="辻堂がじゅまる歯科（2026年8月1日開院予定・藤沢市辻堂6丁目）の採用情報。開院に向けて、一緒に働くスタッフを募集します。歯科衛生士・歯科助手・受付。">
 
-  <!-- OGP（【差し替え】title / description / url。image は当面共通hero） -->
-  <meta property="og:title" content="ページタイトル（仮）｜辻堂がじゅまる歯科">
-  <meta property="og:description" content="ページの説明文（仮）。辻堂の歯科医院。">
+  <!-- OGP -->
+  <meta property="og:title" content="採用情報｜辻堂がじゅまる歯科">
+  <meta property="og:description" content="2026年8月1日開院予定。開院に向けて、一緒に働くスタッフを募集します。">
   <meta property="og:image" content="https://gajumaru-dental.com/images/og-image.jpg">
-  <!-- 【差し替え】このページの絶対URL -->
-  <meta property="og:url" content="https://gajumaru-dental.com/PAGE.html">
+  <meta property="og:url" content="https://gajumaru-dental.com/recruit.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
 
@@ -41,15 +24,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet"></noscript>
 
-  <!-- 【差し替え】canonical（このページの絶対URL） -->
-  <link rel="canonical" href="https://gajumaru-dental.com/PAGE.html">
+  <link rel="canonical" href="https://gajumaru-dental.com/recruit.html">
   <link rel="icon" type="image/png" href="images/logo-icon.png">
   <link rel="apple-touch-icon" href="images/logo-icon.png">
 
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- 【差し替え】構造化データ（必要に応じて MedicalWebPage / FAQPage 等）。
-       telephone / streetAddress は実NAP確定後に追記（誤情報を出さない）。 -->
 </head>
 <body>
 
@@ -82,7 +61,7 @@
           <span>0466-XX-XXXX</span><span class="header__tel-kari">（仮）</span>
         </a>
       </div>
-      <a href="#reserve" class="header__cta btn btn--accent btn--sm">ご予約</a>
+      <a href="index.html#reserve" class="header__cta btn btn--accent btn--sm">ご予約</a>
     </div>
 
     <button class="header__hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
@@ -106,41 +85,64 @@
 </header>
 
 
+<!-- ====== ページヒーロー ====== -->
+<section class="page-hero page-hero--image">
+  <img src="images/facility-counseling.webp" alt="" class="page-hero__bg" width="1600" height="900">
+  <div class="page-hero__overlay">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="現在地"><a href="index.html">トップ</a><span>/</span>採用情報</nav>
+      <div class="page-hero__inner fade-in">
+        <p class="page-hero__eyebrow">採用情報</p>
+        <h1 class="page-hero__title">一緒に、最初のスタッフになってください。</h1>
+        <p class="page-hero__lead">2026年8月1日、藤沢市辻堂6丁目に開院します。立ち上げから一緒に医院をつくってくれる仲間を募集します。（仮）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ====== ページ本文 ====== -->
 <main>
 
-  <!-- 【ここにページ固有のコンテンツを実装】 -->
+  <!-- 当院で働くこと -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title fade-in" data-en="About Us">どんな医院か</h2>
+      <p class="anxiety-intro fade-in" data-todo="院長取材後、実際の言葉に差し替え（INTERVIEW_GUIDE H節）">保険診療を基本に、子どもからお年寄りまで家族みんなを診る、地域のかかりつけ歯科です。無理に治療を進めない・説明してから始める、を大切にします。患者さまにもスタッフにも、無理のない医院でありたいと考えています。（仮）</p>
+    </div>
+  </section>
+
+  <!-- 募集要項 -->
+  <div class="divider" style="color:#F5ECE0" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title fade-in" data-en="Positions">募集要項（仮）</h2>
+      <p class="section__subtitle fade-in">条件の詳細は確定し次第掲載します。下記はすべて（仮）です。お気軽にお問い合わせください。</p>
+      <div class="price-table-wrap fade-in" data-todo="募集職種・条件の確定後に差し替え（INTERVIEW_GUIDE H節）">
+        <table class="price-table">
+          <tbody>
+            <tr><td>募集職種</td><td>歯科衛生士／歯科助手・受付（仮）</td></tr>
+            <tr><td>雇用形態</td><td>常勤・パート（仮）</td></tr>
+            <tr><td>給与</td><td>確定後に掲載します（仮）</td></tr>
+            <tr><td>勤務時間</td><td>診療時間に準ずる（9:30-13:00 / 14:30-18:30・土曜午後は14:00-17:00）（仮）</td></tr>
+            <tr><td>休日</td><td>水曜・日曜・祝日（仮）</td></tr>
+            <tr><td>勤務地</td><td>〒251-0047 神奈川県藤沢市辻堂6丁目13-3（辻堂駅からバス約13分・駐車場あり）</td></tr>
+            <tr><td>勤務開始</td><td>2026年7月頃〜（開院準備から）または応相談（仮）</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 応募方法 -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title fade-in" data-en="Apply">応募・お問い合わせ</h2>
+      <p class="anxiety-intro fade-in">「まず話を聞いてみたい」だけでも歓迎です。<a href="index.html#contact">お問い合わせフォーム</a>に「採用について」とご記入のうえお送りいただくか、お電話（0466-XX-XXXX（仮））でご連絡ください。（仮）</p>
+    </div>
+  </section>
 
 </main>
-
-
-<!-- ====== 予約導線（_partials.html と同一） ====== -->
-<div class="divider" style="color:#F7E8DB" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
-<section class="reserve" id="reserve" aria-labelledby="reserve-title">
-  <div class="container">
-    <h2 class="reserve__title" id="reserve-title">ご予約・お問い合わせ</h2>
-    <p class="reserve__lead">相談だけでも大丈夫です。</p>
-    <p class="reserve__tel">
-      <a href="tel:0466XXXXXX" class="reserve__tel-num">0466-XX-XXXX</a><span class="reserve__tel-kari">（仮）</span>
-      <span class="reserve__tel-hours">受付 9:30-13:00 / 14:30-18:30（水・日・祝 休診）（仮）</span>
-    </p>
-    <div class="reserve__grid">
-      <span class="reserve__btn reserve__btn--epark" aria-disabled="true" data-todo="予約システム(WEB予約)の実URLに差し替え">
-        <span class="reserve__btn-label">WEB予約</span>
-        <span class="reserve__btn-sub">（準備中）</span>
-      </span>
-      <a href="tel:0466XXXXXX" class="reserve__btn reserve__btn--tel">
-        <span class="reserve__btn-label">電話で予約</span>
-        <span class="reserve__btn-sub">0466-XX-XXXX（仮）</span>
-      </a>
-      <a href="index.html#contact" class="reserve__btn reserve__btn--form">
-        <span class="reserve__btn-label">フォーム</span>
-        <span class="reserve__btn-sub">お問い合わせ</span>
-      </a>
-    </div>
-    <p class="reserve__note">※ WEB予約 は開院準備中です。当面はお電話・フォームをご利用ください。（仮）</p>
-  </div>
-</section>
 
 
 <!-- ====== フッター（_partials.html と同一） ====== -->

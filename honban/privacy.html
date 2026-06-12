@@ -1,18 +1,4 @@
 <!DOCTYPE html>
-<!--
-  ============================================================================
-  PAGE_TEMPLATE.html — 新規ページ雛形（空ページ）
-  ============================================================================
-  使い方:
-    1. このファイルを複製し、ルート直下に <page>.html として保存。
-    2. <head> 内の【差し替え】コメント箇所をページ固有の値に直す
-       （title / description / canonical / OGP / JSON-LD）。
-    3. <nav> の該当リンクに aria-current="page" を付ける（任意）。
-    4. <main> にページ本文を実装。
-    5. ヘッダー / 予約導線 / フッター / モバイルバーは _partials.html と同一に保つ。
-       _partials.html を変更したら、このファイルと全ページへ反映する。
-  ============================================================================
--->
 <html lang="ja" class="no-js">
 <head>
   <meta charset="UTF-8">
@@ -21,17 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow"><!-- 本番制作中: 検索に出さない。開業時のルート昇格で解除 -->
 
-  <!-- 【差し替え】ページ固有 title（〜｜辻堂がじゅまる歯科） -->
-  <title>ページタイトル（仮）｜辻堂がじゅまる歯科</title>
-  <!-- 【差し替え】ページ固有 description（辻堂＋ページ主題キーワード） -->
-  <meta name="description" content="ページの説明文（仮）。辻堂の歯科医院。">
+  <title>プライバシーポリシー｜辻堂がじゅまる歯科</title>
+  <meta name="description" content="辻堂がじゅまる歯科の個人情報の取り扱いについて。お問い合わせ・ご予約でお預かりする情報の利用目的と管理方針をご案内します。">
 
-  <!-- OGP（【差し替え】title / description / url。image は当面共通hero） -->
-  <meta property="og:title" content="ページタイトル（仮）｜辻堂がじゅまる歯科">
-  <meta property="og:description" content="ページの説明文（仮）。辻堂の歯科医院。">
+  <!-- OGP -->
+  <meta property="og:title" content="プライバシーポリシー｜辻堂がじゅまる歯科">
+  <meta property="og:description" content="個人情報の取り扱いについてのご案内です。">
   <meta property="og:image" content="https://gajumaru-dental.com/images/og-image.jpg">
-  <!-- 【差し替え】このページの絶対URL -->
-  <meta property="og:url" content="https://gajumaru-dental.com/PAGE.html">
+  <meta property="og:url" content="https://gajumaru-dental.com/privacy.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
 
@@ -41,15 +24,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet"></noscript>
 
-  <!-- 【差し替え】canonical（このページの絶対URL） -->
-  <link rel="canonical" href="https://gajumaru-dental.com/PAGE.html">
+  <link rel="canonical" href="https://gajumaru-dental.com/privacy.html">
   <link rel="icon" type="image/png" href="images/logo-icon.png">
   <link rel="apple-touch-icon" href="images/logo-icon.png">
 
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- 【差し替え】構造化データ（必要に応じて MedicalWebPage / FAQPage 等）。
-       telephone / streetAddress は実NAP確定後に追記（誤情報を出さない）。 -->
+  <style>
+    /* 法務ページ専用の最小スタイル（本文リスト） */
+    .legal { max-width: 760px; margin: 0 auto; }
+    .legal h2 { font-family: var(--font-display); font-size: 1.1875rem; color: var(--color-primary-dark); margin: 40px 0 12px; padding-top: 24px; border-top: 1px solid var(--color-border); }
+    .legal section:first-child h2 { margin-top: 0; border-top: none; padding-top: 0; }
+    .legal p { margin-bottom: 12px; }
+    .legal ul { list-style: disc; padding-left: 1.4em; margin-bottom: 12px; }
+    .legal li { margin-bottom: 4px; }
+    .legal-updated { margin-top: 40px; font-size: 0.8125rem; color: var(--color-text-light); text-align: right; }
+  </style>
 </head>
 <body>
 
@@ -82,7 +71,7 @@
           <span>0466-XX-XXXX</span><span class="header__tel-kari">（仮）</span>
         </a>
       </div>
-      <a href="#reserve" class="header__cta btn btn--accent btn--sm">ご予約</a>
+      <a href="index.html#reserve" class="header__cta btn btn--accent btn--sm">ご予約</a>
     </div>
 
     <button class="header__hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
@@ -106,41 +95,90 @@
 </header>
 
 
-<!-- ====== ページ本文 ====== -->
-<main>
-
-  <!-- 【ここにページ固有のコンテンツを実装】 -->
-
-</main>
-
-
-<!-- ====== 予約導線（_partials.html と同一） ====== -->
-<div class="divider" style="color:#F7E8DB" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
-<section class="reserve" id="reserve" aria-labelledby="reserve-title">
+<!-- ====== ページヒーロー（法務ページ＝テキスト型・簡素） ====== -->
+<section class="page-hero">
   <div class="container">
-    <h2 class="reserve__title" id="reserve-title">ご予約・お問い合わせ</h2>
-    <p class="reserve__lead">相談だけでも大丈夫です。</p>
-    <p class="reserve__tel">
-      <a href="tel:0466XXXXXX" class="reserve__tel-num">0466-XX-XXXX</a><span class="reserve__tel-kari">（仮）</span>
-      <span class="reserve__tel-hours">受付 9:30-13:00 / 14:30-18:30（水・日・祝 休診）（仮）</span>
-    </p>
-    <div class="reserve__grid">
-      <span class="reserve__btn reserve__btn--epark" aria-disabled="true" data-todo="予約システム(WEB予約)の実URLに差し替え">
-        <span class="reserve__btn-label">WEB予約</span>
-        <span class="reserve__btn-sub">（準備中）</span>
-      </span>
-      <a href="tel:0466XXXXXX" class="reserve__btn reserve__btn--tel">
-        <span class="reserve__btn-label">電話で予約</span>
-        <span class="reserve__btn-sub">0466-XX-XXXX（仮）</span>
-      </a>
-      <a href="index.html#contact" class="reserve__btn reserve__btn--form">
-        <span class="reserve__btn-label">フォーム</span>
-        <span class="reserve__btn-sub">お問い合わせ</span>
-      </a>
+    <nav class="breadcrumb" aria-label="現在地"><a href="index.html">トップ</a><span>/</span>プライバシーポリシー</nav>
+    <div class="page-hero__inner fade-in">
+      <h1 class="page-hero__title">プライバシーポリシー</h1>
+      <p class="page-hero__lead">お問い合わせ・ご予約でお預かりする個人情報の取り扱いについてご案内します。</p>
     </div>
-    <p class="reserve__note">※ WEB予約 は開院準備中です。当面はお電話・フォームをご利用ください。（仮）</p>
   </div>
 </section>
+
+
+<!-- ====== ページ本文 ====== -->
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="legal fade-in">
+
+        <section>
+          <h2>1. 基本方針</h2>
+          <p>辻堂がじゅまる歯科（以下「当院」）は、個人情報の重要性を認識し、個人情報の保護に関する法律（個人情報保護法）および関連法令・ガイドラインを遵守して、患者さまの個人情報を適切に取り扱います。</p>
+        </section>
+
+        <section>
+          <h2>2. 取得する情報</h2>
+          <p>当院は、お問い合わせフォーム・お電話でのご予約等を通じて、次の情報をお預かりすることがあります。</p>
+          <ul>
+            <li>お名前</li>
+            <li>メールアドレス</li>
+            <li>電話番号</li>
+            <li>お問い合わせ・ご相談の内容</li>
+          </ul>
+          <p>開院後の診療においては、保険証情報・問診票の記載内容・診療記録等をお預かりします。</p>
+        </section>
+
+        <section>
+          <h2>3. 利用目的</h2>
+          <p>お預かりした個人情報は、次の目的の範囲内で利用します。</p>
+          <ul>
+            <li>ご予約・お問い合わせへの回答、ご連絡</li>
+            <li>診療および診療に関するご案内（開院後）</li>
+            <li>医療保険事務、診療費の請求に関する事務（開院後）</li>
+            <li>当院の運営に必要な範囲での記録・管理</li>
+          </ul>
+          <p>上記以外の目的で利用する場合は、あらかじめご本人の同意を得ます。</p>
+        </section>
+
+        <section>
+          <h2>4. 第三者への提供</h2>
+          <p>法令に基づく場合、人の生命・身体・財産の保護のために必要がある場合等を除き、ご本人の同意なく個人情報を第三者に提供することはありません。</p>
+        </section>
+
+        <section>
+          <h2>5. お問い合わせフォームの送信について</h2>
+          <p>当サイトのお問い合わせフォームは、フォーム送信サービス（FormSubmit）を利用して当院へ送信されます。送信内容は当該サービスのシステムを経由します。サービスの仕様の詳細は提供元のポリシーをご確認ください。</p>
+        </section>
+
+        <section>
+          <h2>6. Cookie・アクセス解析について</h2>
+          <p>当サイトは現在、アクセス解析ツールおよび広告配信のためのCookieを使用していません。導入する場合は、本ページでお知らせします。</p>
+        </section>
+
+        <section>
+          <h2>7. 安全管理</h2>
+          <p>個人情報への不正アクセス、紛失、漏えい等を防ぐため、必要かつ適切な安全管理措置を講じます。</p>
+        </section>
+
+        <section>
+          <h2>8. 開示・訂正・利用停止のご請求</h2>
+          <p>ご本人からの個人情報の開示・訂正・利用停止等のお申し出には、ご本人であることを確認のうえ、法令に従い速やかに対応します。下記の窓口までご連絡ください。</p>
+          <p>辻堂がじゅまる歯科<br>〒251-0047 神奈川県藤沢市辻堂6丁目13-3<br>電話: 0466-XX-XXXX（仮）</p>
+        </section>
+
+        <section>
+          <h2>9. 本ポリシーの改定</h2>
+          <p>法令の改正や運用の変更にあわせて、本ポリシーを改定することがあります。改定後の内容は本ページに掲載した時点で効力を生じます。</p>
+        </section>
+
+        <p class="legal-updated">制定日: 2026年6月12日（開院時に改定予定）</p>
+
+      </div>
+    </div>
+  </section>
+</main>
 
 
 <!-- ====== フッター（_partials.html と同一） ====== -->
