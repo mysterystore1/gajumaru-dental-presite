@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     a.appendChild(span);
   });
 
-  /* --- カルーセル（院内の様子・自動送り） --- */
+  /* --- カルーセル（院内の様子・scroll-snap: スワイプ/矢印/ドット/自動送り） --- */
   document.querySelectorAll('[data-carousel]').forEach((root) => {
     const track = root.querySelector('.carousel__track');
     const slides = Array.from(root.querySelectorAll('.carousel__slide'));
@@ -169,15 +169,29 @@ document.addEventListener('DOMContentLoaded', () => {
       return b;
     });
 
-    const render = () => {
-      track.style.transform = 'translateX(' + (-index * 100) + '%)';
+    const setActive = () => {
       dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
     };
     const go = (i, user) => {
       index = (i + slides.length) % slides.length;
-      render();
+      track.scrollTo({ left: index * track.clientWidth, behavior: reduce ? 'auto' : 'smooth' });
+      setActive();
       if (user) restart();
     };
+
+    /* スワイプ・横スクロールとドットを同期 */
+    let syncTimer = null;
+    track.addEventListener('scroll', () => {
+      clearTimeout(syncTimer);
+      syncTimer = setTimeout(() => {
+        const i = Math.round(track.scrollLeft / track.clientWidth);
+        if (i !== index && i >= 0 && i < slides.length) {
+          index = i;
+          setActive();
+        }
+      }, 90);
+    }, { passive: true });
+
     const start = () => { if (!reduce && !timer) timer = setInterval(() => go(index + 1), 4500); };
     const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
     const restart = () => { stop(); start(); };
@@ -188,8 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
     root.addEventListener('mouseleave', start);
     root.addEventListener('focusin', stop);
     root.addEventListener('focusout', start);
+    track.addEventListener('touchstart', stop, { passive: true });
+    track.addEventListener('touchend', start, { passive: true });
 
-    render();
+    setActive();
     start();
   });
 
