@@ -507,9 +507,25 @@ p {
    - 白背景セクションの余白に1点ずつ・薄く。1セクション1あしらいの原則内
    - モバイルは非表示（余白が無く窮屈になるため）
    ============================================= */
+#greeting,
 #features,
-#access {
+#gallery,
+#access,
+#news-preview {
   position: relative;
+}
+
+/* ごあいさつ: 左上から垂れる気根カーテン（木陰の下で話を聞くイメージ） */
+#greeting::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 3%;
+  width: 92px;
+  height: 110px;
+  background: url("../images/deco-roots.svg") top / contain no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 #features::after {
@@ -524,6 +540,19 @@ p {
   pointer-events: none;
 }
 
+/* 院内の様子: 帯の下に舞い落ちた葉 */
+#gallery::after {
+  content: "";
+  position: absolute;
+  bottom: 18px;
+  right: 4%;
+  width: 138px;
+  height: 50px;
+  background: url("../images/deco-leaves.svg") bottom / contain no-repeat;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 #access::after {
   content: "";
   position: absolute;
@@ -535,9 +564,25 @@ p {
   pointer-events: none;
 }
 
+/* お知らせ: 右下であくびする子猫（足あと=由来の子猫と連動） */
+#news-preview::after {
+  content: "";
+  position: absolute;
+  bottom: 24px;
+  right: 5%;
+  width: 74px;
+  height: 66px;
+  background: url("../images/deco-cat-yawn.svg") bottom / contain no-repeat;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 @media (max-width: 767px) {
+  #greeting::after,
   #features::after,
-  #access::after {
+  #gallery::after,
+  #access::after,
+  #news-preview::after {
     display: none;
   }
 }
@@ -2289,14 +2334,6 @@ a.news-list__link:hover {
 /* =============================================
    院内紹介: facility
    ============================================= */
-.facility-intro {
-  max-width: 760px;
-  margin: 0 auto 8px;
-  text-align: center;
-  font-size: 0.9375rem;
-  line-height: 1.9;
-  color: var(--color-text-light);
-}
 
 .facility-list {
   max-width: 920px;
@@ -2769,6 +2806,11 @@ a.news-list__link:hover {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
     max-width: 420px;
+  }
+
+  /* 2列×3ボタンで3つ目「フォーム」が孤立wrapするため全幅に（L-8） */
+  .reserve__btn--form {
+    grid-column: 1 / -1;
   }
 
   .service-cards {

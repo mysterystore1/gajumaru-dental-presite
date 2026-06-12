@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 130" fill="none">
+  <!-- 気根カーテン（ガジュマルの枝から垂れる気根。セクション上端から下げて使う） -->
+  <!-- スタイル: サイト共通の線画言語（線 #9C5026 / 塗り #F7E8DB） -->
+  <!-- 枝 -->
+  <path d="M2,8 C30,4 74,4 108,10" stroke="#9C5026" stroke-width="2.4" stroke-linecap="round" opacity="0.6"/>
+  <!-- 気根（長短・濃淡をばらす） -->
+  <path d="M16,9 C14,30 18,48 15,66" stroke="#9C5026" stroke-width="1.9" stroke-linecap="round" opacity="0.5"/>
+  <path d="M34,7 C36,34 31,62 35,92" stroke="#9C5026" stroke-width="2" stroke-linecap="round" opacity="0.42"/>
+  <path d="M52,6 C50,28 54,44 51,58" stroke="#9C5026" stroke-width="1.7" stroke-linecap="round" opacity="0.55"/>
+  <path d="M70,7 C72,40 67,78 71,116" stroke="#9C5026" stroke-width="2.1" stroke-linecap="round" opacity="0.38"/>
+  <path d="M88,8 C86,26 90,40 88,52" stroke="#9C5026" stroke-width="1.7" stroke-linecap="round" opacity="0.5"/>
+  <!-- 枝の葉 -->
+  <g transform="rotate(-20 26 16)">
+    <path d="M26,24 C23.5,20.5 23.5,15.5 26,12 C28.5,15.5 28.5,20.5 26,24 Z" fill="#F7E8DB" stroke="#9C5026" stroke-width="1.5"/>
+    <path d="M26,22.5 L26,13.5" stroke="#9C5026" stroke-width="0.9"/>
+  </g>
+  <g transform="rotate(16 96 20)">
+    <path d="M96,26 C93.8,23 93.8,18.5 96,15.5 C98.2,18.5 98.2,23 96,26 Z" fill="#F7E8DB" stroke="#9C5026" stroke-width="1.4"/>
+    <path d="M96,24.5 L96,17" stroke="#9C5026" stroke-width="0.9"/>
+  </g>
+  <!-- いちばん長い気根の先の若葉 -->
+  <g transform="rotate(10 71 121)" opacity="0.7">
+    <path d="M71,125 C69.2,122.5 69.2,119 71,116.5 C72.8,119 72.8,122.5 71,125 Z" fill="#F7E8DB" stroke="#9C5026" stroke-width="1.3"/>
+  </g>
+</svg>
