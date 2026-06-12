@@ -121,7 +121,7 @@
         <span class="hero__title-text">辻堂がじゅまる歯科</span>
       </h1>
       <div class="hero__cta">
-        <a href="#contact" class="btn btn--accent">お問い合わせ</a>
+        <a href="contact.html" class="btn btn--accent">お問い合わせ</a>
         <a href="#access" class="btn btn--white-outline">アクセスを見る</a>
       </div>
     </div>
@@ -403,75 +403,7 @@
 </section>
 
 
-<!-- ====== お問い合わせ ====== -->
-<div class="divider" style="color:#F5ECE0" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
-<section class="section section--alt" id="contact">
-  <div class="container">
-    <h2 class="section__title fade-in" data-en="Contact">お問い合わせ</h2>
-    <p class="section__subtitle fade-in">診療内容・ご予約・ご相談など、お気軽にお問い合わせください。</p>
-
-    <div class="contact fade-in">
-      <form
-        id="contact-form"
-        class="contact__form"
-        action="https://formsubmit.co/ajax/774345eb5ff130cda987cc07b709ec7e"
-        method="POST"
-      >
-        <!-- formsubmit.co 設定（ajax版: main.js の fetch と整合） -->
-        <input type="hidden" name="_subject" value="【辻堂がじゅまる歯科】お問い合わせ">
-        <input type="hidden" name="_template" value="table">
-        <!-- ハニーポット（スパム対策・人間には不可視。ボットが入力すると弾かれる） -->
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-        <div class="form-group">
-          <label for="name" class="form-label">お名前 <span class="form-required">必須</span></label>
-          <input type="text" id="name" name="name" required autocomplete="name" class="form-input" placeholder="例：山田 太郎">
-        </div>
-
-        <div class="form-group">
-          <label for="email" class="form-label">メールアドレス <span class="form-required">必須</span></label>
-          <input type="email" id="email" name="email" required autocomplete="email" class="form-input" placeholder="例：example@mail.com">
-        </div>
-
-        <div class="form-group">
-          <label for="tel" class="form-label">電話番号</label>
-          <input type="tel" id="tel" name="phone" autocomplete="tel" class="form-input" placeholder="例：090-1234-5678">
-        </div>
-
-        <div class="form-group">
-          <label for="category" class="form-label">お問い合わせ種別</label>
-          <select id="category" name="category" class="form-select">
-            <option value="">選択してください</option>
-            <option value="ご予約・ご相談">ご予約・ご相談について</option>
-            <option value="開業予定について">開業予定について</option>
-            <option value="診療内容について">診療内容について</option>
-            <option value="その他">その他</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="message" class="form-label">お問い合わせ内容 <span class="form-required">必須</span></label>
-          <textarea id="message" name="message" rows="5" required class="form-textarea" placeholder="お問い合わせ内容をご記入ください"></textarea>
-        </div>
-
-        <div class="form-group form-group--submit">
-          <button type="submit" class="btn btn--accent btn--lg btn--block">送信する</button>
-        </div>
-      </form>
-
-      <div class="contact__tel">
-        <p class="contact__tel-label">お電話でもお問い合わせいただけます</p>
-        <a href="tel:0466XXXXXX" class="contact__tel-number">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          0466-XX-XXXX
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ====== 予約導線（_partials.html と同一・index ではフォームは #contact） ====== -->
+<!-- ====== 予約導線（_partials.html と同一） ====== -->
 <div class="divider" style="color:#F7E8DB" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
 <section class="reserve" id="reserve" aria-labelledby="reserve-title">
   <div class="container">
@@ -490,7 +422,7 @@
         <span class="reserve__btn-label">電話で予約</span>
         <span class="reserve__btn-sub">0466-XX-XXXX（仮）</span>
       </a>
-      <a href="#contact" class="reserve__btn reserve__btn--form">
+      <a href="contact.html" class="reserve__btn reserve__btn--form">
         <span class="reserve__btn-label">フォーム</span>
         <span class="reserve__btn-sub">お問い合わせ</span>
       </a>
@@ -521,6 +453,7 @@
           <li><a href="pricing.html">料金表</a></li>
           <li><a href="access.html">アクセス</a></li>
           <li><a href="faq.html">よくあるご質問</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
           <li><a href="recruit.html">採用情報</a></li>
           <li><a href="privacy.html">プライバシーポリシー</a></li>
         </ul>
@@ -555,7 +488,7 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     電話する
   </a>
-  <a href="#contact" class="mobile-bar__btn mobile-bar__btn--contact">
+  <a href="contact.html" class="mobile-bar__btn mobile-bar__btn--contact">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
     お問い合わせ
   </a>
