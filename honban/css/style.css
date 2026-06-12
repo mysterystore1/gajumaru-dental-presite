@@ -199,6 +199,19 @@ ol {
   font-size: var(--fs-lead);
 }
 
+/* セクション境界の波ディバイダ（部品3）
+   - 白→alt の境界のみに置く。fill は次セクションの背景色（currentColor渡し） */
+.divider {
+  line-height: 0;
+  margin-bottom: -1px;
+}
+
+.divider svg {
+  width: 100%;
+  height: clamp(20px, 3.2vw, 44px);
+  display: block;
+}
+
 /* --- ボタン --- */
 .btn {
   display: inline-flex;
