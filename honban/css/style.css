@@ -2709,6 +2709,16 @@ p {
 }
 
 /* =============================================
+   ページ遷移のクロスフェード（View Transitions・§4-8）
+   - 対応ブラウザ(Chrome/Edge)のみ。非対応は通常遷移
+   ============================================= */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+/* =============================================
    アクセシビリティ: 動きの抑制（prefers-reduced-motion）
    - スムーススクロールと全transition/animationを無効化
    - fade-in はスクロール到達を待たず常時表示
