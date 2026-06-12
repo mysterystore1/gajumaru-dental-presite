@@ -23,7 +23,11 @@
   --header-height: 72px;
   --radius: 8px;
   --radius-lg: 12px;
-  --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  /* 影は黒でなく暖色チントで多層に（M-3: 上位サイトは「黒くない影」を使う） */
+  --shadow-sm: 0 1px 2px rgba(120, 72, 40, 0.06), 0 2px 8px rgba(120, 72, 40, 0.06);
+  --shadow: 0 1px 2px rgba(120, 72, 40, 0.06), 0 4px 14px rgba(120, 72, 40, 0.08);
+  --shadow-md: 0 2px 4px rgba(120, 72, 40, 0.05), 0 8px 24px rgba(120, 72, 40, 0.1);
+  --shadow-lg: 0 4px 8px rgba(120, 72, 40, 0.06), 0 18px 48px rgba(120, 72, 40, 0.16);
   --transition: 0.3s ease;
   /* 流体タイポ＋寸法トークン（§4-2: 中間幅でもリズムが死なない） */
   --fs-hero: clamp(1.9rem, 1.1rem + 3.6vw, 3.1rem);
@@ -230,6 +234,17 @@ p {
   width: 100%;
   height: clamp(20px, 3.2vw, 44px);
   display: block;
+}
+
+/* 罫線の質: 両端をフェードさせる（§4-4・「罫線＋余白」方針の補強） */
+.info__row,
+.news-list__item,
+.promise,
+.steps__item,
+.qa__item,
+.profile-list__row,
+.policy-item {
+  border-image: linear-gradient(to right, transparent, var(--color-border) 12%, var(--color-border) 88%, transparent) 1;
 }
 
 /* --- ボタン --- */
@@ -516,7 +531,7 @@ p {
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: 0.02em;
-  box-shadow: -3px 3px 12px rgba(0, 0, 0, 0.16);
+  box-shadow: -3px 3px 12px rgba(120, 72, 40, 0.18);
   transition: width 0.2s ease, padding-right 0.2s ease, filter 0.2s ease;
 }
 .side-reserve__btn svg {
@@ -1393,7 +1408,7 @@ p {
   transform: translateY(-2px);
   border-color: var(--color-primary);
   color: var(--color-text);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 .reserve__btn-label {
@@ -2622,7 +2637,7 @@ p {
     right: 0;
     z-index: 900;
     background-color: var(--color-white);
-    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 -2px 12px rgba(120, 72, 40, 0.12);
     padding: 8px 12px;
     padding-bottom: max(8px, env(safe-area-inset-bottom));
     gap: 8px;
