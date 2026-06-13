@@ -515,66 +515,71 @@ p {
   position: relative;
 }
 
-/* ごあいさつ: 左上から垂れる気根カーテン（木陰の下で話を聞くイメージ） */
-#greeting::after {
+/* 共通土台: 各あしらいで同じプロパティはここに集約（差分は下の個別指定） */
+#greeting::after,
+#features::after,
+#gallery::after,
+#access::after,
+#news-preview::after {
   content: "";
   position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+/* ごあいさつ: 左上から垂れる気根カーテン（木陰の下で話を聞くイメージ） */
+#greeting::after {
   top: 0;
   left: 3%;
   width: 92px;
   height: 110px;
-  background: url("../images/deco-roots.svg") top / contain no-repeat;
+  background-image: url("../images/deco-roots.svg");
+  background-position: top;
   opacity: 0.5;
-  pointer-events: none;
 }
 
+/* 当院の特徴: 右上にとまる小鳥 */
 #features::after {
-  content: "";
-  position: absolute;
   top: 44px;
   right: 4%;
   width: 84px;
   height: 70px;
-  background: url("../images/deco-bird.svg") center / contain no-repeat;
+  background-image: url("../images/deco-bird.svg");
+  background-position: center;
   opacity: 0.55;
-  pointer-events: none;
 }
 
 /* 院内の様子: 帯の下に舞い落ちた葉 */
 #gallery::after {
-  content: "";
-  position: absolute;
   bottom: 18px;
   right: 4%;
   width: 138px;
   height: 50px;
-  background: url("../images/deco-leaves.svg") bottom / contain no-repeat;
+  background-image: url("../images/deco-leaves.svg");
+  background-position: bottom;
   opacity: 0.6;
-  pointer-events: none;
 }
 
+/* アクセス: 左下に由来の子猫の足あと（濃淡はSVG内で表現・opacity指定なし） */
 #access::after {
-  content: "";
-  position: absolute;
   bottom: 28px;
   left: 3%;
   width: 132px;
   height: 42px;
-  background: url("../images/deco-pawprints.svg") center / contain no-repeat;
-  pointer-events: none;
+  background-image: url("../images/deco-pawprints.svg");
+  background-position: center;
 }
 
 /* お知らせ: 右下であくびする子猫（足あと=由来の子猫と連動） */
 #news-preview::after {
-  content: "";
-  position: absolute;
   bottom: 24px;
   right: 5%;
   width: 74px;
   height: 66px;
-  background: url("../images/deco-cat-yawn.svg") bottom / contain no-repeat;
+  background-image: url("../images/deco-cat-yawn.svg");
+  background-position: bottom;
   opacity: 0.6;
-  pointer-events: none;
 }
 
 @media (max-width: 767px) {
