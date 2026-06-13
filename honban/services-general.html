@@ -104,7 +104,9 @@
 </section>
 
 
-<!-- ====== ページ本文 ====== -->
+<!-- ====== ページ本文 ======
+     医療コンテンツは一般的事実（ファクトチェック済＝TREATMENT_CONTENT_RESEARCH.md）。
+     当院固有（進め方の具体・料金・図の医学的妥当性）は (仮)／院長最終確認待ち。 -->
 <main>
 
   <!-- 1. リード＋本文＋症状チェック -->
@@ -115,13 +117,15 @@
         <div class="service-detail__body">
           <p class="service-detail__lead">抜くのは、最後の手段です。</p>
           <p class="service-detail__text">むし歯や歯の痛みの治療を行います。むし歯は、必要な分だけ削って治します。でも、抜くのは最後の手段。一度抜いた歯は、二度と戻らないからです。歯を残せる可能性があるかぎり、まず残す方法を考えます。痛みが気になるときは無理のない範囲で進めますので、遠慮なくお伝えください。（仮）</p>
-          <div class="service-detail__symptoms" data-todo="取材後に院長監修で5〜7項目に拡張（INTERVIEW_GUIDE B-13）">
+          <div class="service-detail__symptoms" data-todo="取材後に院長監修で確定（INTERVIEW_GUIDE B-13）">
             <p class="service-detail__symptoms-title">こんなときはご相談ください（仮）</p>
             <ul>
               <li>冷たいもの・甘いものがしみる</li>
               <li>噛むと痛い、違和感がある</li>
-              <li>歯の黒ずみや穴が気になる</li>
-              <li>以前治療した詰め物・被せ物が気になる</li>
+              <li>歯の黒ずみ・白濁・穴が気になる</li>
+              <li>歯に物がはさまりやすくなった</li>
+              <li>以前治療した詰め物・被せ物のふちが気になる</li>
+              <li>しばらく歯科に行っていない</li>
             </ul>
           </div>
         </div>
@@ -129,18 +133,91 @@
     </div>
   </section>
 
-  <!-- 2. 原因と、放置するとどうなるか【取材待ち・院長監修必須】
-       TREATMENT_PAGES_SPEC.md §3。むし歯の進行（一般論）と放置リスクを、断定・恐怖煽りなしで。
-       図解（手書きSVGライン画・線#9C5026/塗りF7E8DB）を入れる場合は院長チェック必須。
-       取材ソース: INTERVIEW_GUIDE B節。確定まで本ブロックは出さない（捏造・GLリスク回避）。 -->
-
-  <!-- 3. 当院の治療の進め方（STEP型・dental-anxietyトーン）【取材待ち】
-       TREATMENT_PAGES_SPEC.md §4 / INTERVIEW_GUIDE B-9〜B-13。
-       「痛かったら止める」「説明してから始める」をむし歯治療の文脈で具体化。 -->
-
-  <!-- 4. 費用・通院の目安 -->
+  <!-- 2. むし歯はなぜ起こるのか（原因・メカニズム） -->
   <div class="divider" style="color:#F5ECE0" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
   <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title fade-in" data-en="Cause">むし歯は、なぜ起こるのか</h2>
+      <div class="service-detail fade-in">
+        <div class="service-detail__body">
+          <p class="service-detail__text">お口の中の細菌（ミュータンス菌など）は、食べ物にふくまれる糖を使って酸をつくります。この酸が、歯の表面のカルシウムやリンを溶かす——これを「脱灰（だっかい）」といいます。いっぽうで、だ液には酸を中和し、溶けた成分を歯にもどす「再石灰化（さいせっかいか）」のはたらきがあります。ふだんはこの2つがつり合っていますが、糖をとる回数が多い・みがき残しが続くなどでバランスがくずれると、脱灰が勝ってむし歯が進んでいきます。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">ここがポイント</span>むし歯は「歯みがき」だけの問題ではなく、糖とのつきあい方・だ液・時間の積み重ねで起こります。だからこそ、原因から一緒に見直していきます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. むし歯の進行（C0〜C4）＋図解【図の医学的妥当性は院長最終確認】 -->
+  <div class="divider" style="color:#FFFFFF" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title fade-in" data-en="Stages">むし歯の進行（C0〜C4）</h2>
+      <p class="anxiety-intro fade-in">むし歯は、気づかないうちに少しずつ進みます。進む段階ごとに、症状も治療も変わります。</p>
+      <figure class="fade-in" style="max-width:760px;margin:24px auto 4px;text-align:center" data-todo="図の医学的妥当性を院長が最終確認">
+        <img src="images/fig-caries-progression.svg" alt="むし歯の進行。C0初期（脱灰・穴なし）、C1エナメル質、C2象牙質（しみる）、C3神経（強い痛み）、C4歯根のみ。進むほど削る量も治療回数も増える。" width="720" height="210" loading="lazy" style="width:100%;height:auto">
+      </figure>
+      <div class="service-detail fade-in">
+        <div class="service-detail__body">
+          <p class="service-detail__meta"><span class="service-detail__meta-label">C0 ｜ 初期（脱灰）</span>まだ穴は開かず、ほぼ無症状。表面が白くにごることがあります。フッ化物やていねいな清掃で、削らずに経過を見られる段階です。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">C1 ｜ エナメル質</span>小さな穴や着色。痛みはほとんどありません。最小限を削って、白い樹脂（コンポジットレジン）で詰めます。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">C2 ｜ 象牙質</span>冷たいもの・甘いものがしみます。詰め物や被せ物で治します。C2から先は進みが早くなります。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">C3 ｜ 神経（歯髄）</span>ズキズキ・夜間の痛み。神経の治療（根管治療）が必要になります。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">C4 ｜ 歯根のみ</span>歯の頭が崩れた状態。神経が死ぬと痛みは一度引きますが、放っておくと根の先に炎症が出ます。保存が難しければ抜歯となり、入れ歯・ブリッジ・インプラントで補います。</p>
+          <p class="service-detail__text"><strong>早い段階ほど、削る量も通院の回数も少なくてすみます。</strong>「しみる」「痛い」の前に気づけるよう、定期検診をおすすめします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 放置するとどうなるか（恐怖煽りなし・一般論） -->
+  <div class="divider" style="color:#F5ECE0" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title fade-in" data-en="If Left">放っておくと、どうなる？</h2>
+      <div class="service-detail fade-in">
+        <div class="service-detail__body">
+          <p class="service-detail__text">むし歯が神経まで進んで強くいたんでも、そのまま放置すると、やがて神経が死んで痛みが一度引くことがあります。「治った」と感じてしまいがちですが、実際は細菌が根の先へ広がり、根の先の骨に炎症や膿がたまる「根尖性歯周炎（こんせんせいししゅうえん）」へ進むことがあります。歯ぐきや顔が腫れる、噛むと痛む、といった形で再びあらわれ、治療はより大がかりになります。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">大切なこと</span>痛みが引いても、「治った」と自己判断で様子を見ないことが大切です。早めに診せていただければ、それだけ小さな治療で済みます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 当院のむし歯治療の考え方（MI／削る・抜くの整理） -->
+  <div class="divider" style="color:#FFFFFF" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title fade-in" data-en="Our Approach">当院のむし歯治療</h2>
+      <div class="service-detail fade-in">
+        <div class="service-detail__body">
+          <p class="service-detail__lead">削るのは必要な分だけ。抜くのは、最後の手段。</p>
+          <p class="service-detail__text">いまの歯科では「できるだけ削らない・歯を残す」という考え方（MI＝ミニマルインターベンション／最小限の侵襲）が基本になっています。当院もこれにそって、健康な歯をむやみに削らず、本当に必要な範囲だけを見きわめて治療します。小さなむし歯は、歯の色に近い樹脂（コンポジットレジン）で、削る量をおさえて当日のうちに詰められることもあります。進みぐあいによって、詰め物・被せ物、神経まで及べば根管治療、と段階的に。どうしても歯を残せないときにはじめて、抜歯と、そのあとの補い方（入れ歯・ブリッジなど）をご相談します。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">進め方</span>急ぎでなければ、初日はお話と検査・ご説明まで。今の状態と見通し（回数・費用）を手鏡で一緒に見ながらお伝えし、納得いただいてから治療を始めます。痛みが気になるときは、無理のない範囲で進めます。（仮）</p>
+          <!-- 取材待ち: 当院固有の痛み配慮・麻酔の具体・院長の言い切り（INTERVIEW_GUIDE B-9〜B-13） -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 治したあと、再発させない（予防） -->
+  <div class="divider" style="color:#F5ECE0" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title fade-in" data-en="Prevention">治したあと、再発させない</h2>
+      <div class="service-detail fade-in">
+        <div class="service-detail__body">
+          <p class="service-detail__text">むし歯は、治しても原因がそのままだと繰り返します。詰めた歯も、ふちから再びむし歯になること（二次う蝕）があります。だからこそ、治療のあとの予防が大切です。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">フッ化物（フッ素）</span>フッ化物配合の歯みがき剤は、4つの学会（日本口腔衛生学会ほか）が年齢に応じた使い方をすすめています。6歳〜大人は1400〜1500ppm を歯ブラシ全体に。お子さまは年齢に合わせて量と濃度を調整します。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">毎日と、定期検診</span>みがき方の見直し、糖をとる回数をおさえること、そして数か月に一度の検診とクリーニング。当院でも、お一人おひとりに合った予防の方法を一緒に考えます。</p>
+          <p class="service-detail__cta"><a href="services-prevention.html">予防歯科について →</a>　<a href="contact.html">検診のご相談 →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. 費用・通院の目安 -->
+  <div class="divider" style="color:#FFFFFF" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
+  <section class="section">
     <div class="container">
       <h2 class="section__title fade-in" data-en="Cost &amp; Visits">費用・通院の目安</h2>
       <div class="service-detail fade-in">
@@ -153,9 +230,28 @@
     </div>
   </section>
 
-  <!-- 5. よくあるご質問 3問【取材待ち】
-       TREATMENT_PAGES_SPEC.md §6。faq.html の関連3問を流用 or 取材で確定。
-       昇格時に FAQPage 構造化データへ同期。 -->
+  <!-- 8. よくあるご質問 -->
+  <div class="divider" style="color:#F5ECE0" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title fade-in" data-en="FAQ">よくあるご質問</h2>
+      <dl class="qa fade-in">
+        <div class="qa__item">
+          <dt class="qa__q">痛くないむし歯も、治療が必要ですか？</dt>
+          <dd class="qa__a">痛みがなくても、象牙質まで進んだむし歯は自然には治りません。早めに小さく治すほど、歯への負担も費用もおさえられます。まずは検査で状態を確かめましょう。（仮）</dd>
+        </div>
+        <div class="qa__item">
+          <dt class="qa__q">神経は、できるだけ残せますか？</dt>
+          <dd class="qa__a">はい、神経はできるだけ残す方針です。ただし炎症が強い場合は、残すことが難しいこともあります。状態を見て、残せるかどうかを一緒に判断します。（仮）</dd>
+        </div>
+        <div class="qa__item">
+          <dt class="qa__q">治療した歯が、また虫歯になることはありますか？</dt>
+          <dd class="qa__a">あります。詰めた歯も、ふちから再びむし歯になること（二次う蝕）があります。だからこそ、治したあとの予防と定期検診が大切です。（仮）</dd>
+        </div>
+      </dl>
+      <p style="max-width:820px;margin:28px auto 0;font-size:0.8125rem;color:var(--color-text-light);line-height:1.8">出典: e-ヘルスネット（厚生労働省）／日本口腔衛生学会ほか4学会「フッ化物配合歯磨剤の推奨される利用方法について」（2023）／ライオン歯科衛生研究所 ほか。本ページの医学的な記述・図は一般的な情報であり、実際の診断・治療方針は診察のうえ個別にご説明します。</p>
+    </div>
+  </section>
 
 </main>
 

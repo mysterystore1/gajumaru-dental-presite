@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 210" role="img" aria-labelledby="cariesTitle cariesDesc" font-family="'Zen Maru Gothic','Noto Sans JP',sans-serif">
+  <title id="cariesTitle">むし歯の進行（C0〜C4）</title>
+  <desc id="cariesDesc">むし歯はC0（初期・脱灰）からC1エナメル質、C2象牙質、C3神経（歯髄）、C4歯根のみへと進行します。進むほど削る量も治療回数も増えます。</desc>
+  <defs>
+    <g id="tooth">
+      <!-- 歯髄（神経）の淡い陰 -->
+      <path d="M50,30 C58,30 60,44 58,72 C57,92 53,104 50,104 C47,104 43,92 42,72 C40,44 42,30 50,30 Z" fill="#F7E8DB"/>
+      <!-- 歯の輪郭（クラウン＋2根） -->
+      <path d="M50,10 C68,10 84,24 84,46 C84,66 76,82 70,106 C66,122 58,130 52,118 L50,108 L48,118 C42,130 34,122 30,106 C24,82 16,66 16,46 C16,24 32,10 50,10 Z" fill="none" stroke="#9C5026" stroke-width="2.4" stroke-linejoin="round"/>
+    </g>
+  </defs>
+
+  <!-- C0 初期：表面の白濁・脱灰 -->
+  <g transform="translate(10,8)">
+    <use href="#tooth"/>
+    <ellipse cx="50" cy="20" rx="11" ry="5" fill="none" stroke="#C9A36E" stroke-width="2" stroke-dasharray="3 3"/>
+    <text x="50" y="160" text-anchor="middle" font-size="18" font-weight="700" fill="#9C5026">C0</text>
+    <text x="50" y="182" text-anchor="middle" font-size="13" fill="#6E645A">初期（脱灰）</text>
+  </g>
+
+  <!-- C1 エナメル質 -->
+  <g transform="translate(150,8)">
+    <use href="#tooth"/>
+    <path d="M36,20 Q50,12 64,20 Q58,34 50,36 Q42,34 36,20 Z" fill="#C56A38"/>
+    <text x="50" y="160" text-anchor="middle" font-size="18" font-weight="700" fill="#9C5026">C1</text>
+    <text x="50" y="182" text-anchor="middle" font-size="13" fill="#6E645A">エナメル質</text>
+  </g>
+
+  <!-- C2 象牙質 -->
+  <g transform="translate(290,8)">
+    <use href="#tooth"/>
+    <path d="M33,19 Q50,11 67,19 Q66,46 50,58 Q34,46 33,19 Z" fill="#B85E2A"/>
+    <text x="50" y="160" text-anchor="middle" font-size="18" font-weight="700" fill="#9C5026">C2</text>
+    <text x="50" y="182" text-anchor="middle" font-size="13" fill="#6E645A">象牙質（しみる）</text>
+  </g>
+
+  <!-- C3 神経（歯髄） -->
+  <g transform="translate(430,8)">
+    <use href="#tooth"/>
+    <path d="M30,18 Q50,10 70,18 Q69,56 50,82 Q31,56 30,18 Z" fill="#9C5026"/>
+    <text x="50" y="160" text-anchor="middle" font-size="18" font-weight="700" fill="#9C5026">C3</text>
+    <text x="50" y="182" text-anchor="middle" font-size="13" fill="#6E645A">神経（強い痛み）</text>
+  </g>
+
+  <!-- C4 歯根のみ -->
+  <g transform="translate(570,8)">
+    <!-- 崩壊したクラウン＝輪郭を欠けさせる -->
+    <path d="M50,30 C58,30 60,44 58,72 C57,92 53,104 50,104 C47,104 43,92 42,72 C40,44 42,30 50,30 Z" fill="#F7E8DB"/>
+    <path d="M22,46 C30,40 38,52 44,40 C48,33 52,33 56,40 C62,52 70,40 78,46 C76,66 76,82 70,106 C66,122 58,130 52,118 L50,108 L48,118 C42,130 34,122 30,106 C24,82 24,66 22,46 Z" fill="none" stroke="#9C5026" stroke-width="2.4" stroke-linejoin="round" stroke-dasharray="1 0"/>
+    <path d="M24,46 Q50,30 76,46 Q70,72 50,90 Q30,72 24,46 Z" fill="#9C5026"/>
+    <text x="50" y="160" text-anchor="middle" font-size="18" font-weight="700" fill="#9C5026">C4</text>
+    <text x="50" y="182" text-anchor="middle" font-size="13" fill="#6E645A">歯根のみ</text>
+  </g>
+</svg>
