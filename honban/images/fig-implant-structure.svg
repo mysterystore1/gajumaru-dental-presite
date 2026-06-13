@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 250" role="img" aria-labelledby="impTitle impDesc" font-family="'Zen Maru Gothic','Noto Sans JP',sans-serif">
+  <title id="impTitle">インプラントの構造</title>
+  <desc id="impDesc">インプラントは、あごの骨に埋める人工歯根（フィクスチャー）、その上の連結部（アバットメント）、いちばん上の被せ物（上部構造）の3つでできています。</desc>
+
+  <!-- 骨・歯ぐき -->
+  <rect x="150" y="150" width="160" height="86" fill="#EAD8C2"/>
+  <rect x="150" y="132" width="160" height="22" fill="#E9C2A6"/>
+  <path d="M150 132 H210 Q230 126 250 132 H310" fill="none" stroke="#C99A78" stroke-width="2"/>
+
+  <!-- 人工歯根（フィクスチャー）骨の中 -->
+  <path d="M214 150 L246 150 L238 220 C236 228 224 228 222 220 Z" fill="#FFFFFF" stroke="#9C5026" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M218 164 H242 M219 176 H241 M221 188 H239 M223 200 H237" stroke="#9C5026" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- アバットメント（連結部） -->
+  <path d="M220 112 L240 112 L236 140 L224 140 Z" fill="#F2DCCB" stroke="#9C5026" stroke-width="2.2" stroke-linejoin="round"/>
+
+  <!-- 上部構造（被せ物） -->
+  <path d="M205 70 C198 48 210 34 230 34 C250 34 262 48 255 70 C253 78 247 82 240 82 L220 82 C213 82 207 78 205 70 Z" fill="#FFFFFF" stroke="#9C5026" stroke-width="2.4" stroke-linejoin="round"/>
+
+  <!-- ラベル -->
+  <line x1="262" y1="52" x2="340" y2="52" stroke="#C9A98C" stroke-width="1.4"/>
+  <text x="346" y="56" font-size="15" fill="#6E645A">上部構造（被せ物）</text>
+  <line x1="244" y1="126" x2="340" y2="100" stroke="#C9A98C" stroke-width="1.4"/>
+  <text x="346" y="104" font-size="15" fill="#6E645A">アバットメント（連結部）</text>
+  <line x1="246" y1="185" x2="340" y2="160" stroke="#C9A98C" stroke-width="1.4"/>
+  <text x="346" y="164" font-size="15" fill="#6E645A">人工歯根（フィクスチャー）</text>
+  <line x1="150" y1="195" x2="120" y2="195" stroke="#C9A98C" stroke-width="1.4"/>
+  <text x="116" y="199" text-anchor="end" font-size="15" fill="#6E645A">あごの骨</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <circle cx="80" cy="80" r="74" fill="#F7E8DB"/>
+  <!-- 中央の歯 -->
+  <path d="M80 54 C68 54 60 62 60 75 C60 87 64 98 68 106 C70 111 76 110 77 103 L79 91 C79.3 88 80.7 88 81 91 L83 103 C84 110 90 111 92 106 C96 98 100 87 100 75 C100 62 92 54 80 54 Z" fill="none" stroke="#C56A38" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 整列の矢印（両側から中央へ） -->
+  <path d="M30 80 H46 M40 73 L47 80 L40 87" fill="none" stroke="#C56A38" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M130 80 H114 M120 73 L113 80 L120 87" fill="none" stroke="#C56A38" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

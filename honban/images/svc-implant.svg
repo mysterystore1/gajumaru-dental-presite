@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <circle cx="80" cy="80" r="74" fill="#F7E8DB"/>
+  <!-- 上部構造（被せ物） -->
+  <path d="M56 66 C50 46 58 34 80 34 C102 34 110 46 104 66 C103 70 99 72 95 72 L65 72 C61 72 57 70 56 66 Z" fill="none" stroke="#C56A38" stroke-width="4" stroke-linejoin="round"/>
+  <!-- 人工歯根（フィクスチャー） -->
+  <path d="M70 78 L90 78 L84 120 C83 126 77 126 76 120 Z" fill="none" stroke="#C56A38" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M72 90 H88 M73 100 H87 M75 110 H85" stroke="#C56A38" stroke-width="3" stroke-linecap="round"/>
+</svg>
