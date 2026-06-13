@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-labelledby="perioTitle perioDesc" font-family="'Zen Maru Gothic','Noto Sans JP',sans-serif">
+  <title id="perioTitle">歯周病の進行</title>
+  <desc id="perioDesc">健康な歯ぐきから歯肉炎、歯周炎へと進むにつれ、歯周ポケットが深くなり、歯を支える骨が失われ、歯根が露出してぐらつきます。</desc>
+  <defs>
+    <g id="ptooth">
+      <path d="M64,14 C64,8 100,8 100,14 L96,118 C95,150 88,168 82,168 C76,168 69,150 68,118 Z" fill="#FFFFFF" stroke="#9C5026" stroke-width="2.2" stroke-linejoin="round"/>
+    </g>
+  </defs>
+
+  <!-- 1 健康：骨は高く、ポケットは浅い -->
+  <g transform="translate(8,4)">
+    <rect x="0" y="70" width="160" height="118" fill="#EAD8C2"/>                <!-- 骨(高い) -->
+    <rect x="0" y="58" width="160" height="20" fill="#E9C2A6"/>                 <!-- 歯ぐき -->
+    <path d="M0,58 H62 Q82,52 102,58 H160" fill="none" stroke="#C99A78" stroke-width="2"/>
+    <use href="#ptooth"/>
+    <rect x="62" y="58" width="3.5" height="10" fill="#7A4A28"/><rect x="99" y="58" width="3.5" height="10" fill="#7A4A28"/>
+    <text x="82" y="206" text-anchor="middle" font-size="14" font-weight="700" fill="#9C5026">健康</text>
+  </g>
+
+  <!-- 2 歯肉炎：歯ぐきが腫れて赤み（骨はまだ保たれる） -->
+  <g transform="translate(186,4)">
+    <rect x="0" y="70" width="160" height="118" fill="#EAD8C2"/>
+    <rect x="0" y="56" width="160" height="22" fill="#E9C2A6"/>
+    <path d="M0,56 Q40,46 64,54 Q82,48 100,54 Q120,46 160,56 L160,78 H0 Z" fill="#D98C63"/>  <!-- 腫れ -->
+    <path d="M0,56 Q40,46 64,54 Q82,48 100,54 Q120,46 160,56" fill="none" stroke="#C56A38" stroke-width="2.4"/>
+    <use href="#ptooth"/>
+    <rect x="62" y="54" width="3.5" height="14" fill="#7A4A28"/><rect x="99" y="54" width="3.5" height="14" fill="#7A4A28"/>
+    <text x="82" y="206" text-anchor="middle" font-size="14" font-weight="700" fill="#9C5026">歯肉炎</text>
+  </g>
+
+  <!-- 3 歯周炎：骨が下がり、ポケットが深まる -->
+  <g transform="translate(364,4)">
+    <rect x="0" y="98" width="160" height="90" fill="#EAD8C2"/>                 <!-- 骨が下がる -->
+    <rect x="0" y="74" width="160" height="26" fill="#E9C2A6"/>
+    <path d="M0,74 H60 Q82,68 104,74 H160" fill="none" stroke="#C56A38" stroke-width="2"/>
+    <use href="#ptooth"/>
+    <rect x="62" y="74" width="3.5" height="24" fill="#7A4A28"/><rect x="99" y="74" width="3.5" height="24" fill="#7A4A28"/>  <!-- 深いポケット -->
+    <text x="82" y="206" text-anchor="middle" font-size="14" font-weight="700" fill="#9C5026">歯周炎</text>
+  </g>
+
+  <!-- 4 重度：骨が大きく失われ、歯根が露出してぐらつく -->
+  <g transform="translate(542,4)">
+    <rect x="0" y="128" width="170" height="60" fill="#EAD8C2"/>                <!-- 骨が大きく失われる -->
+    <rect x="0" y="104" width="170" height="26" fill="#E9C2A6"/>
+    <path d="M0,104 H58 Q82,98 106,104 H170" fill="none" stroke="#C56A38" stroke-width="2"/>
+    <g transform="rotate(5 82 100)">
+      <use href="#ptooth"/>
+      <rect x="62" y="104" width="3.5" height="24" fill="#7A4A28"/><rect x="99" y="104" width="3.5" height="24" fill="#7A4A28"/>
+    </g>
+    <text x="85" y="206" text-anchor="middle" font-size="14" font-weight="700" fill="#9C5026">重度歯周炎</text>
+  </g>
+</svg>

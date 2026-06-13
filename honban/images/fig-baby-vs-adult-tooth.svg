@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" role="img" aria-labelledby="btTitle btDesc" font-family="'Zen Maru Gothic','Noto Sans JP',sans-serif">
+  <title id="btTitle">乳歯と永久歯のくらべ</title>
+  <desc id="btDesc">乳歯は永久歯にくらべてエナメル質や象牙質の層がうすく、神経（歯髄）までの距離が近いため、むし歯が内側へ進みやすい性質があります。</desc>
+
+  <!-- 乳歯（左）：層がうすく、神経が近い -->
+  <g transform="translate(70,16)">
+    <!-- エナメル質(外形) -->
+    <path d="M20,40 C20,16 50,8 70,8 C90,8 120,16 120,40 C120,72 110,118 96,150 C90,164 82,168 70,168 C58,168 50,164 44,150 C30,118 20,72 20,40 Z" fill="#FFFFFF" stroke="#9C5026" stroke-width="2.4" stroke-linejoin="round"/>
+    <!-- 象牙質(内側) -->
+    <path d="M33,42 C33,26 52,20 70,20 C88,20 107,26 107,42 C107,70 99,108 88,140 C84,152 78,156 70,156 C62,156 56,152 52,140 C41,108 33,70 33,42 Z" fill="#FBF1E4" stroke="#D9B48E" stroke-width="1.6"/>
+    <!-- 神経(歯髄)＝大きく上にある -->
+    <path d="M70,42 C84,42 86,66 82,104 C80,124 75,138 70,138 C65,138 60,124 58,104 C54,66 56,42 70,42 Z" fill="#E0A07A"/>
+    <!-- 表面から神経までの距離(短い) -->
+    <line x1="70" y1="10" x2="70" y2="40" stroke="#C56A38" stroke-width="2"/>
+    <path d="M66,34 L70,42 L74,34" fill="none" stroke="#C56A38" stroke-width="2"/>
+    <text x="70" y="196" text-anchor="middle" font-size="16" font-weight="700" fill="#9C5026">乳歯</text>
+    <text x="70" y="216" text-anchor="middle" font-size="12" fill="#6E645A">層がうすい・神経が近い</text>
+  </g>
+
+  <!-- 永久歯（右）：層が厚く、神経が遠い -->
+  <g transform="translate(330,8)">
+    <path d="M18,46 C18,18 54,6 80,6 C106,6 142,18 142,46 C142,86 130,140 112,178 C105,194 95,200 80,200 C65,200 55,194 48,178 C30,140 18,86 18,46 Z" fill="#FFFFFF" stroke="#9C5026" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M42,52 C42,30 64,22 80,22 C96,22 118,30 118,52 C118,86 108,134 94,168 C89,182 86,186 80,186 C74,186 71,182 66,168 C52,134 42,86 42,52 Z" fill="#FBF1E4" stroke="#D9B48E" stroke-width="1.6"/>
+    <path d="M80,70 C90,70 91,92 88,124 C86,144 83,156 80,156 C77,156 74,144 72,124 C69,92 70,70 80,70 Z" fill="#E0A07A"/>
+    <line x1="80" y1="10" x2="80" y2="68" stroke="#C56A38" stroke-width="2"/>
+    <path d="M76,62 L80,70 L84,62" fill="none" stroke="#C56A38" stroke-width="2"/>
+    <text x="80" y="224" text-anchor="middle" font-size="16" font-weight="700" fill="#9C5026">永久歯</text>
+  </g>
+</svg>
