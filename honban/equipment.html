@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow"><!-- 本番制作中: 検索に出さない。開業時のルート昇格で解除 -->
 
-  <title>院内紹介｜落ち着いて通える院内｜辻堂がじゅまる歯科</title>
-  <meta name="description" content="辻堂がじゅまる歯科の院内をご紹介します。受付・待合室・半個室の診療室・個室カウンセリングルーム。初めての方も落ち着いて過ごせる院内です。藤沢市辻堂6丁目・駐車場あり。">
+  <title>設備・機材（歯科用CT・口腔内カメラ）｜辻堂の歯医者｜辻堂がじゅまる歯科</title>
+  <meta name="description" content="辻堂がじゅまる歯科の設備・機材。立体的に診る歯科用CT、お口の中を一緒に見られる口腔内カメラ、被ばくの少ないデジタルレントゲンを導入。衛生管理も徹底。藤沢市辻堂6丁目。（仮）">
 
   <!-- OGP -->
-  <meta property="og:title" content="院内紹介｜辻堂がじゅまる歯科">
-  <meta property="og:description" content="受付・待合室・半個室の診療室・個室カウンセリングルーム。初めての方も落ち着いて過ごせる院内です。">
+  <meta property="og:title" content="設備・機材（歯科用CT・口腔内カメラ）｜辻堂がじゅまる歯科">
+  <meta property="og:description" content="立体的に診る歯科用CT、お口を一緒に見られる口腔内カメラを導入。正確な検査と、わかりやすい説明のための設備をご紹介します。辻堂の歯医者。">
   <meta property="og:image" content="https://gajumaru-dental.com/images/og-image.jpg">
-  <meta property="og:url" content="https://gajumaru-dental.com/facility.html">
+  <meta property="og:url" content="https://gajumaru-dental.com/equipment.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
 
@@ -24,11 +24,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet"></noscript>
 
-  <link rel="canonical" href="https://gajumaru-dental.com/facility.html">
+  <link rel="canonical" href="https://gajumaru-dental.com/equipment.html">
   <link rel="icon" type="image/png" href="images/logo-icon.png">
   <link rel="apple-touch-icon" href="images/logo-icon.png">
 
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- 【昇格時】構造化データ MedicalWebPage + FAQPage を追加（TREATMENT_PAGES_SPEC.md §SEO）。
+       本文・FAQが院長監修で確定してから有効化（未確定の構造化データは出さない）。 -->
 </head>
 <body>
 
@@ -87,14 +90,14 @@
 
 <!-- ====== ページヒーロー ====== -->
 <section class="page-hero page-hero--image">
-  <img src="images/facility-reception.webp" alt="" class="page-hero__bg" width="1600" height="900">
+  <img src="images/facility-equipment.webp" alt="" class="page-hero__bg" width="1600" height="900">
   <div class="page-hero__overlay">
     <div class="container">
-      <nav class="breadcrumb" aria-label="現在地"><a href="index.html">トップ</a><span>/</span>院内紹介</nav>
+      <nav class="breadcrumb" aria-label="現在地"><a href="index.html">トップ</a><span>/</span><a href="facility.html">院内</a><span>/</span>設備・機材</nav>
       <div class="page-hero__inner fade-in">
-        <p class="page-hero__eyebrow">院内のご案内</p>
-        <h1 class="page-hero__title">院内紹介</h1>
-        <p class="page-hero__lead">受付から診療室まで、来院の順にご紹介します。初めての方も、雰囲気を知って少し安心していただけたらうれしいです。（仮）</p>
+        <p class="page-hero__eyebrow">診療案内</p>
+        <h1 class="page-hero__title">設備・機材</h1>
+        <p class="page-hero__lead">見える検査で、納得して進む。正確に診るための設備と、一緒に確認できる仕組みを整えます。（仮）</p>
       </div>
     </div>
   </div>
@@ -103,146 +106,82 @@
 
 <!-- ====== ページ本文 ====== -->
 <main>
-
+  <!-- 1. リード＋導入のかんがえ -->
   <section class="section">
     <div class="container">
-      <h2 class="section__title fade-in" data-en="Tour">受付から診療室まで</h2>
-      <p class="section__subtitle fade-in">写真は準備中です。実際の院内に順次差し替え予定です。雰囲気の参考としてご覧ください。（仮）</p>
-
-      <div class="facility-list">
-
-        <!-- 外観 -->
-        <div class="facility-item fade-in">
-          <div class="facility-item__media" data-img="facility-exterior">
-            <img src="images/facility-exterior.webp" alt="辻堂がじゅまる歯科の外観" loading="lazy" width="1000" height="625">
-          </div>
-          <div class="facility-item__body">
-            <h2 class="facility-item__title">外観</h2>
-            <p class="facility-item__text">藤沢市辻堂6丁目、駐車場2台あり。通りに面した、入りやすい外観を目指しています。初めての方も迷わないよう、わかりやすい看板を掲げる予定です。（仮）</p>
-          </div>
+      <div class="service-detail fade-in">
+        <div class="service-detail__body">
+          <p class="service-detail__lead">見える検査で、納得して進む。</p>
+          <p class="service-detail__text">当院では、お口の状態をできるだけ正確に診て、わかりやすくお伝えするために、歯科用CTと口腔内カメラを導入します。「なぜこの治療が必要なのか」を、ご自分の目で見て納得してから進めていただけるように。検査の精度と、説明のわかりやすさ、その両方を大切にしています。（仮）</p>
         </div>
-
-        <!-- 受付 -->
-        <div class="facility-item fade-in">
-          <div class="facility-item__media" data-img="reception">
-            <img src="images/facility-reception.webp" alt="辻堂がじゅまる歯科の受付" loading="lazy" width="1000" height="625">
-          </div>
-          <div class="facility-item__body">
-            <h2 class="facility-item__title">受付</h2>
-            <p class="facility-item__text">入ってすぐの受付です。初めての方が迷わないよう、スタッフが笑顔でお声がけします。わからないことや不安なことは、受付でお気軽にご相談ください。（仮）</p>
-          </div>
-        </div>
-
-        <!-- 待合室 -->
-        <div class="facility-item fade-in">
-          <div class="facility-item__media" data-img="waiting">
-            <img src="images/facility-waiting.webp" alt="明るく静かな待合室" loading="lazy" width="1000" height="625">
-          </div>
-          <div class="facility-item__body">
-            <h2 class="facility-item__title">待合室</h2>
-            <p class="facility-item__text">木のあたたかみを感じる、明るく静かな待合室です。診療までの時間も気持ちが落ち着くよう、ゆったりとした席にしました。（仮）</p>
-          </div>
-        </div>
-
-        <!-- 診療室 -->
-        <div class="facility-item fade-in">
-          <div class="facility-item__media" data-img="treatment">
-            <img src="images/facility-treatment.webp" alt="半個室の診療室" loading="lazy" width="1000" height="625">
-          </div>
-          <div class="facility-item__body">
-            <h2 class="facility-item__title">診療室</h2>
-            <p class="facility-item__text">半個室の診療室です。となりの方の視線や音が気にならないよう仕切りを設け、それでいて圧迫感が出ないよう明るさを保ちました。落ち着いて治療を受けていただけます。（仮）</p>
-          </div>
-        </div>
-
-        <!-- カウンセリングルーム -->
-        <div class="facility-item fade-in">
-          <div class="facility-item__media" data-img="counseling">
-            <img src="images/facility-counseling.webp" alt="個室のカウンセリングルーム" loading="lazy" width="1000" height="625">
-          </div>
-          <div class="facility-item__body">
-            <h2 class="facility-item__title">カウンセリングルーム</h2>
-            <p class="facility-item__text">個室のカウンセリングルームです。ほかの方を気にせずお話しいただけるよう、診療室とは別にご用意しました。治療を始める前に、お悩みやご希望をゆっくりうかがいます。（仮）</p>
-          </div>
-        </div>
-
-        <!-- 設備 -->
-        <div class="facility-item fade-in">
-          <div class="facility-item__media" data-img="equipment">
-            <img src="images/facility-equipment.webp" alt="被ばく量の少ないレントゲン" loading="lazy" width="1000" height="625">
-          </div>
-          <div class="facility-item__body">
-            <h2 class="facility-item__title">設備・衛生管理</h2>
-            <p class="facility-item__text">被ばく量の少ないデジタルレントゲンなど、体への負担に配慮した設備を整えます。器具は患者さまごとに滅菌し、清潔な状態で診療にあたります。（仮）</p>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- 衛生管理・感染対策 -->
+  <!-- 2. 歯科用CT＋図 -->
   <div class="divider" style="color:#F5ECE0" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
-  <section class="section section--alt" id="hygiene">
+  <section class="section section--alt">
     <div class="container">
-      <h2 class="section__title fade-in" data-en="Hygiene">衛生管理・感染対策</h2>
-      <p class="section__subtitle fade-in">見えないところこそ、きちんと。当院が日々行う取り組みです。（仮）</p>
-      <div class="policy-list fade-in" data-todo="院長確認: 滅菌器のクラス・口腔外バキューム等の実機材確定後に具体名へ差し替え（INTERVIEW_GUIDE G節）">
-
-        <div class="policy-item">
-          <img class="policy-item__icon" src="images/icon-shield.svg" alt="" width="48" height="48" loading="lazy">
-          <div class="policy-item__body">
-            <h3 class="policy-item__title">器具は、患者さまごとに交換・滅菌。</h3>
-            <p class="policy-item__text">お口に入る器具は患者さまごとに交換し、洗浄・滅菌したものを使用します。滅菌設備の詳細は、確定し次第ご紹介します。（仮）</p>
-          </div>
+      <h2 class="section__title fade-in" data-en="Dental CT">歯科用CT（立体的に診る）</h2>
+      <p class="anxiety-intro fade-in">歯科用CT（コーンビームCT）は、お口やあごを立体的（3次元）に撮影できる装置です。</p>
+      <figure class="fade-in" style="max-width:640px;margin:24px auto 4px;text-align:center">
+        <img src="images/fig-ct-2d-3d.svg" alt="ふつうのレントゲンは平面（2次元）で歯や骨が重なって見えにくいが、歯科用CTは立体（3次元）で位置や奥行きまで確かめられる。" width="640" height="260" loading="lazy" style="width:100%;height:auto">
+      </figure>
+      <div class="service-detail fade-in">
+        <div class="service-detail__body">
+          <p class="service-detail__text">ふつうのレントゲンは平面のため、歯や骨が重なって見えにくいことがあります。歯科用CTなら、位置や奥行き、神経や血管との距離まで立体的に確かめられます。より正確な診断につながり、安全に治療を進める助けになります。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">こんなときに役立ちます</span>親知らずの抜歯、根の治療（根管治療）、歯周病、インプラントの診断など、より正確に状態を知りたいときに用います。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">被ばくについて</span>歯科用CTの放射線量は、医科用のCTにくらべて少なく抑えられています。撮影は必要な範囲だけで行い、防護用のエプロンを着けます。</p>
         </div>
-
-        <div class="policy-item">
-          <img class="policy-item__icon" src="images/icon-sprout.svg" alt="" width="48" height="48" loading="lazy">
-          <div class="policy-item__body">
-            <h3 class="policy-item__title">使い捨てにできるものは、使い捨てに。</h3>
-            <p class="policy-item__text">紙コップ・エプロン・グローブなど、使い捨てにできるものはディスポーザブル製品を使用し、患者さまごとに交換します。（仮）</p>
-          </div>
-        </div>
-
-        <div class="policy-item">
-          <img class="policy-item__icon" src="images/promise-stop.svg" alt="" width="48" height="48" loading="lazy">
-          <div class="policy-item__body">
-            <h3 class="policy-item__title">手指の衛生を、徹底します。</h3>
-            <p class="policy-item__text">スタッフは患者さまごとに手指消毒とグローブ交換を行います。当たり前のことを、毎回欠かさずに。（仮）</p>
-          </div>
-        </div>
-
-        <div class="policy-item">
-          <img class="policy-item__icon" src="images/icon-home.svg" alt="" width="48" height="48" loading="lazy">
-          <div class="policy-item__body">
-            <h3 class="policy-item__title">院内の空気と水も、清潔に。</h3>
-            <p class="policy-item__text">診療スペースの清掃・換気を徹底し、清潔な環境で診療します。空調・飛沫対策の設備は、確定し次第ご紹介します。（仮）</p>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- 主な設備 -->
-  <section class="section" id="equipment">
+  <!-- 3. 口腔内カメラ＋図 -->
+  <div class="divider" style="color:#FFFFFF" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
+  <section class="section">
     <div class="container">
-      <h2 class="section__title fade-in" data-en="Equipment">主な設備</h2>
-      <p class="section__subtitle fade-in">立体的に診る歯科用CTや、お口を一緒に見られる口腔内カメラを導入します。「正確に診ること」と「わかりやすくお伝えすること」のための設備です。（仮）</p>
-      <div class="visit-belongings fade-in" data-todo="滅菌器のクラス・型式・実写は確定後に追記（INTERVIEW_GUIDE G節）">
-        <h3 class="visit-belongings__title">導入する設備</h3>
-        <ul class="visit-belongings__list">
-          <li>歯科用CT（立体的・3次元の診断）</li>
-          <li>口腔内カメラ（お口の状態を一緒に確認）</li>
-          <li>デジタルレントゲン（被ばく量に配慮した撮影）</li>
-          <li>滅菌設備（患者さまごとに器具を滅菌・詳細は確定後）（仮）</li>
-        </ul>
+      <h2 class="section__title fade-in" data-en="Intraoral Camera">口腔内カメラ（一緒に見る）</h2>
+      <p class="anxiety-intro fade-in">口腔内カメラは、お口の中を撮影できる小型のカメラです。撮った映像を、その場でモニターに映します。</p>
+      <figure class="fade-in" style="max-width:640px;margin:24px auto 4px;text-align:center">
+        <img src="images/fig-intraoral-camera.svg" alt="小型のカメラでお口の中を撮影し、その映像をモニターに映して、歯科医師と患者が同じ画面を一緒に見る。" width="640" height="250" loading="lazy" style="width:100%;height:auto">
+      </figure>
+      <div class="service-detail fade-in">
+        <div class="service-detail__body">
+          <p class="service-detail__text">奥歯やふだん見えないところも、はっきりと映せます。歯科医師と同じ画面を見ながら、今の状態や治療の必要性を確認できます。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">一緒に見るから、伝わる</span>言葉だけの説明より、ご自分の目で見たほうが、状態が直感的に伝わります。「口の中で何をされているのか分からない」という不安も、やわらげられます。</p>
+          <p class="service-detail__meta"><span class="service-detail__meta-label">記録して、くらべる</span>撮った画像は記録しておけるので、次回と見くらべて、変化や治療の経過を確認できます。</p>
+        </div>
       </div>
-      <p class="service-detail__cta fade-in" style="text-align:center;margin-top:20px"><a href="equipment.html">設備・機材のくわしい解説を見る →</a></p>
     </div>
   </section>
 
+  <!-- 4. デジタルレントゲン -->
+  <div class="divider" style="color:#F5ECE0" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title fade-in" data-en="Digital X-ray">デジタルレントゲン</h2>
+      <div class="service-detail fade-in">
+        <div class="service-detail__body">
+          <p class="service-detail__text">レントゲンはデジタル方式で、フィルムを使う方法よりも少ない線量で撮影できます。撮ったその場で画面に表示できるので、お見せしながらご説明します。撮影のときは防護用のエプロンを着けます。（仮）</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 衛生管理・滅菌 -->
+  <div class="divider" style="color:#FFFFFF" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title fade-in" data-en="Hygiene">衛生管理・滅菌</h2>
+      <div class="service-detail fade-in">
+        <div class="service-detail__body">
+          <p class="service-detail__text">お口に入る器具は、患者さまごとに交換し、洗浄・滅菌したものを使います。清潔な環境で診療できるよう、衛生管理を徹底します。滅菌設備や、空気・水の管理の詳細は、確定し次第このページでご紹介します。（仮）</p>
+          <p class="service-detail__cta"><a href="facility.html">院内のようすを見る →</a>　<a href="contact.html">ご相談・ご予約 →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 
