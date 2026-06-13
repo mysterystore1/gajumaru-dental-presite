@@ -1372,6 +1372,16 @@ a.news-list__link:hover {
   color: var(--color-text-light);
 }
 
+/* 診療時間を単独で見せる場合（access）は表・注記を中央寄せ。
+   .info の直下にある時だけ＝医院情報(dl/dd内の表)には影響しない。 */
+.info > .info__schedule {
+  margin-left: auto;
+  margin-right: auto;
+}
+.info > .info__note {
+  text-align: center;
+}
+
 /* =============================================
    アクセス
    ============================================= */
