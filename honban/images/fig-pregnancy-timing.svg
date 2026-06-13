@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 210" role="img" aria-labelledby="ptTitle ptDesc" font-family="'Zen Maru Gothic','Noto Sans JP',sans-serif">
+  <title id="ptTitle">妊娠中の歯科受診のおすすめ時期</title>
+  <desc id="ptDesc">妊娠初期はつわりがあり無理をせず応急処置が中心、中期（安定期・5〜7か月）は体調が安定し治療にすすめ、後期はおなかが大きく短時間での処置が中心になります。</desc>
+
+  <!-- 月数の目安 -->
+  <text x="150" y="40" text-anchor="middle" font-size="14" fill="#6E645A">妊娠初期（1〜4か月）</text>
+  <text x="360" y="40" text-anchor="middle" font-size="14" fill="#9C5026" font-weight="700">妊娠中期（5〜7か月）</text>
+  <text x="575" y="40" text-anchor="middle" font-size="14" fill="#6E645A">妊娠後期（8〜10か月）</text>
+
+  <!-- 安定期バッジ -->
+  <g transform="translate(360,58)">
+    <rect x="-58" y="0" width="116" height="26" rx="13" fill="#C56A38"/>
+    <text x="0" y="18" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="700">安定期・おすすめ</text>
+  </g>
+
+  <!-- 帯 -->
+  <rect x="40" y="96" width="220" height="44" fill="#F2E0D2"/>
+  <rect x="260" y="90" width="200" height="56" rx="6" fill="#E4B488"/>
+  <rect x="460" y="96" width="220" height="44" fill="#F2E0D2"/>
+  <path d="M40 96 v44" stroke="#FFFFFF" stroke-width="0"/>
+  <text x="150" y="124" text-anchor="middle" font-size="16" font-weight="700" fill="#9C5026">初期</text>
+  <text x="360" y="124" text-anchor="middle" font-size="17" font-weight="700" fill="#7A3F1C">中期（安定期）</text>
+  <text x="575" y="124" text-anchor="middle" font-size="16" font-weight="700" fill="#9C5026">後期</text>
+
+  <!-- 各期のメモ -->
+  <text x="150" y="170" text-anchor="middle" font-size="12.5" fill="#6E645A">つわりも。無理せず</text>
+  <text x="150" y="188" text-anchor="middle" font-size="12.5" fill="#6E645A">応急処置が中心</text>
+  <text x="360" y="170" text-anchor="middle" font-size="12.5" fill="#6E645A">体調が安定し</text>
+  <text x="360" y="188" text-anchor="middle" font-size="12.5" fill="#6E645A">治療を進めやすい</text>
+  <text x="575" y="170" text-anchor="middle" font-size="12.5" fill="#6E645A">おなかが大きく</text>
+  <text x="575" y="188" text-anchor="middle" font-size="12.5" fill="#6E645A">短時間の処置が中心</text>
+</svg>
