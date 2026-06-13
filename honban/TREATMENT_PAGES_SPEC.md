@@ -10,6 +10,7 @@
 - **当院固有は(仮)維持**: 進め方の具体・回数・料金・院長の言い切り。図の医学的妥当性。
 - **昇格時に必要**: (仮)の確定（院長監修サイン）／MedicalWebPage+FAQPage構造化データ有効化／noindex解除／**sitemap.xml に5ページ追加**／canonical・OGP のルートURL確認。
 - リサーチ裏取り: `TREATMENT_PAGES_RESEARCH.md`（個別ページ化の判断）＋`TREATMENT_CONTENT_RESEARCH.md`（本文の医療ファクト・出典）。
+- **マタニティ歯科を6診療目として追加（2026-06-14）**: `services-maternity.html`（妊娠中の診療・安定期/安全性/早産関連[measured]/感染の窓/妊婦歯科健診）。図`fig-pregnancy-timing`・アイコン`svc-maternity`。⚠院長が実際にやるか要確認（昇格前）。URL設計に `services-maternity.html` を追加・昇格時sitemapは計6ページ。
 
 ## タイミング（なぜ今書かないか）
 
