@@ -3,6 +3,13 @@
 作成: 2026-06-12。services.html の5治療を個別ページ化するための確定仕様。
 **本文の執筆は院長取材後**。取材前に医療解説を書かない（捏造・GLリスク・E-E-A-T逆効果）。
 
+## ✅ 進捗（2026-06-14・構造先行=案A 完了）
+5個別ページ作成済（`services-general/pediatric/prevention/perio/whitening.html`）。services.html はハブ化（カード→個別ページ・詳細5セクション撤去・初診の流れ残置・`#general`等アンカーはカードid で互換維持）。
+- **今ある分**: hero/リード/本文/症状チェック/通院・費用目安/CTA帯/予約導線（全(仮)）。ホワイトニングは方法・費用・リスク（GL限定解除4要件）まで記載。
+- **取材待ち（HTMLコメント枠で配置済）**: 「原因と放置」「図解SVG」「当院の進め方STEP」「FAQ3問」→ 院長監修＋INTERVIEW_GUIDE B節で埋める。
+- **昇格時に必要**: 上記コメント枠の本文化／MedicalWebPage+FAQPage構造化データ有効化／noindex解除／**sitemap.xml に5ページ追加**／canonical・OGP のルートURL確認。
+- リサーチ裏取り: `TREATMENT_PAGES_RESEARCH.md`。
+
 ## タイミング（なぜ今書かないか）
 
 - 現在は `noindex`（開院時のルート昇格まで検索対象外）= SEO 効果ゼロの期間

@@ -58,7 +58,7 @@
       { "@type": "Question", "name": "治療を途中でやめてしまっていました。再開できますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。責めるようなことはしません。今の状態を確認して、もう一度一緒に計画を立て直しましょう。" } },
       { "@type": "Question", "name": "痛いところはないのですが、検診だけでも行けますか？", "acceptedAnswer": { "@type": "Answer", "text": "歓迎です。痛くなる前に来ていただくのが、いちばん歯を残せる通い方です。" } },
       { "@type": "Question", "name": "急に痛くなったときは？", "acceptedAnswer": { "@type": "Answer", "text": "まずはお電話でご相談ください。状況に応じて、できるだけ早くご案内できるよう対応します。" } },
-      { "@type": "Question", "name": "土曜日も診療していますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。土曜も午前9:30-13:00、午後14:00-17:00で診療します。休診日は水曜・日曜・祝日です。" } },
+      { "@type": "Question", "name": "土日も診療していますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。土日とも診療します（9:00-14:20・午後なし）。平日は10:30-13:30と14:30-19:00です。休診日は火曜・祝日です。" } },
       { "@type": "Question", "name": "妊娠中・授乳中でも受診できますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、ご相談ください。時期や治療内容に配慮して進めます。受付で必ずお申し出いただき、母子手帳をお持ちいただくと安心です。" } },
       { "@type": "Question", "name": "持病があり、薬を飲んでいます。", "acceptedAnswer": { "@type": "Answer", "text": "お薬手帳をお持ちください。お体の状態に合わせ、必要に応じてかかりつけの先生と連携しながら進めます。" } },
       { "@type": "Question", "name": "車いす・ベビーカーでも通えますか？", "acceptedAnswer": { "@type": "Answer", "text": "お入りいただけるよう配慮する予定です。ご不安な点は事前にお電話でご確認ください。" } },
@@ -75,7 +75,7 @@
 
 <!-- ====== ヘッダー（_partials.html と同一） ====== -->
 <header class="header" id="header">
-  <p class="header__topline">藤沢市辻堂6丁目の歯医者「辻堂がじゅまる歯科」｜駐車場2台｜2026年8月1日 開院予定｜土曜も診療（仮）</p>
+  <p class="header__topline">藤沢市辻堂6丁目の歯医者「辻堂がじゅまる歯科」｜駐車場2台｜2026年8月1日 開院予定｜土日も診療</p>
   <div class="header__inner header__inner--top">
     <a href="index.html" class="header__logo">
       <img src="images/logo.jpg" alt="辻堂がじゅまる歯科" class="header__logo-img">
@@ -90,11 +90,11 @@
             <tr><th></th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
           </thead>
           <tbody>
-            <tr><td>9:30-13:00</td><td>●</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>-</td></tr>
-            <tr><td>14:30-18:30</td><td>●</td><td>●</td><td>-</td><td>●</td><td>●</td><td>△</td><td>-</td></tr>
+            <tr><td>午前</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+            <tr><td>午後</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>-</td><td>-</td></tr>
           </tbody>
         </table>
-        <p class="header__schedule-note">△ 土曜午後 14:00-17:00 ／ 休診: 水・日・祝（仮）</p>
+        <p class="header__schedule-note">平日 10:30-13:30／14:30-19:00　土日 9:00-14:20（午後なし）　休診: 火・祝</p>
       </div>
       <div class="header__tel-block">
         <a href="tel:0466XXXXXX" class="header__tel">
@@ -290,8 +290,8 @@
           <dd class="qa__a">まずはお電話でご相談ください。状況に応じて、できるだけ早くご案内できるよう対応します。（仮）</dd>
         </div>
         <div class="qa__item">
-          <dt class="qa__q">土曜日も診療していますか？</dt>
-          <dd class="qa__a">はい。土曜も午前9:30-13:00、午後14:00-17:00で診療します。休診日は水曜・日曜・祝日です。（仮）</dd>
+          <dt class="qa__q">土日も診療していますか？</dt>
+          <dd class="qa__a">はい。土日とも診療します（9:00-14:20・午後なし）。平日は10:30-13:30と14:30-19:00です。休診日は火曜・祝日です。</dd>
         </div>
       </dl>
     </div>
@@ -361,7 +361,7 @@
     <p class="reserve__lead">相談だけでも大丈夫です。</p>
     <p class="reserve__tel">
       <a href="tel:0466XXXXXX" class="reserve__tel-num">0466-XX-XXXX</a><span class="reserve__tel-kari">（仮）</span>
-      <span class="reserve__tel-hours">受付 9:30-13:00 / 14:30-18:30（水・日・祝 休診）（仮）</span>
+      <span class="reserve__tel-hours">受付 平日 10:30-13:30 / 14:30-19:00　土日 9:00-14:20（火・祝 休診）</span>
     </p>
     <div class="reserve__grid">
       <span class="reserve__btn reserve__btn--epark" aria-disabled="true" data-todo="予約システム(WEB予約)の実URLに差し替え">
@@ -417,14 +417,14 @@
           </thead>
           <tbody>
             <tr>
-              <td>9:30-13:00</td><td>●</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>-</td>
+              <td>午前</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td>
             </tr>
             <tr>
-              <td>14:30-18:30</td><td>●</td><td>●</td><td>-</td><td>●</td><td>●</td><td>△</td><td>-</td>
+              <td>午後</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>-</td><td>-</td>
             </tr>
           </tbody>
         </table>
-        <p class="footer__note">△ 土曜午後は 14:00-17:00 ／ 休診: 水・日・祝（仮）</p>
+        <p class="footer__note">平日 10:30-13:30／14:30-19:00　土日 9:00-14:20（午後なし）　休診: 火・祝</p>
       </div>
     </div>
     <p class="footer__copy">&copy; 2026 辻堂がじゅまる歯科</p>

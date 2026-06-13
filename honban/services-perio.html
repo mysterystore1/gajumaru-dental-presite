@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow"><!-- 本番制作中: 検索に出さない。開業時のルート昇格で解除 -->
 
-  <title>採用情報｜辻堂がじゅまる歯科</title>
-  <meta name="description" content="辻堂がじゅまる歯科（2026年8月1日開院予定・藤沢市辻堂6丁目）の採用情報。開院に向けて、一緒に働くスタッフを募集します。歯科衛生士・歯科助手・受付。">
+  <title>歯周病治療｜辻堂の歯医者・歯ぐきの腫れ・出血｜辻堂がじゅまる歯科</title>
+  <meta name="description" content="辻堂がじゅまる歯科の歯周病治療。歯ぐきの腫れ・出血の検査と治療。歯を失う原因の第1位を、検査から一歩ずつ。辻堂・藤沢市辻堂6丁目・駐車場あり。（仮）">
 
   <!-- OGP -->
-  <meta property="og:title" content="採用情報｜辻堂がじゅまる歯科">
-  <meta property="og:description" content="2026年8月1日開院予定。開院に向けて、一緒に働くスタッフを募集します。">
+  <meta property="og:title" content="歯周病治療｜辻堂がじゅまる歯科">
+  <meta property="og:description" content="歯ぐきの腫れや出血の検査と治療。自覚のないまま進む歯周病こそ、検査で今の状態を知ることから。辻堂の歯医者。">
   <meta property="og:image" content="https://gajumaru-dental.com/images/og-image.jpg">
-  <meta property="og:url" content="https://gajumaru-dental.com/recruit.html">
+  <meta property="og:url" content="https://gajumaru-dental.com/services-perio.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
 
@@ -24,11 +24,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet"></noscript>
 
-  <link rel="canonical" href="https://gajumaru-dental.com/recruit.html">
+  <link rel="canonical" href="https://gajumaru-dental.com/services-perio.html">
   <link rel="icon" type="image/png" href="images/logo-icon.png">
   <link rel="apple-touch-icon" href="images/logo-icon.png">
 
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- 【昇格時】構造化データ MedicalWebPage + FAQPage を追加（TREATMENT_PAGES_SPEC.md §SEO）。
+       本文・FAQが院長監修で確定してから有効化（未確定の構造化データは出さない）。 -->
 </head>
 <body>
 
@@ -61,7 +64,7 @@
           <span>0466-XX-XXXX</span><span class="header__tel-kari">（仮）</span>
         </a>
       </div>
-      <a href="index.html#reserve" class="header__cta btn btn--accent btn--sm">ご予約</a>
+      <a href="#reserve" class="header__cta btn btn--accent btn--sm">ご予約</a>
     </div>
 
     <button class="header__hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
@@ -74,7 +77,7 @@
     <ul class="header__nav-list">
       <li><a href="index.html">トップ</a></li>
       <li><a href="dental-anxiety.html">通院をためらう方へ</a></li>
-      <li><a href="services.html">診療案内</a></li>
+      <li><a href="services.html" aria-current="page">診療案内</a></li>
       <li><a href="about.html">院長・当院</a></li>
       <li><a href="facility.html">院内</a></li>
       <li><a href="pricing.html">料金</a></li>
@@ -87,14 +90,14 @@
 
 <!-- ====== ページヒーロー ====== -->
 <section class="page-hero page-hero--image">
-  <img src="images/facility-counseling.webp" alt="" class="page-hero__bg" width="1600" height="900">
+  <img src="images/facility-equipment.webp" alt="" class="page-hero__bg" width="1600" height="900">
   <div class="page-hero__overlay">
     <div class="container">
-      <nav class="breadcrumb" aria-label="現在地"><a href="index.html">トップ</a><span>/</span>採用情報</nav>
+      <nav class="breadcrumb" aria-label="現在地"><a href="index.html">トップ</a><span>/</span><a href="services.html">診療案内</a><span>/</span>歯周病治療</nav>
       <div class="page-hero__inner fade-in">
-        <p class="page-hero__eyebrow">採用情報</p>
-        <h1 class="page-hero__title">一緒に、最初のスタッフになってください。</h1>
-        <p class="page-hero__lead">2026年8月1日、藤沢市辻堂6丁目に開院します。立ち上げから一緒に医院をつくってくれる仲間を募集します。（仮）</p>
+        <p class="page-hero__eyebrow">診療案内</p>
+        <h1 class="page-hero__title">歯周病治療</h1>
+        <p class="page-hero__lead">歯みがきで血が出る。それは、からだからのサインです。歯ぐきの腫れ・出血の検査と治療を行います。（仮）</p>
       </div>
     </div>
   </div>
@@ -104,45 +107,86 @@
 <!-- ====== ページ本文 ====== -->
 <main>
 
-  <!-- 当院で働くこと -->
+  <!-- 1. リード＋本文＋症状チェック -->
   <section class="section">
     <div class="container">
-      <h2 class="section__title fade-in" data-en="About Us">どんな医院か</h2>
-      <p class="anxiety-intro fade-in" data-todo="院長取材後、実際の言葉に差し替え（INTERVIEW_GUIDE H節）">保険診療を基本に、子どもからお年寄りまで家族みんなを診る、地域のかかりつけ歯科です。無理に治療を進めない・説明してから始める、を大切にします。患者さまにもスタッフにも、無理のない医院でありたいと考えています。（仮）</p>
-    </div>
-  </section>
-
-  <!-- 募集要項 -->
-  <div class="divider" style="color:#F5ECE0" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
-  <section class="section section--alt">
-    <div class="container">
-      <h2 class="section__title fade-in" data-en="Positions">募集要項（仮）</h2>
-      <p class="section__subtitle fade-in">条件の詳細は確定し次第掲載します。下記はすべて（仮）です。お気軽にお問い合わせください。</p>
-      <div class="price-table-wrap fade-in" data-todo="募集職種・条件の確定後に差し替え（INTERVIEW_GUIDE H節）">
-        <table class="price-table">
-          <tbody>
-            <tr><td>募集職種</td><td>歯科衛生士／歯科助手・受付（仮）</td></tr>
-            <tr><td>雇用形態</td><td>常勤・パート（仮）</td></tr>
-            <tr><td>給与</td><td>確定後に掲載します（仮）</td></tr>
-            <tr><td>勤務時間</td><td>診療時間に準ずる（平日 10:30-13:30 / 14:30-19:00、土日 9:00-14:20）（仮）</td></tr>
-            <tr><td>休日</td><td>火曜・祝日ほか（仮）</td></tr>
-            <tr><td>勤務地</td><td>〒251-0047 神奈川県藤沢市辻堂6丁目13-3（辻堂駅からバス約13分・駐車場あり）</td></tr>
-            <tr><td>勤務開始</td><td>2026年7月頃〜（開院準備から）または応相談（仮）</td></tr>
-          </tbody>
-        </table>
+      <div class="service-detail fade-in">
+        <img class="service-detail__icon" src="images/svc-perio.svg" alt="" width="150" height="150">
+        <div class="service-detail__body">
+          <p class="service-detail__lead">歯を失う原因、第1位。でも、防げます。</p>
+          <p class="service-detail__text">歯ぐきの腫れや出血の検査と治療を行います。歯周病は、歯と歯ぐきの間の溝（歯周ポケット）に汚れがたまって進む病気で、自覚のないまま進行することが少なくありません。だからこそ、検査で今の状態を知ることが第一歩です。歯ぐきの不調に気づいたら、早めにご相談ください。（仮）</p>
+          <div class="service-detail__symptoms" data-todo="取材後に院長監修で5〜7項目に拡張（INTERVIEW_GUIDE B-13）">
+            <p class="service-detail__symptoms-title">こんなときはご相談ください（仮）</p>
+            <ul>
+              <li>歯みがきのときに血が出る</li>
+              <li>歯ぐきの腫れ・むずがゆさがある</li>
+              <li>口臭の指摘、朝の口のねばつきが気になる</li>
+              <li>歯が浮く・ぐらつく感じがある</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 応募方法 -->
-  <section class="section">
+  <!-- 2. 原因と、放置するとどうなるか（一般論）【取材待ち・院長監修必須】
+       TREATMENT_PAGES_SPEC.md §3。歯周病の進行・放置リスク（一般論）を、断定・恐怖煽りなしで。
+       歯周ポケット断面など医学図を入れる場合は院長チェック必須（手書きSVGライン画）。
+       取材ソース: INTERVIEW_GUIDE B-13。確定まで本ブロックは出さない（捏造・GLリスク回避）。 -->
+
+  <!-- 3. 当院の歯周病治療の進め方（STEP型）【取材待ち】
+       TREATMENT_PAGES_SPEC.md §4 / INTERVIEW_GUIDE B-13。
+       検査→スケーリング→再評価→メンテナンスの流れを具体化。 -->
+
+  <!-- 4. 費用・治療期間の目安 -->
+  <div class="divider" style="color:#F5ECE0" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
+  <section class="section section--alt">
     <div class="container">
-      <h2 class="section__title fade-in" data-en="Apply">応募・お問い合わせ</h2>
-      <p class="anxiety-intro fade-in">「まず話を聞いてみたい」だけでも歓迎です。<a href="contact.html">お問い合わせフォーム</a>に「採用について」とご記入のうえお送りいただくか、お電話（0466-XX-XXXX（仮））でご連絡ください。（仮）</p>
+      <h2 class="section__title fade-in" data-en="Cost &amp; Visits">費用・治療期間の目安</h2>
+      <div class="service-detail fade-in">
+        <div class="service-detail__body">
+          <p class="service-detail__meta"><span class="service-detail__meta-label">治療期間の目安</span>軽い段階ならクリーニングと歯みがき指導が中心で数回ほど。進んでいる場合は、回数をかけて少しずつ整えていきます。治療後も定期的なメンテナンスが大切です。（仮）</p>
+          <p class="service-detail__text">歯周病の検査と治療は、保険診療で行います。進行の程度によって回数や内容が変わりますので、検査結果をもとに見通しをお伝えします。（仮）</p>
+          <p class="service-detail__cta"><a href="contact.html">歯ぐきが気になる方はこちら →</a>　<a href="pricing.html">料金表を見る →</a></p>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- 5. よくあるご質問 3問【取材待ち】
+       TREATMENT_PAGES_SPEC.md §6。faq.html の関連3問を流用 or 取材で確定。
+       昇格時に FAQPage 構造化データへ同期。 -->
+
 </main>
+
+
+<!-- ====== 予約導線（_partials.html と同一） ====== -->
+<div class="divider" style="color:#F7E8DB" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
+<section class="reserve" id="reserve" aria-labelledby="reserve-title">
+  <div class="container">
+    <h2 class="reserve__title" id="reserve-title">ご予約・お問い合わせ</h2>
+    <p class="reserve__lead">相談だけでも大丈夫です。</p>
+    <p class="reserve__tel">
+      <a href="tel:0466XXXXXX" class="reserve__tel-num">0466-XX-XXXX</a><span class="reserve__tel-kari">（仮）</span>
+      <span class="reserve__tel-hours">受付 平日 10:30-13:30 / 14:30-19:00　土日 9:00-14:20（火・祝 休診）</span>
+    </p>
+    <div class="reserve__grid">
+      <span class="reserve__btn reserve__btn--epark" aria-disabled="true" data-todo="予約システム(WEB予約)の実URLに差し替え">
+        <span class="reserve__btn-label">WEB予約</span>
+        <span class="reserve__btn-sub">（準備中）</span>
+      </span>
+      <a href="tel:0466XXXXXX" class="reserve__btn reserve__btn--tel">
+        <span class="reserve__btn-label">電話で予約</span>
+        <span class="reserve__btn-sub">0466-XX-XXXX（仮）</span>
+      </a>
+      <a href="contact.html" class="reserve__btn reserve__btn--form">
+        <span class="reserve__btn-label">フォーム</span>
+        <span class="reserve__btn-sub">お問い合わせ</span>
+      </a>
+    </div>
+    <p class="reserve__note">※ WEB予約 は開院準備中です。当面はお電話・フォームをご利用ください。（仮）</p>
+  </div>
+</section>
 
 
 <!-- ====== フッター（_partials.html と同一） ====== -->
@@ -166,6 +210,7 @@
           <li><a href="pricing.html">料金表</a></li>
           <li><a href="access.html">アクセス</a></li>
           <li><a href="faq.html">よくあるご質問</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
           <li><a href="recruit.html">採用情報</a></li>
           <li><a href="privacy.html">プライバシーポリシー</a></li>
         </ul>

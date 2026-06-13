@@ -8,11 +8,11 @@
   <meta name="robots" content="noindex, nofollow"><!-- 本番制作中: 検索に出さない。開業時のルート昇格で解除 -->
 
   <title>診療案内｜辻堂の歯医者・保険診療｜辻堂がじゅまる歯科</title>
-  <meta name="description" content="辻堂がじゅまる歯科の診療案内。一般歯科・小児歯科・予防歯科・歯周病治療・ホワイトニング。辻堂で、なるべく削らない・抜かない、保険診療を基本とした治療を行います。藤沢市辻堂6丁目・駐車場あり。">
+  <meta name="description" content="辻堂がじゅまる歯科の診療案内。一般歯科・小児歯科・予防歯科・歯周病治療・ホワイトニング。辻堂で、歯をできるだけ残す（抜くのは最後の手段）、保険診療を基本とした治療を行います。藤沢市辻堂6丁目・駐車場あり。">
 
   <!-- OGP -->
   <meta property="og:title" content="診療案内｜辻堂がじゅまる歯科">
-  <meta property="og:description" content="一般歯科・小児歯科・予防歯科・歯周病治療・ホワイトニング。辻堂で、なるべく削らない・抜かない、保険診療を基本とした治療を。">
+  <meta property="og:description" content="一般歯科・小児歯科・予防歯科・歯周病治療・ホワイトニング。辻堂で、歯をできるだけ残す（抜くのは最後の手段）、保険診療を基本とした治療を。">
   <meta property="og:image" content="https://gajumaru-dental.com/images/og-image.jpg">
   <meta property="og:url" content="https://gajumaru-dental.com/services.html">
   <meta property="og:type" content="website">
@@ -34,7 +34,7 @@
 
 <!-- ====== ヘッダー（_partials.html と同一） ====== -->
 <header class="header" id="header">
-  <p class="header__topline">藤沢市辻堂6丁目の歯医者「辻堂がじゅまる歯科」｜駐車場2台｜2026年8月1日 開院予定｜土曜も診療（仮）</p>
+  <p class="header__topline">藤沢市辻堂6丁目の歯医者「辻堂がじゅまる歯科」｜駐車場2台｜2026年8月1日 開院予定｜土日も診療</p>
   <div class="header__inner header__inner--top">
     <a href="index.html" class="header__logo">
       <img src="images/logo.jpg" alt="辻堂がじゅまる歯科" class="header__logo-img">
@@ -49,11 +49,11 @@
             <tr><th></th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
           </thead>
           <tbody>
-            <tr><td>9:30-13:00</td><td>●</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>-</td></tr>
-            <tr><td>14:30-18:30</td><td>●</td><td>●</td><td>-</td><td>●</td><td>●</td><td>△</td><td>-</td></tr>
+            <tr><td>午前</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+            <tr><td>午後</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>-</td><td>-</td></tr>
           </tbody>
         </table>
-        <p class="header__schedule-note">△ 土曜午後 14:00-17:00 ／ 休診: 水・日・祝（仮）</p>
+        <p class="header__schedule-note">平日 10:30-13:30／14:30-19:00　土日 9:00-14:20（午後なし）　休診: 火・祝</p>
       </div>
       <div class="header__tel-block">
         <a href="tel:0466XXXXXX" class="header__tel">
@@ -104,31 +104,31 @@
 <!-- ====== ページ本文 ====== -->
 <main>
 
-  <!-- 目次 -->
+  <!-- 診療メニュー（各カードから個別ページへ。id はアンカー互換 services.html#general 等を維持） -->
   <section class="section">
     <div class="container">
       <div class="service-cards fade-in">
-        <a href="#general" class="service-card">
+        <a href="services-general.html" id="general" class="service-card">
           <h2 class="service-card__title">一般歯科</h2>
           <p class="service-card__lead">むし歯・歯の痛みの治療。</p>
           <span class="service-card__more">くわしく見る</span>
         </a>
-        <a href="#pediatric" class="service-card">
+        <a href="services-pediatric.html" id="pediatric" class="service-card">
           <h2 class="service-card__title">小児歯科</h2>
           <p class="service-card__lead">お子さまのむし歯予防と治療。</p>
           <span class="service-card__more">くわしく見る</span>
         </a>
-        <a href="#prevention" class="service-card">
+        <a href="services-prevention.html" id="prevention" class="service-card">
           <h2 class="service-card__title">予防歯科</h2>
           <p class="service-card__lead">検診とクリーニングで防ぐ。</p>
           <span class="service-card__more">くわしく見る</span>
         </a>
-        <a href="#perio" class="service-card">
+        <a href="services-perio.html" id="perio" class="service-card">
           <h2 class="service-card__title">歯周病治療</h2>
           <p class="service-card__lead">歯ぐきの腫れ・出血の治療。</p>
           <span class="service-card__more">くわしく見る</span>
         </a>
-        <a href="#whitening" class="service-card">
+        <a href="services-whitening.html" id="whitening" class="service-card">
           <h2 class="service-card__title">ホワイトニング</h2>
           <p class="service-card__lead">歯を白くする（自費）。</p>
           <span class="service-card__more">くわしく見る</span>
@@ -182,129 +182,6 @@
     </div>
   </section>
 
-  <!-- 一般歯科 -->
-  <section class="section service-section" id="general">
-    <div class="container">
-      <h2 class="section__title fade-in" data-en="General">一般歯科</h2>
-      <div class="service-detail fade-in">
-        <img class="service-detail__icon" src="images/svc-general.svg" alt="" width="150" height="150" loading="lazy">
-        <div class="service-detail__body">
-          <p class="service-detail__lead">削るのは、最後の手段です。</p>
-          <p class="service-detail__text">むし歯や歯の痛みの治療を行います。まず大切にしているのは「できるだけ削らない・抜かない」こと。一度削った歯は、もとに戻らないからです。本当に必要な分だけを見極めて治療し、痛みが気になるときは無理のない範囲で進めます。遠慮なくお伝えください。（仮）</p>
-          <div class="service-detail__symptoms" data-todo="取材後に院長監修で確定（INTERVIEW_GUIDE B-13）">
-            <p class="service-detail__symptoms-title">こんなときはご相談ください（仮）</p>
-            <ul>
-              <li>冷たいもの・甘いものがしみる</li>
-              <li>噛むと痛い、違和感がある</li>
-              <li>歯の黒ずみや穴が気になる</li>
-            </ul>
-          </div>
-          <p class="service-detail__meta"><span class="service-detail__meta-label">通院回数の目安</span>初期のむし歯なら1〜2回、進んだむし歯は数回に分けて通っていただくことがあります。状態によって変わりますので、初診でお伝えします。（仮）</p>
-          <p class="service-detail__cta"><a href="dental-anxiety.html">歯医者が苦手な方へ →</a>　<a href="pricing.html">料金表を見る →</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 小児歯科 -->
-  <div class="divider" style="color:#F5ECE0" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
-  <section class="section service-section section--alt" id="pediatric">
-    <div class="container">
-      <h2 class="section__title fade-in" data-en="Pediatric">小児歯科</h2>
-      <div class="service-detail fade-in">
-        <img class="service-detail__icon" src="images/svc-pediatric.svg" alt="" width="150" height="150" loading="lazy">
-        <div class="service-detail__body">
-          <p class="service-detail__lead">嫌がったら、やめます。</p>
-          <p class="service-detail__text">お子さまのむし歯予防と治療を行います。歯医者を嫌いにならないことを、何より大切にします。怖がるお子さまに無理やり治療することはしません。診療台に座ってみる、器具にさわってみる——そんな「慣れる」ところから、年齢とその日の様子に合わせて進めます。（仮）</p>
-          <div class="service-detail__symptoms" data-todo="取材後に院長監修で確定（INTERVIEW_GUIDE B-11）">
-            <p class="service-detail__symptoms-title">こんなときはご相談ください（仮）</p>
-            <ul>
-              <li>仕上げみがきで黒い点を見つけた</li>
-              <li>学校・園の検診で指摘を受けた</li>
-              <li>歯医者を怖がって、連れて行けずにいる</li>
-            </ul>
-          </div>
-          <p class="service-detail__meta"><span class="service-detail__meta-label">進め方の目安</span>3〜5歳は「歯医者に慣れる」ことから。年齢が上がるにつれて少しずつできることを増やします。フッ素塗布やシーラントでの予防も行います。（仮）</p>
-          <p class="service-detail__cta"><a href="dental-anxiety.html">お子さま連れの不安はこちら →</a>　<a href="faq.html">よくあるご質問 →</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 予防歯科 -->
-  <section class="section service-section" id="prevention">
-    <div class="container">
-      <h2 class="section__title fade-in" data-en="Preventive">予防歯科</h2>
-      <div class="service-detail fade-in">
-        <img class="service-detail__icon" src="images/svc-prevention.svg" alt="" width="150" height="150" loading="lazy">
-        <div class="service-detail__body">
-          <p class="service-detail__lead">痛くなる前に来る。それが一番の治療です。</p>
-          <p class="service-detail__text">定期検診とクリーニングで、むし歯や歯周病を防ぎます。毎日の歯みがきだけでは、歯石や汚れは少しずつたまっていきます。数か月に一度の検診で、早めに見つけて早めに対応する。それが、歯を長く残すいちばんの近道です。（仮）</p>
-          <div class="service-detail__symptoms" data-todo="取材後に院長監修で確定（INTERVIEW_GUIDE B-12）">
-            <p class="service-detail__symptoms-title">こんなときはご相談ください（仮）</p>
-            <ul>
-              <li>最後の検診から半年以上たっている</li>
-              <li>歯石や着色が気になる</li>
-              <li>むし歯を繰り返している</li>
-            </ul>
-          </div>
-          <p class="service-detail__meta"><span class="service-detail__meta-label">通うペースの目安</span>お口の状態に応じて、3〜6か月に1回ほど。1回およそ30〜45分で、歯石取り・クリーニング・歯みがきのアドバイスを行います。（仮）</p>
-          <p class="service-detail__cta"><a href="contact.html">検診のご予約・ご相談 →</a>　<a href="pricing.html">料金表を見る →</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 歯周病治療 -->
-  <div class="divider" style="color:#F5ECE0" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0,40 C240,8 480,64 720,40 C960,16 1200,56 1440,28 L1440,64 L0,64 Z"/></svg></div>
-  <section class="section service-section section--alt" id="perio">
-    <div class="container">
-      <h2 class="section__title fade-in" data-en="Perio">歯周病治療</h2>
-      <div class="service-detail fade-in">
-        <img class="service-detail__icon" src="images/svc-perio.svg" alt="" width="150" height="150" loading="lazy">
-        <div class="service-detail__body">
-          <p class="service-detail__lead">歯を失う原因、第1位。でも、防げます。</p>
-          <p class="service-detail__text">歯ぐきの腫れや出血の検査と治療を行います。歯周病は、歯と歯ぐきの間の溝（歯周ポケット）に汚れがたまって進む病気で、自覚のないまま進行することが少なくありません。だからこそ、検査で今の状態を知ることが第一歩です。歯ぐきの不調に気づいたら、早めにご相談ください。（仮）</p>
-          <div class="service-detail__symptoms" data-todo="取材後に院長監修で確定（INTERVIEW_GUIDE B-13）">
-            <p class="service-detail__symptoms-title">こんなときはご相談ください（仮）</p>
-            <ul>
-              <li>歯みがきのときに血が出る</li>
-              <li>歯ぐきの腫れ・むずがゆさがある</li>
-              <li>口臭の指摘、朝の口のねばつきが気になる</li>
-            </ul>
-          </div>
-          <p class="service-detail__meta"><span class="service-detail__meta-label">治療期間の目安</span>軽い段階ならクリーニングと歯みがき指導が中心で数回ほど。進んでいる場合は、回数をかけて少しずつ整えていきます。治療後も定期的なメンテナンスが大切です。（仮）</p>
-          <p class="service-detail__cta"><a href="contact.html">歯ぐきが気になる方はこちら →</a>　<a href="pricing.html">料金表を見る →</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ホワイトニング -->
-  <section class="section service-section" id="whitening">
-    <div class="container">
-      <h2 class="section__title fade-in" data-en="Whitening">ホワイトニング</h2>
-      <div class="service-detail fade-in">
-        <img class="service-detail__icon" src="images/svc-whitening.svg" alt="" width="150" height="150" loading="lazy">
-        <div class="service-detail__body">
-          <p class="service-detail__lead">あなたに似合う白さを。</p>
-          <p class="service-detail__text">歯を白くし、自然な明るさを目指します。真っ白にすることだけが正解ではありません。お顔やお口に自然になじむ白さを、ご希望をうかがいながら一緒に考えます。ホワイトニングは自費診療です。費用や方法は事前にご説明し、納得いただいてから始めます。（仮）</p>
-          <div class="service-detail__symptoms" data-todo="取材後に院長監修で確定（INTERVIEW_GUIDE B-10）">
-            <p class="service-detail__symptoms-title">こんなときはご相談ください（仮）</p>
-            <ul>
-              <li>歯の黄ばみ・くすみが気になる</li>
-              <li>写真にうつった歯の色が気になった</li>
-              <li>結婚式や面接など、人前に出る予定がある</li>
-            </ul>
-          </div>
-          <p class="service-detail__meta"><span class="service-detail__meta-label">方法の目安</span>医院で行う方法と、ご自宅で続けていただく方法があります。どちらが向いているか、ご希望や歯の状態に合わせてご提案します。（仮）</p>
-          <p class="service-detail__meta"><span class="service-detail__meta-label">リスク・副作用</span>一時的に歯がしみる（知覚過敏）ことがあります。効果には個人差があり、色が後戻りすることがあります。治療前に必ずご説明します。（仮）</p>
-          <p class="service-detail__cta"><a href="pricing.html">料金のご案内はこちら →</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 
@@ -316,7 +193,7 @@
     <p class="reserve__lead">相談だけでも大丈夫です。</p>
     <p class="reserve__tel">
       <a href="tel:0466XXXXXX" class="reserve__tel-num">0466-XX-XXXX</a><span class="reserve__tel-kari">（仮）</span>
-      <span class="reserve__tel-hours">受付 9:30-13:00 / 14:30-18:30（水・日・祝 休診）（仮）</span>
+      <span class="reserve__tel-hours">受付 平日 10:30-13:30 / 14:30-19:00　土日 9:00-14:20（火・祝 休診）</span>
     </p>
     <div class="reserve__grid">
       <span class="reserve__btn reserve__btn--epark" aria-disabled="true" data-todo="予約システム(WEB予約)の実URLに差し替え">
@@ -372,14 +249,14 @@
           </thead>
           <tbody>
             <tr>
-              <td>9:30-13:00</td><td>●</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>-</td>
+              <td>午前</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td>
             </tr>
             <tr>
-              <td>14:30-18:30</td><td>●</td><td>●</td><td>-</td><td>●</td><td>●</td><td>△</td><td>-</td>
+              <td>午後</td><td>●</td><td>-</td><td>●</td><td>●</td><td>●</td><td>-</td><td>-</td>
             </tr>
           </tbody>
         </table>
-        <p class="footer__note">△ 土曜午後は 14:00-17:00 ／ 休診: 水・日・祝（仮）</p>
+        <p class="footer__note">平日 10:30-13:30／14:30-19:00　土日 9:00-14:20（午後なし）　休診: 火・祝</p>
       </div>
     </div>
     <p class="footer__copy">&copy; 2026 辻堂がじゅまる歯科</p>
