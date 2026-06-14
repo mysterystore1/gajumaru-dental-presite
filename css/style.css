@@ -4,25 +4,30 @@
 
 /* --- カスタムプロパティ --- */
 :root {
-  --color-primary: #6B9E7D;
-  --color-primary-dark: #5A8A6B;
-  --color-primary-light: #EBF3EE;
-  --color-accent: #D4915E;
-  --color-accent-hover: #C07D4A;
-  --color-bg: #FFFFFF;
-  --color-bg-alt: #F9F7F4;
-  --color-bg-highlight: #EBF3EE;
-  --color-text: #3A3A3A;
-  --color-text-light: #777777;
-  --color-border: #E0DDD8;
+  /* 暖色×木（ガジュマル）パレット — 本番(honban)に寄せる */
+  --color-primary: #C56A38;        /* テラコッタ／木の幹 */
+  --color-primary-dark: #A1502A;   /* 濃いテラコッタ */
+  --color-primary-light: #F7EFE4;  /* 淡い木漏れ日ベージュ（淡色背景用） */
+  --color-accent: #D4915E;         /* 明るい木漏れ日（リンク／ホバー） */
+  --color-accent-hover: #C07D4A;   /* ホバー濃色 */
+  --color-bg: #FFFDF9;             /* 生成り（オフホワイト） */
+  --color-bg-alt: #F7EFE4;         /* 淡い木漏れ日ベージュ */
+  --color-bg-highlight: #FBF6F0;   /* ハイライト背景（クリーム） */
+  --color-text: #3A2E26;           /* 焦げ茶（木のテキスト） */
+  --color-text-light: #6B5A4D;     /* 中間茶 */
+  --color-border: #E5D9C9;         /* 木の縁 */
   --color-white: #FFFFFF;
+  --color-leaf: #7A9A6B;           /* 葉のグリーン（装飾） */
+  --color-bark: #9C5026;           /* 樹皮の茶（線画ライン） */
   --font-family: "Noto Sans JP", sans-serif;
   --font-display: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
   --max-width: 1060px;
   --header-height: 72px;
   --radius: 8px;
   --radius-lg: 12px;
-  --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow: 0 2px 12px rgba(58, 46, 38, 0.08);
+  --shadow-warm: 0 4px 16px rgba(160, 80, 42, 0.12);
+  --shadow-warm-lg: 0 10px 30px rgba(160, 80, 42, 0.15);
   --transition: 0.3s ease;
 }
 
@@ -104,14 +109,18 @@ ol {
   position: relative;
 }
 
+/* ガジュマルの葉モチーフ（見出し下） */
 .section__title::after {
   content: "";
   display: block;
   width: 40px;
-  height: 3px;
-  background-color: var(--color-primary);
-  margin: 16px auto 0;
-  border-radius: 2px;
+  height: 18px;
+  margin: 14px auto 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 18'%3E%3Cpath d='M20 2 C14 2 9 7 8 16 C16 16 20 11 20 2 Z' fill='%237A9A6B'/%3E%3Cpath d='M20 2 C26 2 31 7 32 16 C24 16 20 11 20 2 Z' fill='%238FAE7C'/%3E%3Cpath d='M20 4 L20 16' stroke='%239C5026' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.9;
 }
 
 .section__subtitle {
