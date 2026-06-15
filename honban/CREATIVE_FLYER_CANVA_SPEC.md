@@ -7,6 +7,26 @@
 
 ---
 
+## ★確定マスター＆ワークフロー（2026-06-15・最終）
+
+試作の結論：**AIは「枠・色・装飾・世界観」を"文字なし下地"として作る工場**。文字・写真・QRは後入れ。Magic Layers（画像分割含む）は文字が多く崩れる＋AIの誤字を引き継ぐため**不採用**。確定マスターの見た目＝本セッションの**モックアップ図**（構成・配置の正本）。
+
+**手順**
+1. **文字なし下地をAI生成**（院長あいさつ帯入り／本番は高解像）。プロンプト＝`CREATIVE_FLYER_DRAFT.md`「文字なしレイアウト版」。
+2. Canvaに**下地を背景配置→ロック**。
+3. **文字を後入れ**（本書の確定テキスト）：見出し帯・3カード見出し・9診療ピル・診療時間表・NAP。
+4. **ヒーロー（建物＋家族）・院長写真＝フレームに後入れ**（今ストック／撮影後に実写）。AIに焼かせない＝差し替え自在。
+5. **3カードのイラスト＝Canva素材**（フラット系・3つを同シリーズで統一・テラコッタ/黄にrecolor）。手描き線画とは混ぜない。
+6. **QR＝本物**：`promo-assets/png/qr/` の生成済PNGをドラッグ（§7）。
+
+**役割分担（確定）**：文字＝オーナー手入力（速い・正確）／裏方（アイコン・QR・色・下地配置）＝Claude。
+
+⚠**解像度**：AI下地はA4 300dpiに対し低解像。**仮（院長提示）はOK／本番印刷は下地を高解像生成 or Canva図形で作り直し**。
+
+> 注：下記§1〜§6は当初の「路線A（実写＋手描き）」前提の記述。テキスト確定値はそのまま有効。**飾り/アイコンの方針のみ上記マスター（Canva素材フラット）が優先**。
+
+---
+
 ## 0. 全体設定（Canva）
 - サイズ：**A4 縦（210×297mm）**、塗り足し3mm、300dpi、書き出し=PDF(印刷用)＋フォント埋め込み。
 - 背景色：生成り **#FFFDF9**
@@ -118,14 +138,18 @@
 
 ---
 
-## 7. QR（用途別・本物を貼る）
-| 用途 | 配置 | URL |
-|---|---|---|
-| 予約・問い合わせ | §5-1 QR枠 | `https://gajumaru-dental.com/contact.html?utm_source=flyer&utm_medium=print&utm_campaign=open2026&utm_content=contact` |
-| （任意）院長 | 院長挨拶を入れる場合 | `https://gajumaru-dental.com/about.html?utm_source=flyer&utm_medium=print&utm_campaign=open2026&utm_content=doctor` |
+## 7. QR（用途別・本物を貼る／生成済PNG）
 
-> ⚠`/contact.html`等は**開院8/1のhonban昇格後に有効**。昇格前に配布するなら全QRをトップ `https://gajumaru-dental.com/?utm_source=flyer&utm_medium=print&utm_campaign=open2026&utm_content=top` に。**配布タイミングをオーナー確認**。
-> QRはラクスル/Canva/任意ツールで上記URLから書き出し→**実機スキャンで到達確認**。AI生成NG。
+**生成済**：`honban/promo-assets/png/qr/`（1000px・誤り訂正Q・本物）。Canvaの「アップロード」から入れて枠にドラッグ。
+
+| 用途 | 配置 | ファイル | URL |
+|---|---|---|---|
+| 予約・問い合わせ | §5-1 QR枠 | `qr/qr-contact.png` | `…/contact.html?…&utm_content=contact` |
+| （任意）院長 | 院長あいさつ枠 | `qr/qr-doctor.png` | `…/about.html?…&utm_content=doctor` |
+| トップ（昇格前の全用途） | 表面/任意 | `qr/qr-top.png` | `…/?…&utm_content=top` |
+
+> ⚠`/contact.html`・`/about.html` は**開院8/1のhonban昇格後に有効**。**昇格前に配布するなら `qr-top.png`（トップ）を全QRに使う**（トップは現状でも有効）。配布タイミングをオーナー確認。
+> ⚠**実機スキャンで到達確認必須**（印刷前）。再生成＝`.svg2png-tmp/qrgen.mjs`（URL変更時はここを直して再実行）。
 
 ---
 
