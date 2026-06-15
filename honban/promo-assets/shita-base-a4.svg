@@ -1,0 +1,73 @@
+<svg viewBox="0 0 595 842" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+<rect x="0" y="0" width="595" height="842" fill="#FFFDF9"/>
+
+<!-- HERO photo frame (drop building+family image here) -->
+<rect x="298" y="6" width="285" height="232" rx="6" fill="#F3ECDD" stroke="#E2CDA8" stroke-width="1.5" stroke-dasharray="7 6"/>
+<!-- headline empty area = left cream (nothing) -->
+<!-- open badge (starburst seal) -->
+<g>
+<path d="M62 22 l7 12 13 -6 -3 14 14 3 -11 9 8 12 -14 -1 -2 14 -11 -9 -11 9 -2 -14 -14 1 8 -12 -11 -9 14 -3 -3 -14 13 6 z" fill="#C5552B"/>
+</g>
+<!-- internal tag (empty) -->
+<rect x="118" y="150" width="156" height="44" rx="9" fill="#FFFDF9" stroke="#C5552B" stroke-width="2"/>
+
+<!-- CALLOUT PILLS (4, empty) -->
+<rect x="14" y="258" width="131" height="34" rx="17" fill="#F4C141"/>
+<rect x="160" y="258" width="131" height="34" rx="17" fill="#F4C141"/>
+<rect x="306" y="258" width="131" height="34" rx="17" fill="#F4C141"/>
+<rect x="452" y="258" width="129" height="34" rx="17" fill="#F4C141"/>
+
+<!-- CLINIC NAME bar -->
+<rect x="14" y="304" width="567" height="42" rx="10" fill="#C5552B"/>
+<ellipse cx="40" cy="325" rx="11" ry="6" fill="#7CA45F"/><ellipse cx="556" cy="325" rx="11" ry="6" fill="#7CA45F"/>
+
+<!-- 院長あいさつ band -->
+<rect x="14" y="356" width="567" height="24" rx="6" fill="#C5552B"/>
+<rect x="14" y="384" width="567" height="86" rx="8" fill="#FBF3E4" stroke="#E7D2B5"/>
+<rect x="26" y="394" width="92" height="66" rx="4" fill="#E9E4DB" stroke="#CFC7B8" stroke-dasharray="5 4"/>
+<ellipse cx="552" cy="428" rx="15" ry="17" fill="#7CA45F"/><rect x="548" y="438" width="8" height="22" fill="#7B4B2A"/>
+
+<!-- 3 CARDS -->
+<rect x="14" y="478" width="181" height="138" rx="8" fill="#FBF3E4" stroke="#E7D2B5"/>
+<rect x="206" y="478" width="183" height="138" rx="8" fill="#FBF3E4" stroke="#E7D2B5"/>
+<rect x="400" y="478" width="181" height="138" rx="8" fill="#FBF3E4" stroke="#E7D2B5"/>
+<rect x="24" y="488" width="161" height="24" rx="6" fill="#C5552B"/>
+<rect x="216" y="488" width="163" height="24" rx="6" fill="#C5552B"/>
+<rect x="410" y="488" width="161" height="24" rx="6" fill="#C5552B"/>
+<rect x="48" y="522" width="113" height="58" rx="6" fill="#FFFDF9" stroke="#E7D2B5" stroke-dasharray="5 4"/>
+<rect x="240" y="522" width="115" height="58" rx="6" fill="#FFFDF9" stroke="#E7D2B5" stroke-dasharray="5 4"/>
+<rect x="434" y="522" width="113" height="58" rx="6" fill="#FFFDF9" stroke="#E7D2B5" stroke-dasharray="5 4"/>
+
+<!-- 診療内容 -->
+<rect x="14" y="626" width="567" height="26" rx="6" fill="#C5552B"/>
+<g fill="#FCF5DE" stroke="#E3B23C" stroke-width="1.5">
+<rect x="14" y="666" width="108" height="30" rx="15"/>
+<rect x="130" y="666" width="108" height="30" rx="15"/>
+<rect x="246" y="666" width="108" height="30" rx="15"/>
+<rect x="362" y="666" width="108" height="30" rx="15"/>
+<rect x="478" y="666" width="103" height="30" rx="15"/>
+<rect x="14" y="704" width="136" height="30" rx="15"/>
+<rect x="158" y="704" width="160" height="30" rx="15"/>
+<rect x="326" y="704" width="136" height="30" rx="15"/>
+<rect x="470" y="704" width="111" height="30" rx="15"/>
+</g>
+
+<!-- INFO STRIP -->
+<rect x="14" y="738" width="181" height="76" rx="8" fill="#FBF3E4" stroke="#E7D2B5"/>
+<rect x="202" y="738" width="186" height="76" rx="8" fill="#FBF3E4" stroke="#E7D2B5"/>
+<rect x="394" y="738" width="187" height="76" rx="8" fill="#FBF3E4" stroke="#E7D2B5"/>
+<rect x="14" y="738" width="181" height="22" rx="8" fill="#C5552B"/>
+<rect x="202" y="738" width="186" height="22" rx="8" fill="#C5552B"/>
+<rect x="394" y="738" width="187" height="22" rx="8" fill="#C5552B"/>
+<rect x="24" y="784" width="42" height="24" fill="#FFFFFF" stroke="#C5552B" stroke-dasharray="4 3"/>
+<rect x="212" y="772" width="166" height="34" fill="#E6E2D6"/><circle cx="295" cy="789" r="6" fill="#C5552B"/>
+<g stroke="#E3B23C" stroke-width="1" fill="none">
+<rect x="402" y="770" width="170" height="36"/>
+<line x1="426" y1="770" x2="426" y2="806"/>
+<line x1="402" y1="782" x2="572" y2="782"/><line x1="402" y1="794" x2="572" y2="794"/>
+<line x1="447" y1="770" x2="447" y2="806"/><line x1="468" y1="770" x2="468" y2="806"/><line x1="489" y1="770" x2="489" y2="806"/><line x1="510" y1="770" x2="510" y2="806"/><line x1="531" y1="770" x2="531" y2="806"/><line x1="551" y1="770" x2="551" y2="806"/>
+</g>
+
+<!-- FOOTER -->
+<rect x="0" y="820" width="595" height="22" fill="#C5552B"/>
+</svg>
