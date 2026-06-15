@@ -131,6 +131,37 @@ ol {
   font-size: 0.9375rem;
 }
 
+/* =============================================
+   散らし素材（世界観の付与・honban準拠の暖色版）
+   - 白背景セクションの余白に1点ずつ・薄く。1セクション1あしらい
+   - モバイルは非表示（余白が無く窮屈になるため）
+   - まず #greeting で試す（honban #greeting と同型の気根カーテン）
+   ============================================= */
+#greeting {
+  position: relative;
+}
+
+#greeting::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 3%;
+  width: 92px;
+  height: 110px;
+  background-image: url("../images/deco-roots.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  #greeting::after {
+    display: none;
+  }
+}
+
 /* --- ボタン --- */
 .btn {
   display: inline-flex;
