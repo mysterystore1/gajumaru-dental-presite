@@ -1,0 +1,45 @@
+<svg viewBox="0 0 560 196" xmlns="http://www.w3.org/2000/svg" font-family="'Yu Gothic','Meiryo','Noto Sans JP',sans-serif">
+<rect x="0" y="0" width="560" height="196" fill="#FFFDF9"/>
+
+<!-- header fill -->
+<rect x="72" y="4" width="484" height="34" fill="#FBE3D6"/>
+<rect x="4" y="4" width="68" height="34" fill="#F4ECDD"/>
+
+<!-- outer + grid -->
+<g stroke="#E3B23C" stroke-width="1.4" fill="none">
+<rect x="4" y="4" width="552" height="148"/>
+<line x1="72" y1="4" x2="72" y2="152"/>
+<line x1="4" y1="38" x2="556" y2="38"/>
+<line x1="4" y1="95" x2="556" y2="95"/>
+<line x1="132.5" y1="4" x2="132.5" y2="152"/>
+<line x1="193" y1="4" x2="193" y2="152"/>
+<line x1="253.5" y1="4" x2="253.5" y2="152"/>
+<line x1="314" y1="4" x2="314" y2="152"/>
+<line x1="374.5" y1="4" x2="374.5" y2="152"/>
+<line x1="435" y1="4" x2="435" y2="152"/>
+<line x1="495.5" y1="4" x2="495.5" y2="152"/>
+</g>
+
+<!-- header day labels -->
+<g font-size="20" font-weight="700" fill="#9A3C1C" text-anchor="middle">
+<text x="102" y="28">月</text><text x="162" y="28">火</text><text x="223" y="28">水</text><text x="284" y="28">木</text><text x="344" y="28">金</text><text x="405" y="28">土</text><text x="465" y="28">日</text><text x="526" y="28">祝</text>
+</g>
+
+<!-- row labels -->
+<g font-size="18" font-weight="700" fill="#6B4326" text-anchor="middle">
+<text x="38" y="72">午前</text><text x="38" y="129">午後</text>
+</g>
+
+<!-- 午前 row: ○ 休 ○ ○ ○ ○ ○ 休 -->
+<g font-size="22" text-anchor="middle">
+<text x="102" y="73" fill="#C5552B">○</text><text x="162" y="73" fill="#9A8E7E">休</text><text x="223" y="73" fill="#C5552B">○</text><text x="284" y="73" fill="#C5552B">○</text><text x="344" y="73" fill="#C5552B">○</text><text x="405" y="73" fill="#C5552B">○</text><text x="465" y="73" fill="#C5552B">○</text><text x="526" y="73" fill="#9A8E7E">休</text>
+</g>
+<!-- 午後 row: ○ 休 ○ ○ ○ △ △ 休 -->
+<g font-size="22" text-anchor="middle">
+<text x="102" y="130" fill="#C5552B">○</text><text x="162" y="130" fill="#9A8E7E">休</text><text x="223" y="130" fill="#C5552B">○</text><text x="284" y="130" fill="#C5552B">○</text><text x="344" y="130" fill="#C5552B">○</text><text x="405" y="130" fill="#C5552B">△</text><text x="465" y="130" fill="#C5552B">△</text><text x="526" y="130" fill="#9A8E7E">休</text>
+</g>
+
+<!-- note -->
+<text x="6" y="174" font-size="15" fill="#6B4326">土日は9:00-14:20の通し診療　休診：火曜・祝日</text>
+<text x="6" y="192" font-size="13" fill="#8A7257">平日 午前10:30-13:30 ／ 午後14:30-19:00　△＝14:20まで</text>
+</svg>
