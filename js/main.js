@@ -33,6 +33,22 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMenu);
   });
 
+  /* --- 開院カウントダウン（2026年8月1日 開院予定） --- */
+  const countdownEl = document.getElementById('hero-countdown');
+  if (countdownEl) {
+    const openDate = new Date(2026, 7, 1); // 月は0始まり=7が8月
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const days = Math.ceil((openDate - today) / 86400000);
+    if (days > 0) {
+      countdownEl.innerHTML = '開院まで あと <strong>' + days + '</strong> 日';
+      countdownEl.hidden = false;
+    } else if (days === 0) {
+      countdownEl.textContent = '本日 開院しました';
+      countdownEl.hidden = false;
+    }
+  }
+
   /* --- スムーススクロール --- */
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {

@@ -630,12 +630,63 @@ ol {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* 開院カウントダウン（JSで日数を埋める。no-jsはhiddenのまま非表示） */
+.hero__countdown {
+  display: inline-block;
+  margin: 0 auto 16px;
+  padding: 6px 20px;
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 2vw + 0.4rem, 1.25rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.hero__countdown strong {
+  font-size: 1.4em;
+  margin: 0 3px;
+}
+
 .hero__concept {
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 20px;
   letter-spacing: 0.04em;
   opacity: 0.9;
+}
+
+/* 内覧会ティーザー（#open-houseへ誘導） */
+.hero__openhouse {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-white);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.hero__openhouse:hover {
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.hero__openhouse-tag {
+  flex-shrink: 0;
+  padding: 2px 11px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  background: var(--color-leaf);
+  border-radius: 999px;
 }
 
 .hero__cta {
