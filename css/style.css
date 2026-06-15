@@ -712,6 +712,14 @@ ol {
   letter-spacing: 0.06em;
 }
 
+.greeting__name-sub {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.04em;
+}
+
 .greeting__text p {
   margin-bottom: 16px;
 }
@@ -878,6 +886,32 @@ ol {
 .info__note {
   font-size: 0.75rem;
   color: var(--color-text-light);
+}
+
+/* 診療科目: 名前＋一言を読みやすく（箱化せず罫線+余白で整理） */
+.info__services {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 7px;
+}
+
+.info__services li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 10px;
+}
+
+.info__services b {
+  font-weight: 700;
+  min-width: 10em;
+}
+
+.info__services span {
+  color: var(--color-text-light);
+  font-size: 0.9em;
 }
 
 /* =============================================
