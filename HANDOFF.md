@@ -20,14 +20,14 @@
 - **`bg-remove.mjs.py`** … 元画像の背景透過(PIL)。`python -X utf8 bg-remove.mjs.py D R`(既定 D18 R7)。彩度のあるインク領域を白フチ幅ぶんクロージング膨張→alpha。色は不変。**numpy/scipy無し＝PILのみ**。Pillow必要。
 
 ### 院長あいさつ枠の余白（Canva）
-- **がじゅまる子猫 `deco-cat-yawn.png` を右側に配置で合意**。Canvaで**左右反転**推奨(顔が文章側=左を向く)。反転版PNGは未作成(要れば作る)。他の余白埋め候補=`deco-pawprints.png`/`deco-leaves.png`。
+- **がじゅまる子猫 `deco-cat-yawn.png` を右側に配置で合意**。Canvaで**左右反転**推奨(顔が文章側=左を向く)。**✅反転版PNG作成済=`deco-cat-yawn-flip.png`**(PILでFLIP_LEFT_RIGHT・透明保持・しっぽ＋落ち葉が左へ＝右配置で本文側へ流れる)。Canvaにそのまま置けば反転操作不要。他の余白埋め候補=`deco-pawprints.png`/`deco-leaves.png`。
 
 ### レビュー反省（参照画像再現の教訓・次も厳守）
 参照画像の特徴を初回に取りこぼし手戻り多発＝①**ギザギザ(鋭い星形)を丸スカラップ**にした ②**文字はみ出し・中央ズレ** ③**付箋と誤認(実は右向き値札)** ④**白文字を生成り**に。→ 参照は最初に「形状(角/トゲ/尖り)・文字色・配置・枠との余白」を厳密に拾う。
 
 ### 次にやること（家PC）
 1. `git pull --ff-only origin main`（※**要push後**。このHANDOFF＋パーツ反映）
-2. Canva：院長あいさつ枠の右に `deco-cat-yawn` 配置(左右反転)。
+2. ✅猫の左右反転PNG=`deco-cat-yawn-flip.png` 作成済。Canva：院長あいさつ枠の右にこれを配置(反転操作不要)。
 3. 残パーツ候補：ひとことピル4種／セクション見出し帯／9診療ピル(アイコン入り)／3方針カード見出し。参照あれば同方式(SVG→resvg)で。
 4. オーナー側：電話番号(仮)確定・撮影。
 
