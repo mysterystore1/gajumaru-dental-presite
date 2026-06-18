@@ -1,59 +1,114 @@
-<svg viewBox="0 0 600 470" xmlns="http://www.w3.org/2000/svg" font-family="'Yu Gothic','Meiryo','Noto Sans JP',sans-serif">
-<rect x="0" y="0" width="600" height="470" fill="#EFEBE1"/>
+<svg viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg" font-family="'Yu Gothic','Meiryo','Noto Sans JP',sans-serif">
+<defs>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.16"/>
+  </filter>
+</defs>
 
-<!-- blocks -->
-<g fill="#E4DFD2">
-<rect x="40" y="150" width="110" height="70" rx="4"/><rect x="170" y="150" width="90" height="70" rx="4"/>
-<rect x="340" y="150" width="90" height="60" rx="4"/><rect x="450" y="150" width="110" height="70" rx="4"/>
-<rect x="40" y="250" width="90" height="60" rx="4"/><rect x="450" y="250" width="110" height="60" rx="4"/>
+<!-- land -->
+<rect x="0" y="0" width="680" height="520" fill="#F4EEE2"/>
+
+<!-- ===== city blocks ===== -->
+<g fill="#E9E1D0" stroke="#DCD2BE" stroke-width="1.5">
+  <rect x="10" y="14" width="92" height="96" rx="5"/>
+  <rect x="162" y="14" width="124" height="118" rx="5"/>
+  <rect x="162" y="150" width="124" height="146" rx="5"/>
+  <rect x="362" y="14" width="142" height="118" rx="5"/>
+  <rect x="520" y="14" width="150" height="118" rx="5"/>
+  <rect x="362" y="150" width="142" height="146" rx="5"/>
+  <rect x="520" y="150" width="150" height="146" rx="5"/>
+  <rect x="10" y="336" width="92" height="62" rx="5"/>
+  <rect x="162" y="336" width="124" height="62" rx="5"/>
+  <rect x="190" y="470" width="120" height="44" rx="5"/>
+  <rect x="330" y="470" width="120" height="44" rx="5"/>
 </g>
-<!-- park -->
-<rect x="60" y="40" width="150" height="80" rx="6" fill="#CFE0B8"/>
-<text x="135" y="86" font-size="17" fill="#4F6B3A" text-anchor="middle">辻堂高砂西公園</text>
 
-<!-- roads -->
-<rect x="0" y="330" width="600" height="46" fill="#FBFAF7"/>
-<rect x="270" y="0" width="40" height="330" fill="#FBFAF7"/>
-<rect x="0" y="230" width="600" height="22" fill="#FBFAF7"/>
+<!-- ===== road casing ===== -->
+<g fill="#E0D5BF">
+  <rect x="0" y="402" width="680" height="68" rx="2"/>
+  <rect x="298" y="0" width="54" height="450"/>
+  <rect x="0" y="296" width="680" height="36"/>
+  <rect x="110" y="0" width="34" height="404"/>
+</g>
+<!-- ===== road fill ===== -->
+<g fill="#FFFFFF">
+  <rect x="0" y="409" width="680" height="54" rx="2"/>
+  <rect x="305" y="0" width="40" height="446"/>
+  <rect x="0" y="303" width="680" height="22"/>
+  <rect x="117" y="0" width="20" height="404"/>
+</g>
+
 <!-- route 30 shield -->
-<rect x="486" y="343" width="46" height="22" rx="4" fill="#3E78C2"/>
-<text x="509" y="359" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">30</text>
-<text x="60" y="358" font-size="14" fill="#5A6E86">県道30号</text>
+<rect x="600" y="423" width="50" height="26" rx="5" fill="#3E78C2"/>
+<text x="625" y="442" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">30</text>
+<text x="20" y="400" font-size="15" fill="#7C8AA0" font-weight="700">国道30号</text>
 
-<!-- 高砂歩道橋 -->
-<rect x="300" y="328" width="36" height="50" rx="3" fill="none" stroke="#B7A98E" stroke-width="2"/>
-<text x="318" y="396" font-size="12" fill="#6B4326" text-anchor="middle">高砂歩道橋</text>
-
-<!-- bus stop 高砂 -->
-<circle cx="232" cy="352" r="12" fill="#3E78C2"/>
-<text x="232" y="357" font-size="13" font-weight="700" fill="#FFF" text-anchor="middle">B</text>
-<text x="232" y="300" font-size="14" font-weight="700" fill="#2E5E9E" text-anchor="middle">バス停「高砂」</text>
-<text x="232" y="320" font-size="13" font-weight="700" fill="#C5552B" text-anchor="middle">徒歩約1分</text>
-
-<!-- OK store -->
-<rect x="430" y="388" width="140" height="62" rx="6" fill="#E0D7C2" stroke="#C9BC9E"/>
-<text x="500" y="424" font-size="17" font-weight="700" fill="#6B4326" text-anchor="middle">オーケー 辻堂店</text>
-
-<!-- 小学校 -->
-<rect x="60" y="388" width="150" height="62" rx="6" fill="#E4DFD2"/>
-<text x="135" y="424" font-size="16" fill="#6B4326" text-anchor="middle">高砂小学校</text>
-
-<!-- clinic pin -->
-<path d="M330 210 a34 34 0 1 0 -0.1 0 l-17 30 z" fill="#C5552B"/>
-<circle cx="313" cy="176" r="15" fill="#FFFFFF"/>
-<path d="M313 168 q9 0 9 8 q0 7 -9 12 q-9 -5 -9 -12 q0 -8 9 -8 z" fill="#7CA45F"/>
-<rect x="196" y="250" width="234" height="30" rx="6" fill="#C5552B"/>
-<text x="313" y="271" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">辻堂がじゅまる歯科</text>
-
-<!-- to station arrow -->
-<g>
-<path d="M470 90 l0 -50 l-12 0 l18 -26 l18 26 l-12 0 l0 50 z" fill="#C5552B"/>
-<text x="476" y="118" font-size="15" font-weight="700" fill="#C5552B" text-anchor="middle">辻堂駅へ</text>
-<text x="476" y="138" font-size="14" font-weight="700" fill="#C5552B" text-anchor="middle">車で約3分</text>
+<!-- ===== park ===== -->
+<rect x="10" y="148" width="92" height="100" rx="8" fill="#CCE2B0" stroke="#B6D194" stroke-width="1.5"/>
+<g transform="translate(38,182)">
+  <rect x="-3" y="10" width="6" height="14" rx="2" fill="#8A6A3F"/>
+  <circle cx="0" cy="0" r="13" fill="#7FA85C"/>
+  <circle cx="-9" cy="5" r="9" fill="#8FB56A"/>
+  <circle cx="9" cy="5" r="9" fill="#8FB56A"/>
 </g>
+<text x="56" y="214" font-size="13" fill="#4F6B3A" text-anchor="middle" font-weight="700" paint-order="stroke" stroke="#CCE2B0" stroke-width="3" stroke-linejoin="round">辻堂高砂</text>
+<text x="56" y="232" font-size="13" fill="#4F6B3A" text-anchor="middle" font-weight="700" paint-order="stroke" stroke="#CCE2B0" stroke-width="3" stroke-linejoin="round">西公園</text>
 
-<!-- compass -->
-<circle cx="40" cy="36" r="18" fill="#FFFDF9" stroke="#C9BC9E"/>
-<path d="M40 22 l6 14 l-6 -4 l-6 4 z" fill="#C5552B"/>
-<text x="40" y="50" font-size="11" font-weight="700" fill="#6B4326" text-anchor="middle">N</text>
+<!-- ===== 辻堂駅へ arrow (north, on main road) ===== -->
+<g>
+  <path d="M319 138 L319 72 L303 72 L325 38 L347 72 L331 72 L331 138 Z" fill="#C5552B" filter="url(#soft)"/>
+</g>
+<text x="370" y="78" font-size="15" font-weight="700" fill="#C5552B" text-anchor="start" paint-order="stroke" stroke="#F4EEE2" stroke-width="4" stroke-linejoin="round">辻堂駅へ</text>
+<text x="370" y="98" font-size="14" font-weight="700" fill="#C5552B" text-anchor="start" paint-order="stroke" stroke="#F4EEE2" stroke-width="4" stroke-linejoin="round">車で約3分</text>
+
+<!-- ===== bus stop on R30 ===== -->
+<g transform="translate(120,436)">
+  <rect x="-15" y="-10" width="30" height="19" rx="4" fill="#3E78C2"/>
+  <rect x="-11" y="-6" width="22" height="8" rx="1.5" fill="#D6E4F6"/>
+  <circle cx="-7" cy="11" r="3.2" fill="#3A3A3A"/><circle cx="7" cy="11" r="3.2" fill="#3A3A3A"/>
+</g>
+<rect x="150" y="423" width="172" height="27" rx="13" fill="#FFFFFF" stroke="#C5552B" stroke-width="1.5" filter="url(#soft)"/>
+<text x="236" y="441" font-size="13" font-weight="700" fill="#C5552B" text-anchor="middle">バス停「高砂」徒歩1分</text>
+
+<!-- ===== convenience / OK store ===== -->
+<g transform="translate(40,476)">
+  <rect x="-16" y="-5" width="32" height="20" rx="2" fill="#FFFFFF" stroke="#C9BC9E"/>
+  <rect x="-16" y="-5" width="32" height="7" fill="#5A9BD4"/>
+</g>
+<text x="92" y="492" font-size="13" fill="#5B4636" text-anchor="middle" font-weight="700">ローソン</text>
+<text x="92" y="508" font-size="12" fill="#5B4636" text-anchor="middle">辻堂六丁目店</text>
+
+<rect x="500" y="470" width="170" height="44" rx="6" fill="#E0D7C2" stroke="#C9BC9E"/>
+<g transform="translate(528,492)">
+  <rect x="-15" y="-5" width="30" height="19" rx="2" fill="#FFFFFF" stroke="#C9BC9E"/>
+  <rect x="-15" y="-5" width="30" height="7" fill="#E58A3C"/>
+</g>
+<text x="575" y="488" font-size="15" fill="#6B4326" text-anchor="middle" font-weight="700">オーケー</text>
+<text x="575" y="506" font-size="14" fill="#6B4326" text-anchor="middle" font-weight="700">辻堂店</text>
+
+<!-- サイクルベースあさひ (just south of clinic) -->
+<rect x="352" y="386" width="214" height="22" rx="4" fill="#E9E1D0" stroke="#DCD2BE" stroke-width="1.2"/>
+<text x="459" y="401" font-size="12" fill="#6B4636" text-anchor="middle">サイクルベースあさひ</text>
+
+<!-- ===== clinic ===== -->
+<!-- pin marker pointing to clinic box -->
+<g transform="translate(372,318)" filter="url(#soft)">
+  <path d="M0 34 C-13 16 -16 9 -16 0 a16 16 0 1 1 32 0 c0 9 -3 16 -16 34 Z" fill="#C5552B"/>
+  <circle cx="0" cy="-1" r="9" fill="#FFFFFF"/>
+  <path d="M0 -8 q6 0 6 5 q0 5 -6 9 q-6 -4 -6 -9 q0 -5 6 -5 z" fill="#7CA45F"/>
+</g>
+<rect x="352" y="346" width="214" height="40" rx="9" fill="#C5552B" stroke="#FFFFFF" stroke-width="2" filter="url(#soft)"/>
+<text x="459" y="372" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">辻堂がじゅまる歯科</text>
+
+<!-- parking -->
+<g transform="translate(596,352)">
+  <rect x="-17" y="-2" width="34" height="32" rx="5" fill="#3E78C2" filter="url(#soft)"/>
+  <text x="0" y="22" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">P</text>
+</g>
+<text x="613" y="400" font-size="12" font-weight="700" fill="#5B4636" text-anchor="middle" paint-order="stroke" stroke="#F4EEE2" stroke-width="3" stroke-linejoin="round">駐車場2台</text>
+
+<!-- ===== compass ===== -->
+<circle cx="640" cy="34" r="19" fill="#FFFDF9" stroke="#C9BC9E" filter="url(#soft)"/>
+<path d="M640 19 l7 16 l-7 -5 l-7 5 z" fill="#C5552B"/>
+<text x="640" y="50" font-size="12" font-weight="700" fill="#6B4326" text-anchor="middle">N</text>
 </svg>
