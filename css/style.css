@@ -571,6 +571,8 @@ ol {
   overflow: hidden;
   display: flex;
   align-items: center;
+  /* 借り画像（生成り地のイラスト）の余白を地色と一体化させる */
+  background-color: var(--color-bg);
 }
 
 .hero__bg {
@@ -580,6 +582,14 @@ ol {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+}
+
+/* ワイド画面では横長短冊になり cover が画像上下（写真準備中リボン等）を
+   切り落とすため、全体を見せる contain に切替（地色が生成りで継ぎ目なし） */
+@media (min-width: 1024px) {
+  .hero__bg {
+    object-fit: contain;
+  }
 }
 
 .hero__overlay {
