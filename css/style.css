@@ -578,18 +578,14 @@ ol {
 .hero__bg {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   z-index: 0;
 }
 
-/* ワイド画面では横長短冊になり cover が画像上下（写真準備中リボン等）を
-   切り落とすため、全体を見せる contain に切替（地色が生成りで継ぎ目なし） */
-@media (min-width: 1024px) {
-  .hero__bg {
-    object-fit: contain;
-  }
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero__overlay {

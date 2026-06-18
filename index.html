@@ -98,7 +98,11 @@
 
 <!-- ====== ヒーロー ====== -->
 <section class="hero" id="hero">
-  <img src="images/hero-placeholder.webp" alt="辻堂がじゅまる歯科のイメージイラスト（建物・院内の実際の写真は開院までに掲載します）" class="hero__bg" width="1672" height="941">
+  <picture class="hero__bg">
+    <!-- PC=ワイド帯（全要素フルブリード） / モバイル=フラット16:9（葉＋透かし） -->
+    <source media="(min-width: 768px)" srcset="images/hero-placeholder.webp" width="1915" height="821">
+    <img src="images/hero-placeholder-mobile.webp" alt="辻堂がじゅまる歯科のイメージイラスト（建物・院内の実際の写真は開院までに掲載します）" width="1672" height="941">
+  </picture>
   <div class="hero__overlay">
     <div class="hero__content">
       <h1 class="hero__title">
