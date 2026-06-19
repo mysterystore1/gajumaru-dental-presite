@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 506" width="320" height="506" role="img" aria-label="院長の写真は準備中です。開院までに掲載します。">
+  <defs>
+    <clipPath id="avatarClip"><circle cx="160" cy="186" r="86"/></clipPath>
+  </defs>
+
+  <!-- 背景（生成り） -->
+  <rect x="0" y="0" width="320" height="506" fill="#FFFDF9"/>
+  <rect x="6" y="6" width="308" height="494" rx="14" fill="none" stroke="#E5D9C9" stroke-width="1.5"/>
+
+  <!-- 葉のあしらい（控えめ） -->
+  <g fill="#7A9A6B" opacity="0.35">
+    <path d="M40 56 C30 64 28 80 36 92 C50 86 54 70 40 56 Z"/>
+    <path d="M286 444 C296 436 298 420 290 408 C276 414 272 430 286 444 Z"/>
+    <path d="M52 452 C44 446 32 446 26 454 C34 462 46 462 52 452 Z"/>
+  </g>
+  <g fill="#C56A38" opacity="0.28">
+    <circle cx="276" cy="70" r="3.2"/><circle cx="284" cy="78" r="2.4"/><circle cx="268" cy="78" r="2.4"/>
+    <circle cx="44" cy="430" r="3.2"/><circle cx="52" cy="438" r="2.4"/><circle cx="36" cy="438" r="2.4"/>
+  </g>
+
+  <!-- アバター枠＋人物シルエット（プレースホルダ） -->
+  <circle cx="160" cy="186" r="86" fill="#F7EFE4" stroke="#D4915E" stroke-width="2.5"/>
+  <g clip-path="url(#avatarClip)" fill="#CBB7A3">
+    <circle cx="160" cy="162" r="36"/>
+    <path d="M96 280 C96 232 122 208 160 208 C198 208 224 232 224 280 Z"/>
+  </g>
+
+  <!-- カメラ＋三脚（ヒーローと世界観を合わせる・小さく） -->
+  <g transform="translate(202,232)" opacity="0.9">
+    <rect x="0" y="6" width="34" height="22" rx="4" fill="#FFFDF9" stroke="#A1502A" stroke-width="2"/>
+    <rect x="11" y="1" width="12" height="7" rx="2" fill="#FFFDF9" stroke="#A1502A" stroke-width="2"/>
+    <circle cx="17" cy="17" r="7" fill="#F4C141" stroke="#A1502A" stroke-width="2"/>
+    <path d="M9 28 L4 42 M25 28 L30 42 M17 28 L17 42" stroke="#A1502A" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- 写真準備中 ラベル -->
+  <text x="160" y="338" text-anchor="middle" font-family="'Zen Maru Gothic','Yu Gothic','Hiragino Maru Gothic ProN','Noto Sans JP',sans-serif" font-size="30" font-weight="700" letter-spacing="2" fill="#C5552B">写真準備中</text>
+
+  <!-- サブ（誠実な注記） -->
+  <text x="160" y="372" text-anchor="middle" font-family="'Zen Maru Gothic','Yu Gothic','Hiragino Maru Gothic ProN','Noto Sans JP',sans-serif" font-size="14.5" fill="#6B5A4D">院長の写真は</text>
+  <text x="160" y="394" text-anchor="middle" font-family="'Zen Maru Gothic','Yu Gothic','Hiragino Maru Gothic ProN','Noto Sans JP',sans-serif" font-size="14.5" fill="#6B5A4D">開院までに掲載します</text>
+</svg>
