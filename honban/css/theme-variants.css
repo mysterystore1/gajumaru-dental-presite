@@ -1,0 +1,137 @@
+/* =============================================
+   テーマバリアント（B案・寒色系）— プレビュー検討用
+   A案=現行暖色（data-theme なし／warm）。HTML本文・style.css の構造は無改変。
+   html[data-theme="..."] で :root 変数と body の環境光のみ上書き。
+   公開時はこのファイルと main.js のテーマブロックを外せば A案へ完全復帰。
+   ============================================= */
+
+/* --- B1 純ブルー（歯科定番・清潔/専門/信頼） --- */
+html[data-theme="blue"] {
+  --color-primary: #2D7DB0;
+  --color-primary-dark: #1E5E86;
+  --color-primary-light: #E3F0F8;
+  --color-accent: #2D7DB0;
+  --color-accent-hover: #1E6A99;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F4F9FC;
+  --color-bg-highlight: #E9F3FA;
+  --color-text: #1E333F;
+  --color-text-light: #5A6B76;
+  --color-border: #D5E4EE;
+  --color-bg-soft: #F6FAFD;
+  --color-bg-warm: #EAF2F8;
+  --color-warm-deep: #D6E8F4;
+}
+html[data-theme="blue"] body {
+  background-image:
+    radial-gradient(58vw 58vw at 102% -8%, rgba(45, 125, 176, 0.07), transparent 62%),
+    radial-gradient(50vw 50vw at -8% 26%, rgba(227, 240, 248, 0.6), transparent 60%),
+    radial-gradient(46vw 46vw at 96% 88%, rgba(227, 240, 248, 0.5), transparent 60%);
+}
+
+/* --- B2 ハイブリッド（寒色ベース＋がじゅまるの暖色を差し色に残す）★推奨 --- */
+html[data-theme="hybrid"] {
+  --color-primary: #2E8C9E;
+  --color-primary-dark: #1F6A78;
+  --color-primary-light: #E1F1F2;
+  --color-accent: #C56A38;
+  --color-accent-hover: #9C5026;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F7F9F7;
+  --color-bg-highlight: #E6F2F2;
+  --color-text: #243A3A;
+  --color-text-light: #5E6B66;
+  --color-border: #DCE6E2;
+  --color-bg-soft: #FAFBF8;
+  --color-bg-warm: #EEF4F1;
+  --color-warm-deep: #E5EFEC;
+}
+html[data-theme="hybrid"] body {
+  background-image:
+    radial-gradient(58vw 58vw at 102% -8%, rgba(46, 140, 158, 0.07), transparent 62%),
+    radial-gradient(50vw 50vw at -8% 26%, rgba(225, 241, 242, 0.6), transparent 60%),
+    radial-gradient(46vw 46vw at 96% 88%, rgba(197, 106, 56, 0.05), transparent 60%);
+}
+
+/* --- B3 ティール／セージ（青緑・木と水の有機的な寒色） --- */
+html[data-theme="teal"] {
+  --color-primary: #2F8E7E;
+  --color-primary-dark: #1F6A5E;
+  --color-primary-light: #E3F1ED;
+  --color-accent: #4F9A86;
+  --color-accent-hover: #2F8E7E;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F4F8F5;
+  --color-bg-highlight: #E6F1EC;
+  --color-text: #1F3A33;
+  --color-text-light: #586B63;
+  --color-border: #D6E2DC;
+  --color-bg-soft: #F6FAF7;
+  --color-bg-warm: #E9F1EC;
+  --color-warm-deep: #D8E8E0;
+}
+html[data-theme="teal"] body {
+  background-image:
+    radial-gradient(58vw 58vw at 102% -8%, rgba(47, 142, 126, 0.07), transparent 62%),
+    radial-gradient(50vw 50vw at -8% 26%, rgba(227, 241, 237, 0.6), transparent 60%),
+    radial-gradient(46vw 46vw at 96% 88%, rgba(227, 241, 237, 0.5), transparent 60%);
+}
+
+/* =============================================
+   テーマ切替UI（フローティング・左下）— 検討用。公開時は撤去。
+   ============================================= */
+.theme-switch {
+  position: fixed;
+  left: 14px;
+  bottom: 14px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+  font-family: var(--font-family);
+  backdrop-filter: blur(4px);
+}
+.theme-switch__label {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: #888;
+  padding: 0 2px;
+}
+.theme-switch__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+.theme-switch__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #3A352F;
+  background: #F4F2EE;
+  cursor: pointer;
+  line-height: 1;
+  white-space: nowrap;
+}
+.theme-switch__btn:hover {
+  background: #E9E6E0;
+}
+.theme-switch__btn.is-active {
+  border-color: #333;
+  background: #fff;
+}
+.theme-switch__sw {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  flex: 0 0 auto;
+}
