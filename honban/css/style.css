@@ -26,6 +26,9 @@
   --icon-line: #C56A38;
   --icon-accent: #E0884A;
   --icon-tick: #FBF6F0;
+  /* 線画イラスト（木＋猫）のインク・濃淡塗り（A案は元色据え置き） */
+  --illust-ink: #9C5026;
+  --illust-deep: #F0DAC8;
   --font-family: "Noto Sans JP", sans-serif;
   --font-display: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
   --max-width: 1060px;

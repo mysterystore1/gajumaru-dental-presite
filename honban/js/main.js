@@ -275,12 +275,14 @@ document.addEventListener('DOMContentLoaded', () => {
      svc-/icon-/promise- のアイコンを取得→インライン展開→ハードコード4色を var() 置換。
      warm(現行) は変数=元色のため描画は同一。 */
   (() => {
-    const ICON_RE = /(?:^|\/)(svc-|icon-|promise-)[^/]+\.svg(?:\?.*)?$/;
+    const ICON_RE = /(?:^|\/)(svc-|icon-|promise-|gajumaru-tree-cat)[^/]*\.svg(?:\?.*)?$/;
     const COLOR_MAP = {
       '#F7E8DB': 'var(--icon-bg)',
       '#C56A38': 'var(--icon-line)',
       '#E0884A': 'var(--icon-accent)',
       '#FBF6F0': 'var(--icon-tick)',
+      '#9C5026': 'var(--illust-ink)',
+      '#F0DAC8': 'var(--illust-deep)',
     };
     const cache = new Map();
     const inline = (img, text) => {

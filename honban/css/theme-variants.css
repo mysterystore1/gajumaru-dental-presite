@@ -25,6 +25,8 @@ html[data-theme="blue"] {
   --icon-line: #2D7DB0;
   --icon-accent: #4F9AC9;
   --icon-tick: #F4F9FC;
+  --illust-ink: #1E5E86;
+  --illust-deep: #CFE2F2;
 }
 html[data-theme="blue"] body {
   background-image:
@@ -81,6 +83,8 @@ html[data-theme="teal"] {
   --icon-line: #2F8E7E;
   --icon-accent: #4FA98C;
   --icon-tick: #F6FAF7;
+  --illust-ink: #1F6A5E;
+  --illust-deep: #CFE6DC;
 }
 html[data-theme="teal"] body {
   background-image:
