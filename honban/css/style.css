@@ -21,6 +21,11 @@
   --color-bg-soft: #FBF8F3;
   --color-bg-warm: #F5ECE0;
   --color-warm-deep: #F0DAC8;
+  /* アイコンSVG色（main.js でインライン化したアイコンが参照・A案は元色据え置き） */
+  --icon-bg: #F7E8DB;
+  --icon-line: #C56A38;
+  --icon-accent: #E0884A;
+  --icon-tick: #FBF6F0;
   --font-family: "Noto Sans JP", sans-serif;
   --font-display: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
   --max-width: 1060px;

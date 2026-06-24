@@ -21,6 +21,10 @@ html[data-theme="blue"] {
   --color-bg-soft: #F6FAFD;
   --color-bg-warm: #EAF2F8;
   --color-warm-deep: #D6E8F4;
+  --icon-bg: #E3F0F8;
+  --icon-line: #2D7DB0;
+  --icon-accent: #4F9AC9;
+  --icon-tick: #F4F9FC;
 }
 html[data-theme="blue"] body {
   background-image:
@@ -73,6 +77,10 @@ html[data-theme="teal"] {
   --color-bg-soft: #F6FAF7;
   --color-bg-warm: #E9F1EC;
   --color-warm-deep: #D8E8E0;
+  --icon-bg: #E3F1ED;
+  --icon-line: #2F8E7E;
+  --icon-accent: #4FA98C;
+  --icon-tick: #F6FAF7;
 }
 html[data-theme="teal"] body {
   background-image:

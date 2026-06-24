@@ -270,6 +270,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  /* --- 装飾アイコンSVGをインライン化し色を変数化（テーマ追従・公開時も無害） ---
+     <img> 埋め込みのままだと CSS変数が中に届かずテーマで再着色されないため、
+     svc-/icon-/promise- のアイコンを取得→インライン展開→ハードコード4色を var() 置換。
+     warm(現行) は変数=元色のため描画は同一。 */
+  (() => {
+    const ICON_RE = /(?:^|\/)(svc-|icon-|promise-)[^/]+\.svg(?:\?.*)?$/;
+    const COLOR_MAP = {
+      '#F7E8DB': 'var(--icon-bg)',
+      '#C56A38': 'var(--icon-line)',
+      '#E0884A': 'var(--icon-accent)',
+      '#FBF6F0': 'var(--icon-tick)',
+    };
+    const cache = new Map();
+    const inline = (img, text) => {
+      let svg = text;
+      Object.keys(COLOR_MAP).forEach((hex) => {
+        svg = svg.split(hex).join(COLOR_MAP[hex]);
+        svg = svg.split(hex.toLowerCase()).join(COLOR_MAP[hex]);
+      });
+      const tpl = document.createElement('template');
+      tpl.innerHTML = svg.trim();
+      const el = tpl.content.querySelector('svg');
+      if (!el) return;
+      ['class', 'width', 'height'].forEach((a) => {
+        if (img.getAttribute(a)) el.setAttribute(a, img.getAttribute(a));
+      });
+      el.setAttribute('aria-hidden', 'true');
+      img.replaceWith(el);
+    };
+    document.querySelectorAll('img').forEach((img) => {
+      const src = img.getAttribute('src') || '';
+      if (!ICON_RE.test(src)) return;
+      if (cache.has(src)) { inline(img, cache.get(src)); return; }
+      fetch(src).then((r) => r.text()).then((t) => { cache.set(src, t); inline(img, t); }).catch(() => {});
+    });
+  })();
+
   /* --- テーマ切替UI（左下フローティング・検討用・公開時は撤去） --- */
   if (!document.querySelector('.theme-switch') && window.__gjThemes) {
     const current = document.documentElement.getAttribute('data-theme') || 'warm';
