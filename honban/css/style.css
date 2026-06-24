@@ -17,6 +17,18 @@
   --color-text-light: #6E645A;
   --color-border: #ECE0D4;
   --color-white: #FFFFFF;
+  /* 地の暖色ニュートラル（テーマ切替で上書きできるよう変数化・A案は値据え置き） */
+  --color-bg-soft: #FBF8F3;
+  --color-bg-warm: #F5ECE0;
+  --color-warm-deep: #F0DAC8;
+  /* アイコンSVG色（main.js でインライン化したアイコンが参照・A案は元色据え置き） */
+  --icon-bg: #F7E8DB;
+  --icon-line: #C56A38;
+  --icon-accent: #E0884A;
+  --icon-tick: #FBF6F0;
+  /* 線画イラスト（木＋猫）のインク・濃淡塗り（A案は元色据え置き） */
+  --illust-ink: #9C5026;
+  --illust-deep: #F0DAC8;
   --font-family: "Noto Sans JP", sans-serif;
   --font-display: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
   --max-width: 1060px;
@@ -57,7 +69,7 @@ body {
   line-height: 1.9;
   color: var(--color-text);
   /* 真っ白を避け、生成り地＋木漏れ日の淡い陰影で奥行きを出す */
-  background-color: #FBF8F3;
+  background-color: var(--color-bg-soft);
   background-image:
     radial-gradient(58vw 58vw at 102% -8%, rgba(197, 106, 56, 0.07), transparent 62%),
     radial-gradient(50vw 50vw at -8% 26%, rgba(247, 232, 219, 0.55), transparent 60%),
@@ -142,7 +154,7 @@ p {
 }
 
 .section--alt {
-  background-color: #F5ECE0;
+  background-color: var(--color-bg-warm);
   position: relative;
   overflow: hidden;
 }
@@ -1138,7 +1150,7 @@ p {
    トップ: ためらう方へ誘導バナー
    ============================================= */
 .anxiety-banner {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, #F0DAC8 100%);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-warm-deep) 100%);
   padding: 64px 0;
 }
 
@@ -1887,7 +1899,7 @@ a.news-list__link:hover {
 }
 
 .page-hero--anxiety {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, #F0DAC8 100%);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-warm-deep) 100%);
 }
 
 /* 画像背景型ヒーロー（背景写真＋白半透明オーバーレイ＋パンくず） */
@@ -2912,7 +2924,7 @@ a.news-list__link:hover {
   }
 
   .mobile-bar__btn--tel:hover {
-    background-color: #F0DAC8;
+    background-color: var(--color-warm-deep);
     color: var(--color-primary-dark);
   }
 

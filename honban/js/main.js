@@ -2,6 +2,36 @@
    辻堂がじゅまる歯科 — プレサイト JavaScript
    ============================================= */
 
+/* --- テーマ切替（B案検討用・公開時はこのブロックと theme-variants.css を撤去で A案へ完全復帰） ---
+   data-theme で :root 変数を上書き。warm=現行A案(既定・属性なし)。localStorage で保持。 */
+(function () {
+  if (!document.querySelector('link[data-theme-variants]')) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'css/theme-variants.css';
+    link.setAttribute('data-theme-variants', '');
+    document.head.appendChild(link);
+  }
+  let saved = null;
+  try { saved = localStorage.getItem('gj-theme'); } catch (e) {}
+  if (saved && saved !== 'warm') document.documentElement.setAttribute('data-theme', saved);
+
+  window.__gjThemes = [
+    { id: 'warm', name: '①現行', sw: '#C56A38' },
+    { id: 'blue', name: '②青', sw: '#2D7DB0' },
+    { id: 'hybrid', name: '③併用', sw: '#2E8C9E' },
+    { id: 'teal', name: '④緑', sw: '#2F8E7E' },
+  ];
+  window.__gjApplyTheme = function (id) {
+    if (id === 'warm') document.documentElement.removeAttribute('data-theme');
+    else document.documentElement.setAttribute('data-theme', id);
+    try { localStorage.setItem('gj-theme', id); } catch (e) {}
+    document.querySelectorAll('.theme-switch__btn').forEach((b) => {
+      b.classList.toggle('is-active', b.getAttribute('data-theme-id') === id);
+    });
+  };
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.getElementById('header');
   const hamburger = document.getElementById('hamburger');
@@ -239,4 +269,62 @@ document.addEventListener('DOMContentLoaded', () => {
       if (sub && sub.textContent.indexOf('EPARK') !== -1) sub.textContent = '（準備中）';
     }
   });
+
+  /* --- 装飾アイコンSVGをインライン化し色を変数化（テーマ追従・公開時も無害） ---
+     <img> 埋め込みのままだと CSS変数が中に届かずテーマで再着色されないため、
+     svc-/icon-/promise- のアイコンを取得→インライン展開→ハードコード4色を var() 置換。
+     warm(現行) は変数=元色のため描画は同一。 */
+  (() => {
+    const ICON_RE = /(?:^|\/)(svc-|icon-|promise-|gajumaru-tree-cat)[^/]*\.svg(?:\?.*)?$/;
+    const COLOR_MAP = {
+      '#F7E8DB': 'var(--icon-bg)',
+      '#C56A38': 'var(--icon-line)',
+      '#E0884A': 'var(--icon-accent)',
+      '#FBF6F0': 'var(--icon-tick)',
+      '#9C5026': 'var(--illust-ink)',
+      '#F0DAC8': 'var(--illust-deep)',
+    };
+    const cache = new Map();
+    const inline = (img, text) => {
+      let svg = text;
+      Object.keys(COLOR_MAP).forEach((hex) => {
+        svg = svg.split(hex).join(COLOR_MAP[hex]);
+        svg = svg.split(hex.toLowerCase()).join(COLOR_MAP[hex]);
+      });
+      const tpl = document.createElement('template');
+      tpl.innerHTML = svg.trim();
+      const el = tpl.content.querySelector('svg');
+      if (!el) return;
+      ['class', 'width', 'height'].forEach((a) => {
+        if (img.getAttribute(a)) el.setAttribute(a, img.getAttribute(a));
+      });
+      el.setAttribute('aria-hidden', 'true');
+      img.replaceWith(el);
+    };
+    document.querySelectorAll('img').forEach((img) => {
+      const src = img.getAttribute('src') || '';
+      if (!ICON_RE.test(src)) return;
+      if (cache.has(src)) { inline(img, cache.get(src)); return; }
+      fetch(src).then((r) => r.text()).then((t) => { cache.set(src, t); inline(img, t); }).catch(() => {});
+    });
+  })();
+
+  /* --- テーマ切替UI（左下フローティング・検討用・公開時は撤去） --- */
+  if (!document.querySelector('.theme-switch') && window.__gjThemes) {
+    const current = document.documentElement.getAttribute('data-theme') || 'warm';
+    const box = document.createElement('div');
+    box.className = 'theme-switch';
+    box.setAttribute('aria-label', 'テーマ切替（検討用）');
+    let html = '<span class="theme-switch__label">テーマ確認用</span><div class="theme-switch__row">';
+    window.__gjThemes.forEach((t) => {
+      html += '<button type="button" class="theme-switch__btn' + (t.id === current ? ' is-active' : '') +
+        '" data-theme-id="' + t.id + '"><span class="theme-switch__sw" style="background:' + t.sw + '"></span>' + t.name + '</button>';
+    });
+    html += '</div>';
+    box.innerHTML = html;
+    document.body.appendChild(box);
+    box.querySelectorAll('.theme-switch__btn').forEach((b) => {
+      b.addEventListener('click', () => window.__gjApplyTheme(b.getAttribute('data-theme-id')));
+    });
+  }
 });
