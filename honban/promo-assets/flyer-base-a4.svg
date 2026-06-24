@@ -1,0 +1,98 @@
+<svg viewBox="0 0 595 842" xmlns="http://www.w3.org/2000/svg" font-family="Zen Maru Gothic">
+<!-- 辻堂がじゅまる歯科 チラシ版（写真以外の全要素・印刷用下地）。
+     淡色ゾーン2箇所=Canvaで写真を後はめ：①ヒーロー帯(x34 y170 w527 h78) ②院長写真(x34 y350 w106 h118) -->
+<rect width="595" height="842" fill="#FFFFFF"/>
+
+<!-- ① ヒーロー -->
+<rect x="0" y="0" width="595" height="6" fill="#C5552B"/>
+<text x="34" y="58" fill="#7A9A6B" font-size="13" font-weight="700">歯医者が苦手な方にこそ。</text>
+<text x="34" y="92" fill="#C5552B" font-size="27" font-weight="700">辻堂の、家族の</text>
+<text x="34" y="126" fill="#C5552B" font-size="27" font-weight="700">かかりつけ歯科。</text>
+<text x="34" y="156" fill="#6B5A4D" font-size="11">こわい・痛そう…そんな気持ちに、やさしく寄り添います。</text>
+<circle cx="500" cy="66" r="44" fill="#F4C141"/>
+<text x="500" y="52" text-anchor="middle" fill="#7A3A12" font-size="9" font-weight="700">2026年</text>
+<text x="500" y="71" text-anchor="middle" fill="#7A3A12" font-size="16" font-weight="700">8/1(土)</text>
+<text x="500" y="86" text-anchor="middle" fill="#7A3A12" font-size="9" font-weight="700">開院予定</text>
+<!-- 写真ゾーン①（ヒーロー帯・Canvaで横長イメージを重ねる） -->
+<rect x="34" y="170" width="527" height="78" rx="10" fill="#F4F8F1"/>
+
+<!-- ② 安心ピル -->
+<rect x="34" y="260" width="124" height="28" rx="14" fill="#FBF6F0" stroke="#7A9A6B" stroke-width="1.3"/>
+<text x="96" y="278" text-anchor="middle" fill="#4F6B41" font-size="11" font-weight="700">駐車場あり</text>
+<rect x="166" y="260" width="124" height="28" rx="14" fill="#FBF6F0" stroke="#7A9A6B" stroke-width="1.3"/>
+<text x="228" y="278" text-anchor="middle" fill="#4F6B41" font-size="11" font-weight="700">土日も診療</text>
+<rect x="298" y="260" width="146" height="28" rx="14" fill="#FBF6F0" stroke="#7A9A6B" stroke-width="1.3"/>
+<text x="371" y="278" text-anchor="middle" fill="#4F6B41" font-size="11" font-weight="700">保険診療を基本に</text>
+<rect x="452" y="260" width="109" height="28" rx="14" fill="#FBF6F0" stroke="#7A9A6B" stroke-width="1.3"/>
+<text x="506" y="278" text-anchor="middle" fill="#4F6B41" font-size="11" font-weight="700">バス停すぐ</text>
+
+<!-- ③ 医院名＋ロゴ -->
+<circle cx="56" cy="316" r="20" fill="#FFFFFF" stroke="#C5552B" stroke-width="2"/>
+<text x="56" y="321" text-anchor="middle" fill="#C5552B" font-size="9" font-weight="700">歯猫</text>
+<text x="86" y="324" fill="#3A2E26" font-size="25" font-weight="700">辻堂がじゅまる歯科</text>
+<line x1="34" y1="338" x2="561" y2="338" stroke="#E5D9C9" stroke-width="1"/>
+
+<!-- ④ 院長あいさつ＋写真ゾーン②（Canvaで院長実写を後はめ） -->
+<rect x="34" y="350" width="106" height="118" rx="8" fill="#FBF3EE"/>
+<text x="158" y="372" fill="#C5552B" font-size="13" font-weight="700">院長あいさつ</text>
+<text x="158" y="396" fill="#3A2E26" font-size="10.5">子どもの頃、私自身が歯医者が苦手でした。</text>
+<text x="158" y="414" fill="#3A2E26" font-size="10.5">だからこそ、苦手な方に寄り添える歯科で</text>
+<text x="158" y="432" fill="#3A2E26" font-size="10.5">ありたいと思っています。</text>
+<text x="158" y="458" fill="#6B5A4D" font-size="11" font-weight="700">院長　桑田 淳（くわた あつし）</text>
+
+<!-- ⑤ 3方針 -->
+<rect x="34" y="482" width="170" height="80" rx="10" fill="#FFFFFF" stroke="#E5D9C9" stroke-width="1"/>
+<text x="50" y="510" fill="#F4C141" font-size="19" font-weight="700">01</text>
+<text x="50" y="532" fill="#C5552B" font-size="12" font-weight="700">まず、お話を聞きます</text>
+<text x="50" y="550" fill="#6B5A4D" font-size="9">不安や疑問に丁寧にお答えします</text>
+<rect x="212" y="482" width="170" height="80" rx="10" fill="#FFFFFF" stroke="#E5D9C9" stroke-width="1"/>
+<text x="228" y="510" fill="#F4C141" font-size="19" font-weight="700">02</text>
+<text x="228" y="532" fill="#C5552B" font-size="12" font-weight="700">保険診療を基本に</text>
+<text x="228" y="550" fill="#6B5A4D" font-size="9">ご負担に配慮した治療を行います</text>
+<rect x="390" y="482" width="171" height="80" rx="10" fill="#FFFFFF" stroke="#E5D9C9" stroke-width="1"/>
+<text x="406" y="510" fill="#F4C141" font-size="19" font-weight="700">03</text>
+<text x="406" y="532" fill="#C5552B" font-size="12" font-weight="700">家族みんなのかかりつけ</text>
+<text x="406" y="550" fill="#6B5A4D" font-size="9">お子さまからご年配の方まで</text>
+
+<!-- ⑥ 診療内容 -->
+<text x="34" y="588" fill="#3A2E26" font-size="14" font-weight="700">診療内容</text>
+<rect x="34" y="598" width="527" height="56" rx="10" fill="#F7FAF4" stroke="#E1E9D8" stroke-width="1"/>
+<text x="50" y="620" fill="#3A2E26" font-size="10.5">・一般歯科</text>
+<text x="50" y="642" fill="#3A2E26" font-size="10.5">・歯周病治療</text>
+<text x="190" y="620" fill="#3A2E26" font-size="10.5">・小児歯科</text>
+<text x="190" y="642" fill="#3A2E26" font-size="10.5">・予防歯科</text>
+<text x="330" y="620" fill="#3A2E26" font-size="10.5">・マタニティ歯科</text>
+<text x="330" y="642" fill="#3A2E26" font-size="10.5">・ホワイトニング（自費）</text>
+<text x="470" y="620" fill="#3A2E26" font-size="9.5">・マウスピース矯正（自費）</text>
+<text x="470" y="642" fill="#3A2E26" font-size="9.5">・インプラント（自費）</text>
+<text x="540" y="668" text-anchor="end" fill="#9A8B7C" font-size="8">自費の費用・詳細は公式サイトをご覧ください</text>
+
+<!-- ⑦ 内覧会＋予約・アクセス -->
+<rect x="34" y="676" width="340" height="128" rx="10" fill="#FFFFFF" stroke="#E5D9C9" stroke-width="1"/>
+<rect x="34" y="688" width="340" height="12" fill="#C5552B"/>
+<rect x="34" y="676" width="340" height="20" rx="10" fill="#C5552B"/>
+<text x="48" y="693" fill="#FFFFFF" font-size="12" font-weight="700">内覧会・ご予約・お問い合わせ</text>
+<text x="48" y="718" fill="#6B5A4D" font-size="9.5">内覧会 開催予定（日程は決まり次第お知らせ）</text>
+<text x="48" y="732" fill="#5C7A4E" font-size="9">院内・設備の見学／院長への相談ができます</text>
+<text x="48" y="756" fill="#3A2E26" font-size="15" font-weight="700">0466-XX-XXXX</text>
+<text x="160" y="756" fill="#B0382A" font-size="7.5">（番号確定後に差替）</text>
+<text x="48" y="774" fill="#3A2E26" font-size="9">〒251-0047 藤沢市辻堂6丁目13-3</text>
+<text x="48" y="788" fill="#6B5A4D" font-size="9">辻堂駅から車で約3分／バス停「高砂」徒歩約1分／駐車場2台</text>
+<rect x="288" y="710" width="36" height="36" fill="#FFFFFF" stroke="#3A2E26" stroke-width="1"/>
+<text x="306" y="731" text-anchor="middle" fill="#3A2E26" font-size="7">QR</text>
+<text x="306" y="756" text-anchor="middle" fill="#6B5A4D" font-size="7">サイト</text>
+<rect x="330" y="710" width="36" height="36" fill="#FFFFFF" stroke="#7A9A6B" stroke-width="1"/>
+<text x="348" y="731" text-anchor="middle" fill="#5C7A4E" font-size="7">QR</text>
+<text x="348" y="756" text-anchor="middle" fill="#5C7A4E" font-size="7">予約</text>
+<!-- 地図ゾーン（自作SVG map-access を後で配置） -->
+<rect x="382" y="676" width="179" height="128" rx="10" fill="#EEF3E9" stroke="#7A9A6B" stroke-width="1"/>
+<text x="471" y="730" text-anchor="middle" fill="#5C7A4E" font-size="11" font-weight="700">アクセス地図</text>
+<text x="471" y="748" text-anchor="middle" fill="#7E9A6E" font-size="8.5">最寄り・駐車場・目印入り</text>
+
+<!-- ⑧ フッター -->
+<rect x="0" y="812" width="595" height="30" fill="#3A2E26"/>
+<text x="20" y="824" fill="#F4C141" font-size="8" font-weight="700">診療時間</text>
+<text x="20" y="834" fill="#FFFFFF" font-size="7.5">平日(月水木金)10:30-13:30/14:30-19:00　土日9:00-14:20通し　休診:火・祝</text>
+<text x="400" y="831" fill="#FFFFFF" font-size="11" font-weight="700">gajumaru-dental.com</text>
+<text x="566" y="828" text-anchor="end" fill="#C9BEB2" font-size="7">辻堂がじゅまる歯科</text>
+</svg>
