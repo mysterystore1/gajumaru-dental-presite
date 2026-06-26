@@ -3,6 +3,8 @@
 残タスクと今後の予定。完了したら `[x]`。詳細な現在地は `HANDOFF.md`、確定判断は `DECISIONS.md` 参照。
 
 ## 進行中 / 次にやること
+- [ ] アクセス解析: **GA4 ↔ Clarity 相互リンク連携**（やる確定・時期問わず／手順=`honban/ANALYTICS_TODO.md`）
+- [ ] アクセス解析: GA4 キーイベント化 `generate_lead`/`click_to_call`（データ受信後・最大48h・管理→イベント）
 - [ ] 本番(honban) フェーズ3: `services.html` ほか残ページ作成。トーン基準=町医者・保険メイン・等身大の話し言葉（AI臭回避）
 - [ ] dental-anxiety 改稿の文言、必要なら後日微修正（ユーザー合意済み・後修正可）
 
@@ -15,6 +17,7 @@
 - [ ] リポ名 `gajumaru-dental` への rename 検討（任意・URL自動リダイレクト）
 
 ## 完了
+- [x] 2026-06-26 アクセス解析（Microsoft Clarity `xcwuquiftw` ＋ GA4 `G-DDTRX2HL8P`）導入・本番反映（PR #16）。全ページ一括・録画マスク/Strict・privacy明記・イベント計測（generate_lead/click_to_call）
 - [x] 2026-06-10 残ページ作成（services/pricing/access/faq/news）: 本番(honban)全9ページが揃う
 - [x] 2026-06-10 about.html（院長・当院紹介）作成: 院長あいさつ＋プロフィール＋当院の考え4項目（罫線・余白型・院長写真枠）
 - [x] 2026-06-10 facility.html（院内紹介）作成: 外観/受付/待合/診療室/カウンセリング/設備の6枠（設計意図コピー・内覧会後差し替え）
