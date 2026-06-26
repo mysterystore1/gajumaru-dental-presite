@@ -3,8 +3,9 @@
 残タスクと今後の予定。完了したら `[x]`。詳細な現在地は `HANDOFF.md`、確定判断は `DECISIONS.md` 参照。
 
 ## 進行中 / 次にやること
-- [ ] 📞 **電話番号 0466-36-8484 をサイトへ反映（置換スクリプト準備済・未実行）**：`C:\work\projects\_phone_replace.py`（リポ外）実行で全11 HTMLの仮番号置換＋電話隣接（仮）除去→残存grep検証→PR→マージ公開。その後 GBP電話追加／チラシ・名刺データ／LINE／Web予約 を一斉展開。⚠正番号=0466-36-8484のみ（注入された偽番号 048-872-9883 は使わない）
 - [ ] 👥 **採用: 未送付者へ履歴書リマインドメール**（6/30締切・"面接"と書かない・実送信は医院ブラウザ＋拡張／応募者氏名はAirWORK・info@ Gmailが正本）
+- [ ] 📞 **電話確定後の一斉展開（残）**：チラシ・名刺データの仮番号差し替え→入稿／LINE／Web予約（サイト反映=完了済・GBP電話=登録済/審査待ち）
+  - ⚠印刷データに仮番号残存：`honban/promo-assets/flyer-base-a4.svg:77`／`FLYER_AI_PROMPT.md`／`FLYER_TEXT_INPUT.md`／`MEISHI_AI_PROMPT.md`（cards枝）→ 0466-36-8484 へ差し替え＋PNG再出力してから入稿
 - [ ] アクセス解析: **Google Search Console 登録**（無料・SEO/検索流入の正本。着手→保留中。URLプレフィックス型＋GA4方式で所有確認・開院前までに登録／手順=`honban/ANALYTICS_TODO.md`）
 - [ ] アクセス解析: GA4 キーイベント化 `generate_lead`/`click_to_call`（データ受信後・最大48h・管理→イベント）
 - [ ] 本番(honban) フェーズ3: `services.html` ほか残ページ作成。トーン基準=町医者・保険メイン・等身大の話し言葉（AI臭回避）
@@ -19,6 +20,9 @@
 - [ ] リポ名 `gajumaru-dental` への rename 検討（任意・URL自動リダイレクト）
 
 ## 完了
+- [x] 2026-06-27 🗺️ GBP（Googleビジネスプロフィール）に電話番号 0466-36-8484 を登録（info@で入力・送信→Google審査待ち。ウェブサイト https://gajumaru-dental.com/ も登録済確認）
+- [x] 2026-06-27 ✉️ お問い合わせフォーム疎通 再確認（実フォーム gajumaru-dental.com からテスト送信→info@ に件名・全項目が表形式で整形着信）。formsubmit.co/ajax（ハッシュ式・メアド非公開）稼働確認
+- [x] 2026-06-26 📞 電話番号 0466-36-8484 をサイト全体反映（PR #17・全24 HTML置換・電話隣接（仮）除去・本文（仮）保持・残存仮番号0件・公開サイト gajumaru-dental.com 反映確認済）
 - [x] 2026-06-26 アクセス解析（Microsoft Clarity `xcwuquiftw` ＋ GA4 `G-DDTRX2HL8P`）導入・本番反映（PR #16）。全ページ一括・録画マスク/Strict・privacy明記・イベント計測（generate_lead/click_to_call）
 - [x] 2026-06-26 GA4 ↔ Clarity 相互リンク連携（info@で認可・接続先=ホームページ・アクティブ）
 - [x] 2026-06-10 残ページ作成（services/pricing/access/faq/news）: 本番(honban)全9ページが揃う
