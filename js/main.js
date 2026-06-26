@@ -2,6 +2,23 @@
    辻堂がじゅまる歯科 — プレサイト JavaScript
    ============================================= */
 
+/* --- Microsoft Clarity（アクセス解析・行動分析／ヒートマップ・録画） ---
+   ID未設定（プレースホルダのまま）の間は注入しない＝空計測・誤計測を防ぐ。
+   有効化手順：clarity.microsoft.com でプロジェクト作成 → 発行されたID（例 'abcd1234ef'）を
+   下の CLARITY_PROJECT_ID に差し替えるだけ。honban/js/main.js も同じIDに揃える。
+   ⚠個人情報保護：Clarityダッシュボードで Masking=Strict を設定。問い合わせフォームの
+   氏名/メール/電話 入力欄は data-clarity-mask="true" でHTML側でも明示マスク済。
+   プライバシーポリシー（honban/privacy.html）に解析ツール利用を明記すること。 */
+(function () {
+  var CLARITY_PROJECT_ID = 'xcwuquiftw'; // 辻堂がじゅまる歯科 ホームページ（clarity.microsoft.com 発行）
+  if (!CLARITY_PROJECT_ID || CLARITY_PROJECT_ID === 'CLARITY_PROJECT_ID') return;
+  (function (c, l, a, r, i, t, y) {
+    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+    t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+  })(window, document, 'clarity', 'script', CLARITY_PROJECT_ID);
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.getElementById('header');
   const hamburger = document.getElementById('hamburger');

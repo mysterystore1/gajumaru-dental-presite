@@ -2,6 +2,24 @@
    辻堂がじゅまる歯科 — プレサイト JavaScript
    ============================================= */
 
+/* --- Microsoft Clarity（アクセス解析・行動分析／ヒートマップ・録画） ---
+   ID未設定（プレースホルダのまま）の間は注入しない＝空計測・誤計測を防ぐ。
+   有効化手順：clarity.microsoft.com でプロジェクト作成 → 発行されたID（例 'abcd1234ef'）を
+   下の CLARITY_PROJECT_ID に差し替えるだけ。公開ルート js/main.js も同じIDに揃える。
+   ⚠個人情報保護：Clarityダッシュボードで Masking=Strict を設定。問い合わせフォームの
+   氏名/メール/電話 入力欄は data-clarity-mask="true" でHTML側でも明示マスク済。
+   プライバシーポリシー（privacy.html）に解析ツール利用を明記すること。
+   honban=8/1に公開ルートへ昇格予定＝置き換え後も同一IDで計測継続。 */
+(function () {
+  var CLARITY_PROJECT_ID = 'xcwuquiftw'; // 辻堂がじゅまる歯科 ホームページ（clarity.microsoft.com 発行・ルートと同一ID）
+  if (!CLARITY_PROJECT_ID || CLARITY_PROJECT_ID === 'CLARITY_PROJECT_ID') return;
+  (function (c, l, a, r, i, t, y) {
+    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+    t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+  })(window, document, 'clarity', 'script', CLARITY_PROJECT_ID);
+})();
+
 /* --- テーマ切替（B案検討用・公開時はこのブロックと theme-variants.css を撤去で A案へ完全復帰） ---
    data-theme で :root 変数を上書き。warm=現行A案(既定・属性なし)。localStorage で保持。 */
 (function () {
