@@ -19,6 +19,7 @@
 - [ ] リポ名 `gajumaru-dental` への rename 検討（任意・URL自動リダイレクト）
 
 ## 完了
+- [x] 2026-06-27 ✉️ お問い合わせフォーム疎通 再確認（実フォーム gajumaru-dental.com からテスト送信→info@ に件名・全項目が表形式で整形着信）。formsubmit.co/ajax（ハッシュ式・メアド非公開）稼働確認
 - [x] 2026-06-26 📞 電話番号 0466-36-8484 をサイト全体反映（PR #17・全24 HTML置換・電話隣接（仮）除去・本文（仮）保持・残存仮番号0件・公開サイト gajumaru-dental.com 反映確認済）
 - [x] 2026-06-26 アクセス解析（Microsoft Clarity `xcwuquiftw` ＋ GA4 `G-DDTRX2HL8P`）導入・本番反映（PR #16）。全ページ一括・録画マスク/Strict・privacy明記・イベント計測（generate_lead/click_to_call）
 - [x] 2026-06-26 GA4 ↔ Clarity 相互リンク連携（info@で認可・接続先=ホームページ・アクティブ）
