@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>診療案内 画像カード試作（桑田レビュー用）｜辻堂がじゅまる歯科</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  /* === プレビュー専用（本番CSS非依存・ここだけで完結） === */
+  .pv-note{max-width:980px;margin:24px auto 0;padding:14px 18px;border:1px dashed var(--color-primary);border-radius:10px;background:#FBF5EE;font-size:.85rem;line-height:1.8;color:var(--color-text)}
+  .pv-note b{color:var(--color-primary-dark)}
+  .pv-label{max-width:980px;margin:48px auto 8px;font-family:"Zen Maru Gothic",sans-serif;font-size:1.15rem;color:var(--color-primary-dark)}
+  .pv-sub{max-width:980px;margin:0 auto 20px;font-size:.82rem;color:var(--color-text-light)}
+
+  /* 写真プレースホルダー（AI生成画像が入る枠。差替予定の見本） */
+  .ph{position:relative;width:100%;background:linear-gradient(135deg,#F3E2D2 0%,#EAD0BC 100%);display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .ph img{width:46%;height:auto;opacity:.5;filter:saturate(.2)}
+  .ph::after{content:"写真イメージ（AI生成・差替予定）";position:absolute;left:8px;bottom:8px;font-size:.62rem;color:#9C5026;background:rgba(255,255,255,.7);padding:2px 7px;border-radius:6px}
+
+  /* --- 案A: 3列 写真カード（トップ向け・画像リッチでもコンパクト） --- */
+  .pvA{max-width:980px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .pvA .card{display:flex;flex-direction:column;text-decoration:none;color:var(--color-text);background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 14px rgba(156,80,38,.08);transition:transform .25s,box-shadow .25s}
+  .pvA .card:hover{transform:translateY(-4px);box-shadow:0 8px 22px rgba(156,80,38,.14)}
+  .pvA .ph{aspect-ratio:4/3}
+  .pvA .body{padding:14px 16px 18px;display:flex;flex-direction:column;gap:7px;flex:1}
+  .pvA h3{font-size:1.05rem;font-weight:700;letter-spacing:.02em}
+  .pvA p{font-size:.8rem;line-height:1.7;color:var(--color-text-light);flex:1}
+  .pvA .more{font-size:.74rem;font-weight:700;color:var(--color-primary-dark)}
+  .pvA .more::after{content:" →"}
+
+  /* --- 案B: 左右交互 大判ロウ（TMDC/カバサワ型・詳細ページ向け） --- */
+  .pvB{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+  .pvB .row{display:grid;grid-template-columns:minmax(0,46%) 1fr;gap:28px;align-items:center;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 14px rgba(156,80,38,.08)}
+  .pvB .row:nth-child(even){grid-template-columns:1fr minmax(0,46%)}
+  .pvB .row:nth-child(even) .ph{order:2}
+  .pvB .ph{aspect-ratio:4/3;height:100%}
+  .pvB .body{padding:8px 28px}
+  .pvB .eyebrow{font-family:"Zen Maru Gothic",sans-serif;font-size:.8rem;color:var(--color-primary);letter-spacing:.08em}
+  .pvB h3{font-size:1.3rem;font-weight:700;margin:.2em 0 .5em}
+  .pvB p{font-size:.9rem;line-height:1.85;color:var(--color-text-light)}
+  .pvB .more{display:inline-block;margin-top:14px;font-size:.8rem;font-weight:700;color:var(--color-primary-dark)}
+  .pvB .more::after{content:" →"}
+
+  @media(max-width:720px){
+    .pvA{grid-template-columns:1fr 1fr;gap:14px}
+    .pvB .row,.pvB .row:nth-child(even){grid-template-columns:1fr}
+    .pvB .row:nth-child(even) .ph{order:0}
+  }
+</style>
+</head>
+<body>
+
+<section class="section">
+  <div class="container">
+    <h1 class="section__title" data-en="Services" style="margin-bottom:6px">診療案内 画像カード試作</h1>
+    <p class="section__subtitle">ライン画アイコン → 実写トーン画像へ。<b>暖色ベース維持</b>・桑田レビュー用</p>
+
+    <div class="pv-note">
+      <b>これは試作（noindex・本番非影響）。</b> 写真枠はすべて差替予定のプレースホルダー。<br>
+      参考＝TMDC（テラスモール歯科）・辻堂カバサワ＝どちらも辻堂の競合。良かった点＝<b>画像リッチ・大きめ写真カード・余白で読みやすい</b>を暖色のまま取り込み。<br>
+      画像は <b>AI生成＋医療広告GL制約</b>（顔出さない／ビフォーアフター無し／効果暗示無し）で用意し、開院後に自院実写へ差替。色は青に寄せない（隣の競合と被るため）。
+    </div>
+
+    <div class="pv-label">案A ── 3列 写真カード（トップ向け・コンパクトに画像リッチ）</div>
+    <p class="pv-sub">今のトップ「診療案内」をこの形に。写真を主役にしつつ9枠が収まる。</p>
+    <div class="pvA">
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-general.svg" alt=""></div><div class="body"><h3>一般歯科</h3><p>むし歯・歯の痛みの治療。歯をできる限り残すことを心がけます。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-pediatric.svg" alt=""></div><div class="body"><h3>小児歯科</h3><p>お子さまのむし歯予防と治療。年齢に合わせて対応します。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-prevention.svg" alt=""></div><div class="body"><h3>予防歯科</h3><p>定期検診とクリーニングで、むし歯・歯周病を防ぎます。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-perio.svg" alt=""></div><div class="body"><h3>歯周病治療</h3><p>歯ぐきの腫れ・出血の検査と治療を行います。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-whitening.svg" alt=""></div><div class="body"><h3>ホワイトニング</h3><p>歯を白くし、自然な明るさを目指します（自費）。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-maternity.svg" alt=""></div><div class="body"><h3>マタニティ歯科</h3><p>妊娠中の歯ぐき・むし歯のケア。体調に合わせて対応します。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-mouthguard.svg" alt=""></div><div class="body"><h3>スポーツマウスガード</h3><p>スポーツのケガから、歯やお口を守ります（自費）。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-ortho.svg" alt=""></div><div class="body"><h3>マウスピース矯正</h3><p>透明なマウスピースで、目立たず歯並びを整えます（自費）。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-implant.svg" alt=""></div><div class="body"><h3>インプラント</h3><p>失った歯を補います（自費・対応予定）。</p><span class="more">くわしく見る</span></div></a>
+    </div>
+
+    <div class="pv-label">案B ── 左右交互 大判ロウ（詳細ページ向け・TMDC/カバサワ型）</div>
+    <p class="pv-sub">services.html の全項目一覧をこの形に。1項目を大きく見せる。トップは案A・詳細ページは案B、の併用が現実的。</p>
+    <div class="pvB">
+      <div class="row"><div class="ph"><img src="../images/svc-general.svg" alt=""></div><div class="body"><span class="eyebrow">Service 01</span><h3>一般歯科</h3><p>むし歯や歯の痛みの治療。痛みに配慮し、歯をできる限り残すこと（抜くのは最後の手段）を大切にします。</p><span class="more">くわしく見る</span></div></div>
+      <div class="row"><div class="ph"><img src="../images/svc-pediatric.svg" alt=""></div><div class="body"><span class="eyebrow">Service 02</span><h3>小児歯科</h3><p>お子さまのむし歯予防と治療。怖がらせず、年齢と発達に合わせて少しずつ慣れていけるように対応します。</p><span class="more">くわしく見る</span></div></div>
+      <div class="row"><div class="ph"><img src="../images/svc-prevention.svg" alt=""></div><div class="body"><span class="eyebrow">Service 03</span><h3>予防歯科</h3><p>定期検診とクリーニングで、むし歯・歯周病になる前に防ぐ。痛くなってからではなく、通い続けられる予防を。</p><span class="more">くわしく見る</span></div></div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

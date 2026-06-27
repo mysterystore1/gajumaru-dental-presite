@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>勝ちパターン構成 暖色×寒色 比較試作（桑田レビュー用）｜辻堂がじゅまる歯科</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maxw:1040px;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans JP",sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
+
+/* ===== テーマ変数（同じ構成・色だけ差し替え） ===== */
+body.warm{
+  --bg:#FBF8F3; --bg-alt:#F5EADF; --text:#3A2C22; --text-light:#7A6655;
+  --primary:#C56A38; --primary-dark:#9C5026; --accent:#E0884A;
+  --eyebrow:#C56A38; --card:#FFFFFF; --line:#E7D6C6;
+  --ph1:#F3E2D2; --ph2:#E6CDB6; --ph-ink:#9C5026; --num:rgba(197,106,56,.16);
+  --btn-text:#fff;
+}
+body.cool{
+  --bg:#F4F8FB; --bg-alt:#EAF1F6; --text:#23323F; --text-light:#5E7180;
+  --primary:#2E6E96; --primary-dark:#1F4E6E; --accent:#46A6BB;
+  --eyebrow:#2E6E96; --card:#FFFFFF; --line:#D5E2EC;
+  --ph1:#DCEAF2; --ph2:#C2DAE7; --ph-ink:#1F4E6E; --num:rgba(46,110,150,.16);
+  --btn-text:#fff;
+}
+body{background:var(--bg);color:var(--text)}
+
+/* ===== トグル ===== */
+.switch{position:fixed;top:14px;right:14px;z-index:50;display:flex;gap:6px;background:rgba(255,255,255,.9);padding:6px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.12);backdrop-filter:blur(6px)}
+.switch button{border:none;cursor:pointer;font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:.82rem;padding:8px 16px;border-radius:999px;background:transparent;color:#555;transition:.2s}
+body.warm .switch .b-warm,body.cool .switch .b-cool{color:#fff}
+body.warm .switch .b-warm{background:#C56A38}
+body.cool .switch .b-cool{background:#2E6E96}
+
+/* ===== 共通レイアウト ===== */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.intro{max-width:var(--maxw);margin:0 auto;padding:30px 20px 6px}
+.intro .note{border:1px dashed var(--primary);background:var(--card);border-radius:12px;padding:14px 18px;font-size:.84rem;line-height:1.85;color:var(--text)}
+.intro .note b{color:var(--primary-dark)}
+
+/* セクション見出し（英字透かし＋和） */
+.sec{padding:64px 0}
+.sec--alt{background:var(--bg-alt)}
+.sec__head{text-align:center;margin-bottom:40px;position:relative}
+.sec__en{font-family:"Shippori Mincho",serif;font-size:3.4rem;color:var(--primary);opacity:.12;letter-spacing:.06em;line-height:1;display:block}
+.sec__ja{font-family:"Zen Maru Gothic",sans-serif;font-size:1.7rem;font-weight:700;margin-top:-1.4em;position:relative}
+.sec__lead{text-align:center;color:var(--text-light);font-size:.92rem;margin:10px auto 0;max-width:640px}
+
+/* 写真プレースホルダー */
+.ph{position:relative;width:100%;background:linear-gradient(135deg,var(--ph1),var(--ph2));display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:var(--radius)}
+.ph img{width:38%;opacity:.5;filter:saturate(.15)}
+.ph::after{content:"写真イメージ（ストック写真・差替予定）";position:absolute;left:10px;bottom:10px;font-size:.62rem;color:var(--ph-ink);background:rgba(255,255,255,.72);padding:3px 8px;border-radius:6px}
+
+/* TOP直下：アクセス＋診療時間（来院者が最初に見る情報） */
+.access{padding:34px 0 8px}
+.access__grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+.access__card{background:var(--card);border-radius:var(--radius);padding:22px 24px;box-shadow:0 3px 16px rgba(0,0,0,.06)}
+.access__card h3{font-family:"Zen Maru Gothic",sans-serif;font-size:1.1rem;margin:0 0 12px;color:var(--primary-dark)}
+.hours{width:100%;border-collapse:collapse;font-size:.86rem}
+.hours th,.hours td{border-bottom:1px solid var(--line);padding:9px 6px;vertical-align:top;text-align:left}
+.hours th{color:var(--text-light);font-weight:700;white-space:nowrap;width:9em}
+.hours td{color:var(--text)}
+.hours .off th,.hours .off td{color:var(--primary);font-weight:700;border-bottom:none}
+.access__meta{margin-top:14px;font-size:.85rem;color:var(--text-light);line-height:1.95}
+.access__meta b{color:var(--text)}
+.access__map{background:linear-gradient(135deg,var(--ph1),var(--ph2));border-radius:var(--radius);min-height:230px;display:flex;align-items:center;justify-content:center;color:var(--ph-ink)}
+.access__map span{background:rgba(255,255,255,.72);padding:4px 10px;border-radius:6px;font-size:.78rem}
+@media(max-width:760px){.access__grid{grid-template-columns:1fr}}
+
+/* 選ばれる理由：左右交互 大判ロウ */
+.reason{display:flex;flex-direction:column;gap:40px}
+.reason .row{display:grid;grid-template-columns:minmax(0,52%) 1fr;gap:36px;align-items:center}
+.reason .row:nth-child(even){grid-template-columns:1fr minmax(0,52%)}
+.reason .row:nth-child(even) .ph{order:2}
+.reason .ph{aspect-ratio:4/3}
+.reason .num{font-family:"Shippori Mincho",serif;font-size:2.6rem;color:var(--primary);line-height:1}
+.reason .eyebrow{font-family:"Zen Maru Gothic",sans-serif;font-size:.8rem;letter-spacing:.14em;color:var(--eyebrow);display:block;margin-bottom:.3em}
+.reason h3{font-size:1.45rem;font-weight:700;margin:.1em 0 .6em;line-height:1.5}
+.reason p{font-size:.92rem;color:var(--text-light);margin:0}
+.reason .btn{display:inline-block;margin-top:18px;font-size:.82rem;font-weight:700;color:var(--btn-text);background:var(--primary);padding:11px 26px;border-radius:999px;text-decoration:none;transition:.2s}
+.reason .btn:hover{background:var(--primary-dark)}
+
+/* 診療案内：写真カード 3列 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{display:flex;flex-direction:column;text-decoration:none;color:var(--text);background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 3px 16px rgba(0,0,0,.06);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 26px rgba(0,0,0,.12)}
+.card .ph{aspect-ratio:4/3;border-radius:0}
+.card .body{padding:15px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h4{font-size:1.08rem;font-weight:700;margin:0}
+.card p{font-size:.8rem;color:var(--text-light);flex:1;margin:0;line-height:1.7}
+.card .more{font-size:.74rem;font-weight:700;color:var(--primary-dark)}
+.card .more::after{content:" →"}
+
+@media(max-width:760px){
+  .sec__en{font-size:2.4rem}
+  .sec__ja{font-size:1.35rem}
+  .reason .row,.reason .row:nth-child(even){grid-template-columns:1fr;gap:14px}
+  .reason .row:nth-child(even) .ph{order:0}
+  .cards{grid-template-columns:1fr 1fr;gap:14px}
+}
+</style>
+</head>
+<body class="warm">
+
+<div class="switch" role="group" aria-label="配色切替">
+  <button class="b-warm" onclick="document.body.className='warm'">暖色（がじゅまる案）</button>
+  <button class="b-cool" onclick="document.body.className='cool'">寒色（競合標準）</button>
+</div>
+
+<div class="intro">
+  <div class="note">
+    <b>勝ちパターン構成の 暖色×寒色 比較（試作・noindex・本番非影響）。</b>
+    右上で切替＝<b>同じレイアウトのまま色だけ</b>が変わる。写真は全部ストック写真の差替プレースホルダー。<br>
+    構成＝辻堂競合8院共通の「選ばれる理由（左右交互大判）＋診療写真カード」。<b>色だけ</b>を桑田が実物で判断する用。<br>
+    暖色＝がじゅまる案（差別化・かわしまも暖色寄りで高級）／寒色＝競合標準（安全だが辻堂で9個目）。
+  </div>
+</div>
+
+<!-- ===== TOP直下：アクセス＋診療時間 ===== -->
+<section class="access">
+  <div class="wrap">
+    <div class="access__grid">
+      <div class="access__card">
+        <h3>診療時間</h3>
+        <table class="hours">
+          <tr><th>平日（月・水・木・金）</th><td>10:30–13:30 ／ 14:30–19:00</td></tr>
+          <tr><th>土・日</th><td>9:00–14:20（通し診療）</td></tr>
+          <tr class="off"><th>休診</th><td>火曜・祝日</td></tr>
+        </table>
+        <div class="access__meta">
+          <b>辻堂がじゅまる歯科</b>（2026年8月1日 開院予定）<br>
+          〒251-0000 神奈川県藤沢市辻堂6丁目13-3<br>
+          辻堂駅から徒歩約15分／駐車場2台／バス「辻03」<br>
+          お電話番号：確定後に掲載
+        </div>
+      </div>
+      <div class="access__map"><span>Googleマップ（差込予定）</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 選ばれる理由 ===== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head"><span class="sec__en">Reason</span><div class="sec__ja">選ばれる理由</div></div>
+    <p class="sec__lead">「歯医者が苦手」な大人と、ご家族のための歯科医院として大切にしていること。</p>
+    <div class="reason" style="margin-top:40px">
+
+      <div class="row">
+        <div class="ph"><img src="../images/svc-general.svg" alt=""></div>
+        <div class="body"><span class="num">01</span><span class="eyebrow">REASON 01</span><h3>「怖い」を、我慢しなくていい</h3><p>歯科が苦手な方の不安に寄り添います。今どんな処置をするかをそのつど説明し、痛みに配慮した治療を心がけます。無理に進めることはしません。</p><a class="btn" href="#">くわしく見る</a></div>
+      </div>
+
+      <div class="row">
+        <div class="ph"><img src="../images/svc-pediatric.svg" alt=""></div>
+        <div class="body"><span class="num">02</span><span class="eyebrow">REASON 02</span><h3>お子さまから親御さままで、家族で通える</h3><p>お子さまは年齢と発達に合わせて少しずつ。三世代で「かかりつけ」にしていただける、地域に密着した歯科医院を目指します。</p><a class="btn" href="#">くわしく見る</a></div>
+      </div>
+
+      <div class="row">
+        <div class="ph"><img src="../images/svc-prevention.svg" alt=""></div>
+        <div class="body"><span class="num">03</span><span class="eyebrow">REASON 03</span><h3>痛くなる前に。通い続けられる予防</h3><p>治療して終わりではなく、むし歯・歯周病になりにくいお口を一緒に育てます。定期検診とクリーニングで、長く健康を保ちます。</p><a class="btn" href="#">くわしく見る</a></div>
+      </div>
+
+      <div class="row">
+        <div class="ph"><img src="../images/svc-perio.svg" alt=""></div>
+        <div class="body"><span class="num">04</span><span class="eyebrow">REASON 04</span><h3>辻堂6丁目・通いやすい立地</h3><p>住宅街のかかりつけとして、ご家族で歩いて通える立地に。平日夜・土日も診療し、お仕事や学校帰りにも寄りやすい体制を整えます。</p><a class="btn" href="#">くわしく見る</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 診療案内 ===== -->
+<section class="sec sec--alt">
+  <div class="wrap">
+    <div class="sec__head"><span class="sec__en">Services</span><div class="sec__ja">診療案内</div></div>
+    <p class="sec__lead">辻堂で、お子さまから大人まで。一般歯科・予防から、マタニティや自費の治療まで。</p>
+    <div class="cards" style="margin-top:40px">
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-general.svg" alt=""></div><div class="body"><h4>一般歯科</h4><p>むし歯・歯の痛みの治療。歯をできる限り残すことを心がけます。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-pediatric.svg" alt=""></div><div class="body"><h4>小児歯科</h4><p>お子さまのむし歯予防と治療。年齢に合わせて対応します。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-prevention.svg" alt=""></div><div class="body"><h4>予防歯科</h4><p>定期検診とクリーニングで、むし歯・歯周病を防ぎます。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-perio.svg" alt=""></div><div class="body"><h4>歯周病治療</h4><p>歯ぐきの腫れ・出血の検査と治療を行います。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-whitening.svg" alt=""></div><div class="body"><h4>ホワイトニング</h4><p>歯を白くし、自然な明るさを目指します（自費）。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-maternity.svg" alt=""></div><div class="body"><h4>マタニティ歯科</h4><p>妊娠中の歯ぐき・むし歯のケア。体調に合わせて対応します。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-mouthguard.svg" alt=""></div><div class="body"><h4>スポーツマウスガード</h4><p>スポーツのケガから、歯やお口を守ります（自費）。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-ortho.svg" alt=""></div><div class="body"><h4>マウスピース矯正</h4><p>透明なマウスピースで、目立たず歯並びを整えます（自費）。</p><span class="more">くわしく見る</span></div></a>
+      <a class="card" href="#"><div class="ph"><img src="../images/svc-implant.svg" alt=""></div><div class="body"><h4>インプラント</h4><p>失った歯を補います（自費・対応予定）。</p><span class="more">くわしく見る</span></div></a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
