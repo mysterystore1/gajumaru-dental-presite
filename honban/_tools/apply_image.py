@@ -30,6 +30,10 @@ SPECS = {
     "svc-prevention":  ("svc-prevention.webp",   600, 600),  # services 予防歯科
     "svc-perio":       ("svc-perio.webp",        600, 600),  # services 歯周病治療
     "svc-whitening":   ("svc-whitening.webp",    600, 600),  # services ホワイトニング
+    "svc-maternity":   ("svc-maternity.webp",    600, 600),  # services マタニティ歯科
+    "svc-mouthguard":  ("svc-mouthguard.webp",   600, 600),  # services スポーツマウスガード
+    "svc-ortho":       ("svc-ortho.webp",        600, 600),  # services マウスピース矯正
+    "svc-implant":     ("svc-implant.webp",      600, 600),  # services インプラント
 }
 
 def main():
