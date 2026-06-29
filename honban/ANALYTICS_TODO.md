@@ -56,5 +56,27 @@
    - 解除する場合：Clarity統合の「切断」、または Googleアカウント→セキュリティ→サードパーティ接続。
 4. **【次やる・保留】Google Search Console 登録**（検索流入=SEOの正本。無料・推奨）：本セッションで着手→ユーザー判断で保留。最短=URLプレフィックス型でURL `https://gajumaru-dental.com/`→所有確認はGA4方式でワンクリック（同一info@）。開院前までに登録し寝かせる。⚠Googleドメインは拡張から直接開けず、本人がブラウザで開く必要。
 
+## GSC登録 + GA4キーイベント化 実施手順（2026-06-29）
+
+> GA4本番反映（06-26）から3日経過＝データ受信済みのはず。下記は**全てブラウザ作業**（info@gajumaru-dental.com でGoogleログイン必須・AIは代行不可）。サイト側資産は準備完了。
+
+### サイト側 準備完了（PRでmain反映待ち）
+- **`robots.txt`（ルート新規）**：全クロール許可＋Sitemap行。honban/ は noindex meta で除外＝あえて Disallow しない（クローラにnoindexを読ませるため）。
+- **`sitemap.xml`（ルート新規）**：検索対象は公開トップ（`https://gajumaru-dental.com/`）1URLのみ。honban全noindexのため未掲載。honban昇格時に追記。lastmod=2026-06-26。
+- ⚠main直push不可 → PR経由でmerge後に公開URLで `robots.txt`/`sitemap.xml` を配信開始。
+
+### A. GA4キーイベント化（CV計測）
+1. GA4（analytics.google.com）→ 左下⚙️**管理** → プロパティ列「**イベント**」を開く。
+2. 一覧に `generate_lead`（問い合わせ送信）/ `click_to_call`（tel発信）が出ていれば、各行の「**キーイベントとしてマーク**」をON。
+3. 未表示なら「**キーイベントを作成**」→ イベント名に `generate_lead` / `click_to_call` を手入力で先行登録（イベント発火時に紐づく）。
+
+### B. GSC（Search Console）登録
+1. search.google.com/search-console に info@ でログイン → 「**プロパティを追加**」。
+2. **URLプレフィックス**型を選択 → `https://gajumaru-dental.com/` を入力。
+3. 所有権確認＝「**Googleアナリティクス**」方式（同一info@がGA4編集権限保有＝ワンクリック確認）。
+4. 確認後 → 左メニュー「**サイトマップ**」→ `sitemap.xml` を送信（**robots.txt/sitemap.xml の本番反映後**に実施）。
+5. （開院前は流入ゼロで正常）登録して寝かせる＝開院後の検索流入計測基盤。
+- ⚠Googleドメイン/GSCは拡張から直接開けず、本人がブラウザで開く必要。
+
 ## 関連
 - 本番公開フェーズで設置 → 公開後の MEO/SEO 改善（継続運用メニュー）の計測基盤になる。
