@@ -1172,6 +1172,77 @@ p {
   line-height: 1.9;
 }
 
+/* --- 当院の特徴 リッチ版（横長・左右交互・大きいイラスト主役） --- */
+.features-rich {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.feature-row--reverse .feature-row__media {
+  order: 2;
+}
+.feature-row__media {
+  position: relative;
+}
+.feature-row__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--color-bg, #FBF8F3);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 12px 40px rgba(74, 53, 47, 0.07);
+}
+.feature-row__badge {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(197, 106, 56, 0.32);
+}
+.feature-row--reverse .feature-row__badge {
+  left: auto;
+  right: -16px;
+}
+.feature-row__heading {
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+.feature-row__desc {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .feature-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .feature-row--reverse .feature-row__media {
+    order: 0;
+  }
+  .feature-row__heading {
+    font-size: 1.375rem;
+  }
+}
+
 /* =============================================
    トップ: ためらう方へ誘導バナー
    ============================================= */
