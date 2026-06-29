@@ -1,0 +1,8 @@
+# 辻堂がじゅまる歯科 — robots.txt
+# 公開トップ（ルート）はクロール許可。honban/ 配下は各ページの
+# <meta robots noindex> で除外（クローラに noindex を読ませるため
+# あえて Disallow しない）。
+User-agent: *
+Allow: /
+
+Sitemap: https://gajumaru-dental.com/sitemap.xml

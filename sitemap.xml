@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 現在の検索インデックス対象は公開トップ（ルート）1ページのみ。
+       honban/ 配下は全ページ noindex のため未掲載。
+       honban 昇格時にここへ各ページを追記する。 -->
+  <url>
+    <loc>https://gajumaru-dental.com/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
