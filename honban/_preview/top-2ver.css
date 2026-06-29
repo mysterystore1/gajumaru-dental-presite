@@ -1,0 +1,1014 @@
+:root {
+  --bg: #fbf7f1;
+  --bg-alt: #f3eadf;
+  --ink: #241b14;
+  --muted: #6a5848;
+  --primary: #b6531d;
+  --primary-dark: #82390f;
+  --teal: #1f7f8f;
+  --teal-dark: #155f6d;
+  --leaf: #677a4f;
+  --card: #fffdf9;
+  --line: #e3d2bf;
+  --shadow: 0 16px 40px rgba(83, 55, 31, 0.12);
+  --radius: 8px;
+  --maxw: 1160px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Noto Sans JP", system-ui, sans-serif;
+  line-height: 1.85;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.preview-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #2d2119;
+  color: #fff1e6;
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.site-header {
+  position: sticky;
+  top: 38px;
+  z-index: 80;
+  background: rgba(255, 253, 249, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.header-inner,
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 76px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary-dark);
+  font-family: "Zen Maru Gothic", system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.nav a,
+.header-actions a,
+.btn {
+  text-decoration: none;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tel-link {
+  color: var(--primary-dark);
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.reserve-link,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.reserve-link {
+  min-height: 38px;
+  padding: 0 16px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.82rem;
+}
+
+.btn {
+  min-height: 48px;
+  padding: 0 26px;
+  border: 1px solid transparent;
+}
+
+.btn:hover,
+.reserve-link:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(182, 83, 29, 0.24);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.86);
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+.hero {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  right: clamp(18px, 5vw, 74px);
+  bottom: 26px;
+  width: clamp(90px, 12vw, 170px);
+  aspect-ratio: 1;
+  background: url("../images/gajumaru-tree-cat.svg") center / contain no-repeat;
+  opacity: 0.88;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, rgba(251, 247, 241, 0.96) 0%, rgba(251, 247, 241, 0.84) 42%, rgba(251, 247, 241, 0.18) 76%);
+}
+
+.hero-card {
+  position: relative;
+  z-index: 2;
+  width: min(640px, 100%);
+  padding: 110px 0 86px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  border-radius: 999px;
+  padding: 0 14px;
+  background: rgba(31, 127, 143, 0.12);
+  color: var(--teal-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 18px 0 18px;
+  font-family: "Zen Maru Gothic", system-ui, sans-serif;
+  font-size: clamp(2.3rem, 5.5vw, 4.35rem);
+  line-height: 1.24;
+}
+
+.hero h1 span {
+  color: var(--primary);
+}
+
+.hero-lead {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.hero-leaf {
+  position: absolute;
+  left: -30px;
+  top: 96px;
+  width: clamp(110px, 13vw, 180px);
+  opacity: 0.16;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #eadac8;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo::after {
+  content: "イメージ（仮）";
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 999px;
+  padding: 3px 10px;
+  background: rgba(45, 33, 25, 0.72);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.hero-media.photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  border-radius: 0;
+}
+
+section {
+  position: relative;
+  padding: 78px 0;
+}
+
+.decor-section {
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.decor-section > .wrap,
+.decor-section .lead-grid,
+.decor-section .doctor-grid {
+  position: relative;
+  z-index: 2;
+}
+
+.decor-section::before,
+.decor-section::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.decor-leaves::before {
+  right: -40px;
+  top: 32px;
+  width: 250px;
+  height: 190px;
+  background-image: url("../images/deco-leaves.svg");
+  opacity: 0.17;
+}
+
+.decor-roots::before {
+  left: -58px;
+  bottom: 20px;
+  width: 280px;
+  height: 190px;
+  background-image: url("../images/deco-roots.svg");
+  opacity: 0.13;
+}
+
+.decor-bird::after {
+  right: clamp(24px, 7vw, 96px);
+  bottom: 26px;
+  width: 92px;
+  height: 70px;
+  background-image: url("../images/deco-bird.svg");
+  opacity: 0.22;
+}
+
+.decor-cat::after {
+  right: clamp(18px, 6vw, 90px);
+  bottom: 18px;
+  width: 118px;
+  height: 112px;
+  background-image: url("../images/cat-sitting.svg");
+  opacity: 0.18;
+}
+
+.decor-yawn::after {
+  left: clamp(14px, 5vw, 78px);
+  bottom: 18px;
+  width: 130px;
+  height: 110px;
+  background-image: url("../images/deco-cat-yawn.svg");
+  opacity: 0.16;
+}
+
+.paw-divider {
+  height: 40px;
+  margin: -18px 0;
+  background: url("../images/deco-pawprints.svg") center / auto 28px repeat-x;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.section-alt {
+  background: var(--bg-alt);
+}
+
+.section-head {
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+.section-label {
+  display: block;
+  color: var(--primary);
+  font-family: "Shippori Mincho", serif;
+  font-size: clamp(2.6rem, 7vw, 4.6rem);
+  line-height: 1;
+  opacity: 0.13;
+}
+
+.section-title {
+  margin: -1.25em 0 0;
+  font-family: "Zen Maru Gothic", system-ui, sans-serif;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.4;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin: 12px auto 0;
+  border-radius: 999px;
+  background: var(--teal);
+}
+
+.section-lead {
+  max-width: 700px;
+  margin: 14px auto 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.lead-grid,
+.doctor-grid,
+.access-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 34px;
+  align-items: center;
+}
+
+.lead-grid::after,
+.doctor-grid::after {
+  content: "";
+  position: absolute;
+  right: -26px;
+  top: -26px;
+  width: 100px;
+  height: 100px;
+  background: url("../images/leaf-branch.svg") center / contain no-repeat;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.lead-grid .photo,
+.doctor-grid .photo {
+  aspect-ratio: 4 / 3;
+  box-shadow: var(--shadow);
+}
+
+.lead-copy h2,
+.doctor-copy h2 {
+  margin: 0 0 14px;
+  font-family: "Zen Maru Gothic", system-ui, sans-serif;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  line-height: 1.5;
+}
+
+.lead-copy p,
+.doctor-copy p {
+  color: var(--muted);
+}
+
+.points {
+  display: grid;
+  gap: 26px;
+}
+
+.points::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 98px;
+  bottom: 98px;
+  width: 2px;
+  background: linear-gradient(var(--teal), rgba(31, 127, 143, 0));
+  opacity: 0.25;
+}
+
+.point-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: 30px;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: 0 8px 24px rgba(83, 55, 31, 0.07);
+}
+
+.point-card:nth-child(even) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+}
+
+.point-card:nth-child(even) .photo {
+  order: 2;
+}
+
+.point-card .photo {
+  aspect-ratio: 4 / 3;
+}
+
+.point-num {
+  color: var(--primary);
+  font-family: "Shippori Mincho", serif;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.point-copy h3 {
+  margin: 8px 0 8px;
+  font-family: "Zen Maru Gothic", system-ui, sans-serif;
+  font-size: 1.35rem;
+}
+
+.point-copy p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.icon-strip,
+.symptom-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.icon-rich .wrap::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: -48px;
+  width: 150px;
+  height: 110px;
+  background: url("../images/deco-pawprints.svg") center / contain no-repeat;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.icon-item,
+.symptom-item {
+  position: relative;
+  min-height: 128px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  text-align: center;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.icon-item::after,
+.symptom-item::after {
+  content: "";
+  position: absolute;
+  right: 9px;
+  top: 8px;
+  width: 22px;
+  height: 22px;
+  background: url("../images/icon-sprout.svg") center / contain no-repeat;
+  opacity: 0.16;
+}
+
+.icon-item img,
+.symptom-item img {
+  width: 38px;
+  height: 38px;
+  opacity: 0.82;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: 0 8px 24px rgba(83, 55, 31, 0.07);
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  bottom: -20px;
+  width: 92px;
+  height: 92px;
+  background: url("../images/deco-leaves.svg") center / contain no-repeat;
+  opacity: 0.09;
+  pointer-events: none;
+}
+
+.service-card .photo {
+  aspect-ratio: 4 / 3;
+  border-radius: 0;
+}
+
+.service-body {
+  padding: 18px;
+}
+
+.service-body h3 {
+  margin: 0 0 8px;
+  font-family: "Zen Maru Gothic", system-ui, sans-serif;
+  font-size: 1.12rem;
+}
+
+.service-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.doctor-grid {
+  align-items: start;
+}
+
+.doctor-grid .photo {
+  aspect-ratio: 2 / 3;
+}
+
+.doctor-name {
+  margin: 0 0 4px;
+  color: var(--primary-dark);
+  font-family: "Zen Maru Gothic", system-ui, sans-serif;
+  font-size: 1.45rem;
+}
+
+.doctor-note {
+  margin-top: 10px;
+  color: var(--primary-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.access-grid {
+  align-items: stretch;
+}
+
+.access-panel,
+.hours-panel {
+  position: relative;
+  padding: 26px;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.access-panel::after,
+.hours-panel::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 48px;
+  height: 48px;
+  background: url("../images/icon-home.svg") center / contain no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.access-panel .photo {
+  aspect-ratio: 16 / 9;
+  margin-top: 18px;
+}
+
+.info-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.info-list div {
+  display: grid;
+  grid-template-columns: 5.5em 1fr;
+  gap: 12px;
+}
+
+.info-list dt {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.info-list dd {
+  margin: 0;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.hours-table th,
+.hours-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 10px 6px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.hours-table th {
+  width: 10em;
+  color: var(--muted);
+}
+
+.map-box {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #e8d8c7, #f7eee5);
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.concept-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 34px;
+  align-items: center;
+}
+
+.concept-grid h2 {
+  margin: 16px 0 14px;
+  font-family: "Zen Maru Gothic", system-ui, sans-serif;
+  font-size: clamp(1.65rem, 3.2vw, 2.45rem);
+  line-height: 1.45;
+}
+
+.concept-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.concept-card {
+  position: relative;
+  min-height: 270px;
+  display: grid;
+  place-items: center;
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.concept-card::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 1px dashed rgba(103, 122, 79, 0.26);
+  border-radius: var(--radius);
+  pointer-events: none;
+}
+
+.concept-card img {
+  width: min(190px, 52%);
+  margin: 0 auto 18px;
+  opacity: 0.88;
+}
+
+.concept-card p {
+  position: relative;
+  max-width: 420px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: flow;
+}
+
+.flow-grid li {
+  position: relative;
+  min-height: 190px;
+  padding: 22px 20px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: 0 8px 24px rgba(83, 55, 31, 0.07);
+  overflow: hidden;
+}
+
+.flow-grid li::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  bottom: -16px;
+  width: 80px;
+  height: 80px;
+  background: url("../images/icon-sprout.svg") center / contain no-repeat;
+  opacity: 0.1;
+}
+
+.flow-grid span {
+  color: var(--primary);
+  font-family: "Shippori Mincho", serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.flow-grid h3 {
+  margin: 10px 0 8px;
+  font-family: "Zen Maru Gothic", system-ui, sans-serif;
+  font-size: 1.1rem;
+}
+
+.flow-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+}
+
+.faq-list div {
+  position: relative;
+  padding: 22px 22px 20px 54px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: 0 8px 24px rgba(83, 55, 31, 0.07);
+}
+
+.faq-list div::before {
+  content: "Q";
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  font-family: "Shippori Mincho", serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.faq-list dt {
+  margin: 0 0 8px;
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.faq-list dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: 42px 24px;
+  background: #30231a;
+  color: #f1dfcf;
+  text-align: center;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -52px;
+  width: 240px;
+  height: 190px;
+  background: url("../images/deco-roots.svg") center / contain no-repeat;
+  opacity: 0.09;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  bottom: 10px;
+  width: 84px;
+  height: 72px;
+  background: url("../images/cat-sitting.svg") center / contain no-repeat;
+  opacity: 0.18;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-family: "Zen Maru Gothic", system-ui, sans-serif;
+  font-weight: 700;
+}
+
+.footer-logo img {
+  width: 38px;
+  height: 38px;
+  filter: brightness(0) invert(1);
+}
+
+.footer p {
+  margin: 14px 0 0;
+  color: rgba(241, 223, 207, 0.78);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    display: none;
+  }
+
+  .icon-strip,
+  .symptom-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .preview-bar {
+    position: static;
+  }
+
+  .site-header {
+    top: 0;
+  }
+
+  .header-inner {
+    min-height: 68px;
+  }
+
+  .header-actions .tel-link {
+    display: none;
+  }
+
+  .hero {
+    min-height: 620px;
+    align-items: flex-end;
+  }
+
+  .hero::before {
+    width: 92px;
+    right: 8px;
+    bottom: 12px;
+  }
+
+  .hero::after {
+    background: linear-gradient(180deg, rgba(251, 247, 241, 0.18) 0%, rgba(251, 247, 241, 0.96) 58%);
+  }
+
+  .hero-card {
+    padding: 260px 0 52px;
+  }
+
+  section {
+    padding: 58px 0;
+  }
+
+  .decor-section::before,
+  .decor-section::after,
+  .lead-grid::after,
+  .doctor-grid::after,
+  .icon-rich .wrap::before,
+  .points::before {
+    display: none;
+  }
+
+  .lead-grid,
+  .doctor-grid,
+  .access-grid,
+  .concept-grid,
+  .point-card,
+  .point-card:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .point-card:nth-child(even) .photo {
+    order: 0;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-grid,
+  .faq-list {
+    grid-template-columns: 1fr;
+  }
+
+  .icon-strip,
+  .symptom-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

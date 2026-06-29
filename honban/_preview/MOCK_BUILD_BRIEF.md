@@ -34,32 +34,51 @@
 
 ---
 
-## §2 画像（実体感優先＝空枠ゼロ。既存webp流用→足りない分だけ生成）
+## §2 画像（写真多用＋SVG装飾多用のハイブリッド＝全面リッチ化）
 
-⚠**全てプレビュー専用プレースホルダ**。本番は実写差し替え（`PHOTO_SHOTLIST.md`）。生成画像を公開 `honban/images/` に置かない。
+方針: **写真は全枠"別画像"（使い回し禁止）**＋**背景・区切り・余白にSVG装飾を多用**。モックの「のっぺりLP感」を解消し体感を最大化。
 
-**手順（この順で・空枠を残さない）:**
-1. **まず既存資産を流用**（即・確実に体感を出す）。`honban/images/` に既にあるもの:
-   - `facility-reception.webp`→ヒーロー / `facility-counseling.webp`→怖い方へリード / `facility-exterior.webp`→POINT02(土日)・アクセス建物 / `facility-waiting.webp`・`facility-treatment.webp`・`facility-equipment.webp`→POINT/診療案内に割当 / `director-profile.webp`→院長
-   - **流用元（公開ファイル）は読むだけ**。`honban/_preview/img/` にコピーして参照（公開側は書き換えない）。
-2. **足りないスロットだけ新規生成**（POINT01/03/04、診療案内の不足分 等）。Codexに画像生成手段が無ければ**既存webpで最も近いものを暫定流用**し、空枠を作らない。
+⚠**全てプレビュー専用**。本番は実写差し替え（`PHOTO_SHOTLIST.md`）。生成画像を公開 `honban/images/` に置かない。`honban/_preview/img/` のみ。
 
-**安全（必須）:**
-- 各写真に**可視の「イメージ（仮）」バッジ**を右下に重ねる（CSSオーバーレイ）。noindexに加え、見た目でも実写と誤認させない。
-- ページ最上部に固定バナー: `⚠社内プレビュー｜写真はすべてイメージ（仮）。本番は実写に差し替え`。
-- **院長スロット＝ニセ実写の顔を「桑田 淳」として出さない**。`director-profile.webp` を使う場合も**「※写真は取材後に差し替え」キャプション必須**。新規生成するなら顔をぼかすか後ろ姿/シルエット寄りにする（実在医師のなりすまし誤認を作らない）。
+### §2a 写真（15枠すべて別画像・画像AIで生成）
 
-共通スタイル（新規生成時）: `warm and bright Japanese neighborhood family dental clinic, soft natural light, clean and calming, light wood and soft apricot/terracotta accents, photorealistic, no text, no logos, no watermark`
+調達＝**画像AI生成**（`IMAGE_WORKFLOW.md` 準拠）。各 slot 用に下プロンプトで**1枚ずつ別の画像**を生成→`honban/_preview/img/<ファイル名>` に保存。**同一画像の使い回し禁止**（現状7枚→15枠の重複を解消する）。
 
-| ファイル名 | 用途 | 比率 | 追加プロンプト |
+共通スタイル: `warm and bright Japanese neighborhood family dental clinic, soft natural light, clean and calming, light wood and soft apricot/terracotta accents, photorealistic, no text, no logos, no watermark`
+
+| ファイル名 | 用途 | 比率 | 追加プロンプト（slotごとに別構図） |
 |---|---|---|---|
-| `hero.webp` | ヒーロー院内 | 16:9 | bright welcoming reception and waiting area, wide shot |
-| `anxiety.webp` | 怖い方へリード | 4:3 | a gentle dental hygienist talking with a relaxed seated patient, reassuring |
-| `point01.webp`〜`point05.webp` | 5つの安心 | 4:3 | 01=careful gentle treatment / 02=clinic open on weekends exterior / 03=family with child / 04=parking lot in front / 05=dentist explaining with tablet |
-| `svc-general/pedo/prevent/perio/implant/whitening.webp` | 診療案内6枚 | 4:3 | 各診療の穏やかな施術シーン（口腔クローズアップは避ける） |
-| `director.webp` | 院長ポートレート | 2:3 | **顔をぼかす/後ろ姿/シルエット寄り**で。実在医師のなりすまし誤認を作らない。キャプション「※写真は取材後に差し替え」必須 |
+| `hero.webp` | ヒーロー院内 | 16:9 | bright welcoming reception and waiting area, wide establishing shot |
+| `anxiety.webp` | 怖い方へリード | 4:3 | a dental hygienist gently talking with a relaxed seated patient, reassuring |
+| `point01.webp` | 01 痛みに配慮 | 4:3 | close gentle hands preparing careful treatment, calm |
+| `point02.webp` | 02 土日も診療 | 4:3 | clinic exterior on a bright weekend day, friendly entrance |
+| `point03.webp` | 03 家族で通える | 4:3 | a family with a young child in a warm waiting area |
+| `point04.webp` | 04 駐車場あり | 4:3 | a small parking space in front of a ground-floor clinic, daytime |
+| `point05.webp` | 05 丁寧な説明 | 4:3 | a dentist explaining with a tablet to a seated patient |
+| `svc-general.webp` | 一般歯科 | 4:3 | tidy general treatment room, single clean chair |
+| `svc-pedo.webp` | 小児歯科 | 4:3 | bright child-friendly corner with small chair, soft toys |
+| `svc-prevent.webp` | 予防歯科 | 4:3 | hygiene/cleaning setup with mirror and tools, tidy |
+| `svc-perio.webp` | 歯周病治療 | 4:3 | calm consultation with gum-care tools (no mouth close-up) |
+| `svc-implant.webp` | インプラント | 4:3 | modern equipment / digital x-ray area, clean |
+| `svc-whitening.webp` | ホワイトニング | 4:3 | bright cosmetic care setting, shade guide on table |
+| `director.webp` | 院長 | 2:3 | **顔をぼかす/後ろ姿/シルエット寄り**。実在医師のなりすまし誤認を作らない |
 
-- 体感優先のため**空枠は禁止**。生成手段が無いスロットは§2手順1の既存webpで暫定流用する。どうしても当てが無い枠のみ、正しい比率の枠＋`alt`＋生成プロンプトをコメントで残す。
+- 口腔・歯のリアルなクローズアップは避ける（AI破綻＋GL）。ビフォーアフター禁止。
+- Codex に生成手段が無い場合: **上の表（共通スタイル＋slot別プロンプト）をそのままプロンプトシートとして出力**し、画像AI（GPT/DALL-E）で別途生成→`_preview/img/`へ。HTML側は上記ファイル名を参照済みにしておく（画像を入れ替えるだけで反映）。**空枠は既存webpで暫定埋め**（重複可・後で差し替え前提）。
+
+### §2b 背景・装飾SVG（多用＝リッチ化の主役）
+
+既存SVGを各セクションに重ねる（無料・安全＝photorealでない＝医療誤認リスクなし）:
+- 装飾: `deco-roots.svg` `deco-leaves.svg` `deco-pawprints.svg` `deco-bird.svg` `cat-sitting.svg` `gajumaru-tree-cat.svg` `deco-cat-yawn.svg`
+- アイコン帯/症状/診療: `icon-calendar/child/door/home/shield/sprout/yen.svg`
+- 使い方: セクション背景に淡くroots/leaves、区切りにpawprints、余白の角にcat/birdをあしらう。**写真の上に重ねず余白側へ**。彩度は背景として落とす（写真の邪魔をしない）。
+
+### §2c 安全（必須・写真を増やすほど厳守）
+
+- 各写真に**可視「イメージ（仮）」バッジ**（CSS擬似要素）。
+- ページ最上部に固定バナー: `⚠社内プレビュー｜写真はすべてイメージ（仮）。本番は実写に差し替え`。
+- **院長＝ニセ実写の顔を「桑田 淳」として出さない**。ぼかし/シルエット＋**「※写真は取材後に差し替え」キャプション必須**。
+- 写真は `_preview/img/` のみ・noindex 維持・公開ファイル差分ゼロ。
 
 ---
 
@@ -79,6 +98,14 @@
 - GL版冒頭にコメントで「医療広告GLセルフチェック: 断定/最上級/体験談/ビフォーアフター無しを確認」と残す。
 
 ---
+
+## §3b 文言（薄さ解消＝リサーチ適用・必須）
+
+現プレビューは各セクション1〜2文で薄く、「丁寧な説明」等＝**リサーチ自身がNGとする抽象形容詞**。
+→ **`honban/_preview/TOP_COPY_SPEC.md` の原稿を各セクションに反映**（差別化角度＋GOOD型A〜I適用・確定情報準拠・固有未確定は（仮））。
+- 新規セクション追加: コンセプト（看板猫由来）／初めての方へ・初診の流れ／FAQ抜粋。
+- 院長あいさつは原体験（確定）を核に厚く。診療案内は各2〜3文＋保険/自費明示。
+- 固有数字・経歴・設備・所要時間は**創作禁止**。`services-*.html`・`faq.html`・`dental-anxiety.html` の承認本文を要約移植。
 
 ## §4 完了条件
 
