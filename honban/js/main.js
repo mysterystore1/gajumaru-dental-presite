@@ -39,36 +39,6 @@
   gtag('config', GA4_ID);
 })();
 
-/* --- テーマ切替（B案検討用・公開時はこのブロックと theme-variants.css を撤去で A案へ完全復帰） ---
-   data-theme で :root 変数を上書き。warm=現行A案(既定・属性なし)。localStorage で保持。 */
-(function () {
-  if (!document.querySelector('link[data-theme-variants]')) {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'css/theme-variants.css';
-    link.setAttribute('data-theme-variants', '');
-    document.head.appendChild(link);
-  }
-  let saved = null;
-  try { saved = localStorage.getItem('gj-theme'); } catch (e) {}
-  if (saved && saved !== 'warm') document.documentElement.setAttribute('data-theme', saved);
-
-  window.__gjThemes = [
-    { id: 'warm', name: '①現行', sw: '#C56A38' },
-    { id: 'blue', name: '②青', sw: '#2D7DB0' },
-    { id: 'hybrid', name: '③併用', sw: '#2E8C9E' },
-    { id: 'teal', name: '④緑', sw: '#2F8E7E' },
-  ];
-  window.__gjApplyTheme = function (id) {
-    if (id === 'warm') document.documentElement.removeAttribute('data-theme');
-    else document.documentElement.setAttribute('data-theme', id);
-    try { localStorage.setItem('gj-theme', id); } catch (e) {}
-    document.querySelectorAll('.theme-switch__btn').forEach((b) => {
-      b.classList.toggle('is-active', b.getAttribute('data-theme-id') === id);
-    });
-  };
-})();
-
 document.addEventListener('DOMContentLoaded', () => {
   /* GA4: 電話発信（tel:リンク）クリックをコンバージョン計測 */
   document.querySelectorAll('a[href^="tel:"]').forEach((a) => {
@@ -355,22 +325,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  /* --- テーマ切替UI（左下フローティング・検討用・公開時は撤去） --- */
-  if (!document.querySelector('.theme-switch') && window.__gjThemes) {
-    const current = document.documentElement.getAttribute('data-theme') || 'warm';
-    const box = document.createElement('div');
-    box.className = 'theme-switch';
-    box.setAttribute('aria-label', 'テーマ切替（検討用）');
-    let html = '<span class="theme-switch__label">テーマ確認用</span><div class="theme-switch__row">';
-    window.__gjThemes.forEach((t) => {
-      html += '<button type="button" class="theme-switch__btn' + (t.id === current ? ' is-active' : '') +
-        '" data-theme-id="' + t.id + '"><span class="theme-switch__sw" style="background:' + t.sw + '"></span>' + t.name + '</button>';
-    });
-    html += '</div>';
-    box.innerHTML = html;
-    document.body.appendChild(box);
-    box.querySelectorAll('.theme-switch__btn').forEach((b) => {
-      b.addEventListener('click', () => window.__gjApplyTheme(b.getAttribute('data-theme-id')));
-    });
-  }
 });
