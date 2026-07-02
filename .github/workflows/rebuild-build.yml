@@ -1,0 +1,34 @@
+# リビルド（DEC-015）: feature ブランチへの push で dist/ をビルドしアーティファクト保存のみ行う。
+# 本番 GitHub Pages（現行サイト gajumaru-dental.com の配信）へのデプロイはここでは行わない＝現行配信を壊さない。
+name: rebuild-build
+
+on:
+  push:
+    branches:
+      - "feature/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npx eleventy
+
+      # CLAUDE.md §8 の機械検証（カタカナ表記・誤番号・ダミーが dist に混入したら失敗）
+      - name: guard-claude-md-s8
+        run: |
+          ! grep -rn "ガジュマル" dist/
+          ! grep -rn -e "0465" -e "XX-XXXX" dist/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
