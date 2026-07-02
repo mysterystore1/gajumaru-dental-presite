@@ -1,6 +1,9 @@
 # ビルド生成物・一時出力（各ツールが出力。gitには含めない）
 /output/
 /tmp/
+# Eleventyリビルド（DEC-015）: 依存とビルド出力
+/node_modules/
+/dist/
 # Codex等が繰り返し生成する撮影PDFツール（正規の_toolsとは別・混入防止）
 honban/_tools/build_photo_visual_pdf.py
 honban/_tools/photo_shotlist_image_jobs.jsonl
